@@ -1,0 +1,32 @@
+<section class="header-details2" > 
+        <table>
+                  <tr>
+                    <td>{{localize "ARGS.infotexto.edad"}}:</td><td><input name="system.edad" type="text" value="{{system.edad}}" placeholder="{{ localize 'Edad' }}" /></td>
+                    <td>{{localize "ARGS.infotexto.altura"}}:</td><td><input name="system.altura" type="text" value="{{system.altura}}"  placeholder="{{ localize 'Altura' }}"/></td>
+                  </tr>
+                  <tr>
+                    <td>{{localize "ARGS.infotexto.pelo"}}:</td><td><input name="system.pelo" type="text" value="{{system.pelo}}" placeholder="{{ localize 'Pelo' }}"/></td>
+                    <td>{{localize "ARGS.infotexto.ojos"}}:</td><td><input name="system.ojos" type="text" value="{{system.ojos}}" placeholder="{{ localize 'Ojos' }}"/></td>                    
+                  </tr>
+                  <tr>
+                    <td>{{localize "ARGS.infotexto.peinado"}}:</td><td colspan="3"><input name="system.peinado" type="text" value="{{system.peinado}}" placeholder="{{ localize 'Peinado' }}" width="100%"/></td>
+                  </tr>
+                  <tr>
+                    <td>{{localize "ARGS.infotexto.detalle"}}:</td><td colspan="3"><input name="system.detalle" type="text" value="{{system.detalle}}" placeholder="{{ localize 'Detalle' }}"/></td>
+                  </tr>
+              </table>
+       
+      </section>  
+<div class="biography">
+	<h3>{{localize "ARGS.infotexto.biografia"}}</h3>
+		{{editor
+			notesHTML
+			target="system.notas"
+			button=true
+			editable=editable
+			engine="prosemirror"
+			collaborate=false
+		}}
+	</div>
+
+

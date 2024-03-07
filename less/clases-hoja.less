@@ -1,0 +1,154 @@
+.form-group-carac {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+    input[type="text"]{
+        height: 16px;
+        font-size: 13px;
+        border: 1px solid #7a7971;
+        background: whitesmoke;   
+    }
+    select {
+        height: 24px;
+        border: 1px solid #7a7971;
+        background: whitesmoke;
+    }
+}
+.form-group-escuela {
+    align-items: baseline;
+    margin-bottom: 4px;
+    text-align: right;
+    margin-right: 5px;
+    padding: 0px;
+    gap: 1px;
+    margin: 1px 0;
+}
+
+.magbonus-grid {
+    text-align: right;
+    margin-right: 5px;
+    padding: 0px;
+    gap: 1px;
+    margin: 1px 0;
+    align-items: center;
+    input[type="text"]{
+        height: 16px;
+        font-size: 13px;
+        border: 1px solid #7a7971;
+        background: whitesmoke !important;   
+    }
+}
+.defepv-grid {
+    text-align: right;
+    margin-right: 5px;
+    padding: 0px;
+    gap: 1px;
+    margin: 1px 0;
+    align-items: center;
+    .pv-bonus{
+        span {
+        display: flex;
+        }
+    }
+    input[type="text"]{
+        height: 16px;
+        font-size: 13px;
+        border: 1px solid #7a7971;
+        background: whitesmoke !important;   
+    }
+}
+.sheet img[data-edit]{
+    height: 30px;
+    width: 30px;
+    border: none;
+    
+}
+
+.lucklog-grid{
+    text-align: right;
+    margin-right: 5px;
+    padding: 0px;
+    gap: 1px;
+    margin: 1px 0;
+    align-items: center;
+    .checkbox{
+        text-align: left;
+        }
+    
+    input[type="text"]{
+        height: 16px;
+        font-size: 13px;
+        border: 1px solid #7a7971;
+        background: whitesmoke !important;   
+    }
+    .content-link {
+        display: flex;
+        width: 100px;
+        height: 25px;
+        background-color: rgb(206, 134, 41);
+        color: black;
+    }
+}
+.pericias-especiales {
+    .pericias-grid{
+        //grid-template-columns: 70% 30%;
+        grid-template-columns: 10% 40% 40% 10%;
+        padding: 0px;
+        gap: 1px;
+        margin: 1px 0;
+    }
+    label{        
+        line-height: 25px;
+        margin-right: 5px;
+    }
+}
+
+.pericias-extra-especie .pericias-grid .percat-group .pericia-valor, .pericias-iniciales .pericias-grid .percat-group .pericia-valor {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    line-height: 20px;
+}
+
+.pericias-entrenamiento,.pericias-iniciales  {
+    display: grid;
+    .pericias-grid{
+        //grid-template-columns: 70% 30%;
+       
+        gap: 1px;
+        margin: 1px 0;
+        .percat-group{
+            display: grid;
+            margin: 2px;
+            border: 2px groove #eeede0;
+            border-radius: 4px;
+            .percat-title {
+                h4{
+                font-family: "FHACondFrenchNC";
+                font-weight: bold; 
+                color: purple;
+                }
+            }
+            .pericia-valor{
+                display: grid;
+                grid-template-columns: 70% 30%;
+                line-height: 20px;
+                .pericia-label {
+                    display: flex;
+                    align-items: center;
+                    height: 16px;
+                }
+
+                input[type="text"]{
+                    height: 16px;
+                    font-size: 13px;
+                    border: 1px solid #7a7971;
+                    background: whitesmoke;   
+                }
+            }    
+        }
+
+    }
+
+} // fin pericias-entrenamiento

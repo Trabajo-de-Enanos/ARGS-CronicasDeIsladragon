@@ -1,0 +1,259 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile" src="{{item.img}}" data-tooltip="{{item.name}}" data-edit="img"/>
+
+		    <div class="header-detalles">
+            <h1 class="itemnombre">
+                <input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'ARGS.ItemName' }}"/>
+            </h1>                       
+        </div>
+       
+	</header>
+	 {{!-- Item Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item" data-tab="descripcion">{{ localize "ARGS.tab.descripcion" }}</a>
+        <a class="item" data-tab="detalles">{{ localize "ARGS.tab.detalles" }}</a>
+        <a class="item" data-tab="efectos">{{ localize "ARGS.tab.efectos" }}</a>
+    </nav>
+	
+    {{!-- Item Sheet Body --}}
+    <section class="sheet-body">
+		    {{> "systems/ARGS/templates/partials/items-descripcion.hbs" }}
+
+	{{!-- Details Tab --}}
+       <div class="tab detalles" data-group="primary" data-tab="detalles">
+             <div class="clase-item item" data-item-id="{{item._id}}">
+            <h2 class="form-header"> {{ localize "ARGS.clases.clasedetalles"}}</h2>
+              <h3>{{localize "ARGS.clases.caracppales"}}</h3>
+            {{!-- Weapon Type --}}
+            <div class="form-group-carac">
+                
+                <label>{{localize "ARGS.clases.primaria"}}</label>
+                <select name="system.stats.primaria">
+				{{#select system.stats.primaria}}
+				{{#each config.caracteristicas as |name type|}}
+                <option value="{{type}}">{{localize name}} </option>
+				{{/each}}
+				{{/select}}		 
+				</select>
+                <label>{{localize "ARGS.clases.secundaria"}}</label>
+                <select name="system.stats.secundaria">
+				{{#select system.stats.secundaria}}
+				{{#each config.caracteristicas as |name type|}}
+				<option value="{{type}}">{{localize name}}</option>
+				{{/each}}
+				{{/select}}		 
+				</select>
+                <label>{{localize "ARGS.clases.terciaria"}}</label>
+                <select name="system.stats.terciaria">
+				{{#select system.stats.terciaria}}
+				{{#each config.caracteristicas as |name type|}}
+				<option value="{{type}}">{{localize name}}</option>
+				{{/each}}
+				{{/select}}		 
+				</select>               
+            </div>
+            
+
+            
+              {{!-- Pericias de Entrenamiento --}}
+            <div class="pericias-entrenamiento">
+                <h3>{{localize "ARGS.clases.periciasentrena"}}</h3>
+                <div class="pericias-grid grid grid-3col">
+                 
+                {{#each system.periciasentrena as |percat ncat|}}
+                    <div class="percat-group">
+                        <div  class="percat-title">
+                        <h4>{{localize (concat "ARGS.pericias." ncat ".nombre")}}</h4>                
+                        </div>                     
+                    {{#each percat as |prcombate key|}}          
+                    <div class="pericia-valor">
+                    <label for="system.periciasentrena.{{ncat}}.{{key}}" class="pericia-label">{{localize (concat "ARGS.pericias." ncat "." key)}}</label>                  
+                     <input type="text" name="system.periciasentrena.{{ncat}}.{{key}}" value="{{prcombate}}" data-dtype="Number"/>                   
+                     </div>          
+                    {{/each}}
+                    </div>                    
+                {{/each}}
+             </div>   
+            </div>
+
+            
+              {{!-- Pericias de Iniciales --}}
+            <div class="pericias-iniciales">
+                <h3>{{localize "ARGS.clases.periciasinicial"}} </h3>
+                <div class="pericias-grid grid grid-3col">
+                {{#each system.periciasinicial as |percat ncat|}}
+                    <div class="percat-group">                               
+                         <div class="pericia-valor">
+                        <label for="system.periciasinicial.{{ncat}}" class="pericia-label">{{localize (concat "ARGS.pericias." ncat ".nombre")}}</label>
+                        <input type="text" name="system.periciasinicial.{{ncat}}" value="{{percat}}" data-dtype="Number"/>
+                        </div>
+                    </div>
+                {{/each}}
+                </div>    
+             </div>
+
+              {{!-- Pericias de Especiales y bonus --}}
+            <div class="pericias-especiales">
+                <h3>{{localize "ARGS.clases.especiales"}} </h3>
+                
+                <label> {{localize "ARGS.clases.periciabonus"}} </label>
+                <div class="pericias-grid grid grid-4col">
+                    <span></span>
+                    <span>{{localize "ARGS.especies.periciasextranm"}}</span>
+                    <span>{{localize "ARGS.clases.periciabase"}}</span>
+                    <span>{{localize "ARGS.especies.periciasextravalor"}}</span>
+
+
+                    <label style="text-align: right;">{{localize "ARGS.clases.especial1"}} </label>
+                    <input type="text" name="system.especiales.especial1.name" value="{{system.especiales.especial1.name}}" data-dtype="text"/>
+                     <select name="system.especiales.especial1.pericia">
+                    {{#select system.especiales.especial1.pericia}}
+                    {{#each system.periciasentrena as |percat ncat|}}
+                    {{#each percat as |prbonus key|}}                     
+				    <option value="{{key}}">{{localize (concat "ARGS.catpericias."ncat)}} - {{localize (concat "ARGS.pericias." ncat "." key)}}</option>                    
+                    {{/each}}
+                    {{/each}}
+				    {{/select}}		 
+                    </select>
+                <input type="text" name="system.especiales.especial1.value" value="{{system.especiales.especial1.value}}" data-dtype="Number"/>
+                 <label style="text-align: right;">{{localize "ARGS.clases.especial2"}} </label>
+                 <input type="text" name="system.especiales.especial2.name" value="{{system.especiales.especial2.name}}" data-dtype="text"/>
+                     <select name="system.especiales.especial2.pericia">
+                    {{#select system.especiales.especial2.pericia}}
+                    {{#each system.periciasentrena as |percat ncat|}}
+                    {{#each percat as |prbonus key|}}                     
+				    <option value="{{key}}">{{localize (concat "ARGS.catpericias."ncat)}} - {{localize (concat "ARGS.pericias." ncat "." key)}}</option>                    
+                    {{/each}}
+                    {{/each}}
+				    {{/select}}		 
+                    </select>
+                <input type="text" name="system.especiales.especial2.value" value="{{system.especiales.especial2.value}}" data-dtype="Number"/>
+                </div>            
+                <label> {{localize "ARGS.clases.magiabonus"}} </label>
+                    <div class="magbonus-grid grid grid-6col">                                                        
+                        <label>{{localize "ARGS.varios.resistenciamagia"}}</label>
+                        <input type="text" name="system.especiales.bonifRM" value="{{system.especiales.bonifRM}}" data-dtype="Number"/>
+                        <label>{{localize "ARGS.magia.puntosmagia"}}</label>
+                        <input type="text" name="system.especiales.bonifPM" value="{{system.especiales.bonifPM}}" data-dtype="Number"/>
+                        <label>{{localize "ARGS.magia.conjurar"}}</label>
+                        <input type="text" name="system.especiales.bonifconjurar" value="{{system.especiales.bonifconjurar}}" data-dtype="Number"/>
+                        
+                    </div>
+
+                 <label> {{localize "ARGS.clases.pvbdbonus"}} </label>
+                    <div class="defepv-grid grid grid-4col">                                                        
+                        <label>{{localize "ARGS.atributos.BD"}}</label>
+                        <input type="text" name="system.especiales.bonifBD" value="{{system.especiales.bonifBD}}" data-dtype="Number"/>
+                        <label>{{localize "ARGS.varios.catarmadura"}}</label>
+                        <input type="text" name="system.especiales.bonifCatArm" value="{{system.especiales.bonifCatArm}}" data-dtype="Number"/>
+                        <label>{{localize "ARGS.atributos.puntosvida"}}</label>
+                            <div class="pv-bonus grid grid-3col ">                        
+                                <span>Sum:<input type="text" name="system.especiales.bonifPV.value" value="{{system.especiales.bonifPV.value}}" data-dtype="Number"/></span>
+                                <span>Min:<input type="text" name="system.especiales.bonifPV.min" value="{{system.especiales.bonifPV.min}}" data-dtype="Number"/></span>
+                                <span>Max:<input type="text" name="system.especiales.bonifPV.max" value="{{system.especiales.bonifPV.max}}" data-dtype="Number"/></span>
+                            </div>
+                        
+                    </div>   
+                 <label> {{localize "ARGS.clases.suertelogicaextra"}} </label>
+                    <div class="lucklog-grid grid grid-2col">
+                        <label>{{localize "ARGS.varios.dadossuerte"}}</label>
+                         <label class="checkbox">
+                          <input type="checkbox" name="system.especiales.puntosuerted2" {{checked system.especiales.puntosuerted2}}/> <i class="fa-solid fa-coin"></i>
+                          
+                          <input type="checkbox" name="system.especiales.puntosuerted4" {{checked system.especiales.puntosuerted4}}/> <i class="fa-solid fa-dice-d4"></i>
+                          
+                          <input type="checkbox" name="system.especiales.puntosuerted6" {{checked system.especiales.puntosuerted6}}/> <i class="fa-solid fa-dice-d6"></i></label>
+                        <label>{{localize "ARGS.varios.dadoslogica"}}</label>
+                            <label class="checkbox">
+                            <input type="checkbox" name="system.especiales.puntoslogicad41" {{checked system.especiales.puntoslogicad41}}/>
+                            <input type="checkbox" name="system.especiales.puntoslogicad42" {{checked system.especiales.puntoslogicad42}}/> <i class="fa-solid fa-dice-d4"></i></label>
+                    </div>
+
+              <h3 class="section-header">{{localize "ARGS.infotexto.clasehabs"}}</h3>
+                <div class="choice-selector item-detail">
+                    {{>
+                        systems/ARGS/templates/partials/selector-opciones.hbs
+                        config=habilidadesConfig
+                        editable=editable
+                    }}
+                </div>
+             
+
+              <h3 class="section-header">{{localize "ARGS.infotexto.claseinv"}}</h3>
+                <div class="choice-selector item-detail">
+                    {{>
+                        systems/ARGS/templates/partials/selector-opciones.hbs
+                        config=inventarioConfig
+                        editable=editable
+                    }}
+                </div>
+                
+            </div>
+           
+          
+		
+            {{!-- conjurador --}}
+            <div class="form-group stacked">
+                <h3>{{ localize "ARGS.clases.usuariomagia" }}</h3>
+                <div class="form-fields">
+                    <label class="checkbox">
+                        <input type="checkbox" name="system.conjurador" {{checked system.conjurador}}/> {{ localize "ARGS.clases.conjurador" }}
+                    </label>      
+                </div>
+            </div>
+            {{#if (eq system.conjurador true)}}
+             <h4>{{localize "ARGS.magia.escuelas.escuelas"}}</h4>
+            {{!-- Weapon Type --}}
+            <div class="form-group-escuela grid grid-4col">
+
+                
+                <label>{{localize "ARGS.magia.escuelas.escuela1"}}</label>
+                <select name="system.escuelas.primera">
+				{{#select system.escuelas.primera}}
+				{{#each config.escuelas as |name|}}
+                <option value="{{name}}">{{localize name}} </option>
+				{{/each}}
+				{{/select}}		 
+				</select>
+                <label>{{localize "ARGS.magia.escuelas.escuela2"}}</label>
+                <select name="system.escuelas.segunda">
+				{{#select system.escuelas.segunda}}
+				{{#each config.escuelas as |name|}}
+				<option value="{{name}}">{{localize name}}</option>
+				{{/each}}
+				{{/select}}		 
+				</select>
+                <label>{{localize "ARGS.magia.escuelas.escuela3"}}</label>
+                <select name="system.escuelas.tercera">
+				{{#select system.escuelas.tercera}}
+				{{#each config.escuelas as |name|}}
+				<option value="{{name}}">{{localize name}}</option>
+				{{/each}}
+				{{/select}}		 
+				</select> 
+                <label>{{localize "ARGS.magia.escuelas.escuela4"}}</label>
+                <select name="system.escuelas.cuarta">
+				{{#select system.escuelas.cuarta}}
+				{{#each config.escuelas as |name|}}
+				<option value="{{name}}">{{localize name}}</option>
+				{{/each}}
+				{{/select}}		 
+				</select>                
+            </div>
+            {{/if}}
+            
+           
+
+             </div>
+        </div>
+
+        {{!-- Effects Tab --}}
+       
+        <div class="tab effects flexcol" data-group="primary" data-tab="efectos">
+        
+       
+        
+        </div>
+	</section>
+</form>

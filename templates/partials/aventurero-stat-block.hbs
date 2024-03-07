@@ -1,0 +1,32 @@
+<section>
+    <label>
+        <h3>
+            <select name="data.attackPrimary.name" class="stat-name">
+                {{#select data.system.attackPrimary.name}}
+                {{#each config.tiposAtaque as |name type|}}
+                <option value="{{type}}">{{localize name}}</option>
+                {{/each}}
+                {{/select}}
+            </select>
+        </h3>
+    </label>
+
+<div class="stat-value">
+    <input name="data.attackPrimary.value" type="text" value="{{data.system.attackPrimary.value}}"
+    data-type="Number" />
+</div>
+<label class="stat-name">
+    <h3>{{localize "ARGS.stats.armaslargas"}}</h3>
+</label>
+<div class="stat-value backup-attack">
+    <select name="data.attackBackup.name" class="secondary-attack-selector">
+        {{#select data.system.attackBackup.name}}
+        {{#each config.tiposAtaque as |name type|}}
+        <option value="{{type}}">{{localize name}}</option>
+        {{/each}}
+        {{/select}}
+    </select>
+    <input name="data.attackBackup.value" type="text" value="{{data.system.attackBackup.value}}"
+    data-type="Number" />
+</div>
+</section>

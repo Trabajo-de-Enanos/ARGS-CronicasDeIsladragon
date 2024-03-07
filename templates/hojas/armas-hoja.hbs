@@ -1,0 +1,153 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile" src="{{item.img}}" data-tooltip="{{item.name}}" data-edit="img"/>
+
+		    <div class="header-detalles">
+            <h1 class="itemnombre">
+                <input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'ARGS.ItemName' }}"/>
+            </h1>
+            <div class="item-subtitulo">
+                <h4 class="item-tipo">{{localize "ITEM.TypeArmas"}}:</h4>
+                <span class="item-status">
+                     {{#if system.equipado}}
+                    {{localize "ARGS.items.equipado" }}
+                   
+                    {{else}}
+                    {{ localize "ARGS.items.noequipado" }}    
+                     {{/if}}
+                    </span>
+            </div>
+
+            <ul class="tipocalidad">
+                <li>
+                   Calidad:
+                </li>
+                <li>
+                    <select name="system.calidad">
+                        {{#select system.calidad}}
+						{{#each config.tipoCalidad as |name type|}}
+						<option value="{{type}}">{{localize name}}</option>
+						{{/each}}
+						{{/select}}		 
+                    </select>
+                </li>
+                
+            </ul>
+        </div>
+       
+	</header>
+	 {{!-- Item Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item" data-tab="descripcion">{{ localize "ARGS.tab.descripcion" }}</a>
+        <a class="item" data-tab="detalles">{{ localize "ARGS.tab.detalles" }}</a>
+        <a class="item" data-tab="efectos">{{ localize "ARGS.tab.efectos" }}</a>
+    </nav>
+	
+    {{!-- Item Sheet Body --}}
+    <section class="sheet-body">
+		    {{> "systems/ARGS/templates/partials/items-descripcion.hbs" }}
+
+	{{!-- Details Tab --}}
+       <div class="tab detalles" data-group="primary" data-tab="detalles">
+             <div class="armas-item item" data-item-id="{{item._id}}">
+            <h3 class="form-header">{{ localize "ARGS.items.itemdetallearma" }}</h3>
+
+            {{!-- Weapon Type --}}
+            <div class="form-group">
+                <label>{{ localize "ARGS.items.itemtipoarma" }}</label>
+                <select name="system.atacaCon">
+				{{#select system.atacaCon}}
+				{{#each config.tiposAtaque as |name type|}}
+				<option value="{{type}}">{{localize name}}</option>
+				{{/each}}
+				{{/select}}		 
+				</select>
+            </div>
+              {{!-- Dado DAño --}}
+            <div class="form-group">
+                <label>{{ localize "ARGS.arma.dadodanio" }}</label>
+                <input type="number" name="system.cantdado" value="{{system.cantdado}}" placeholder={{ localize "ARGS.arma.cantdado" }} data-tooltip="ARGS.arma.cantdado" data-formula-editor/>   
+                <select name="system.danio">
+				{{#select system.danio}}
+				{{#each config.dadodenominacion as |denom type|}}
+				<option value="{{type}}">{{denom}}</option>
+				{{/each}}
+				{{/select}}		 
+				</select>
+                {{#if (ne system.atacaCon "artilleria")}}
+                <input type="number" name="system.critumbral" value="{{system.critumbral}}" placeholder={{ localize "ARGS.arma.critumbral"}} data-tooltip="ARGS.arma.critumbral" data-formula-editor/>   
+                {{/if}}
+            </div>
+
+                    
+            {{!-- equipado --}}
+            <div class="form-group stacked">
+                <label>{{ localize "ARGS.items.itemarmapropiedades" }}</label>
+                <div class="form-fields">
+                    <label class="checkbox">
+                        <input type="checkbox" name="system.lanzable" {{checked system.lanzable}}/> {{ localize "ARGS.arma.lanzable" }}
+                    </label>
+                    
+                    <label class="checkbox">
+                        <input type="checkbox" name="system.recarga" {{checked system.recarga}}/> {{ localize "ARGS.arma.recarga" }}
+                    </label>
+                </div>
+            </div>
+            <div class="form-group stacked">
+                <label>{{ localize "ARGS.items.itemarmastatus" }}</label>
+                <div class="form-fields">
+                    <label class="checkbox">
+                        <input type="checkbox" name="system.equipado" {{checked system.equipado}}/> {{ localize "ARGS.items.equipado" }}
+                    </label>                    
+                </div>
+            </div>
+           
+
+            {{!-- Weapon Properties --}}
+            <div class="form-group stacked weapon-properties">
+                <label>{{ localize "ARGS.items.itembonificadores" }}</label>
+                <div class="form-fields">
+                <label>{{ localize "ARGS.arma.bonificadorCalidad" }}:</label>
+                  <input type="number" name="system.bonificadorCalidad" value="{{system.bonificadorCalidad}}" data-formula-editor/>   
+                {{!--numberInput system.bonificadorCalidad name="system.bonificadorCalidad"--}}
+                </div>
+                 <div class="form-fields">
+                <label>{{ localize "ARGS.arma.bonificadorMagia" }}:</label>
+                <input type="number" name="system.bonificadorMagia" value="{{system.bonificadorMagia}}" data-formula-editor/>   
+                 {{!--numberInput system.bonificadorMagia name="system.bonificadorMagia"--}}  
+                 </div>
+            </div>
+
+            
+            <h3 class="form-header">{{ localize "ARGS.arma.formula" }}</h3>
+             <h4 class="damage-header">               
+                {{ localize "ARGS.arma.formula" }}               
+            </h4>
+            <ol class="damage-parts form-group">
+               {{#if (ne system.atacaCon "artilleria")}}
+                <li class="damage-part flexrow">
+                    <input type="text" name="system.formula" value="{{system.bonificadorMagia}}+{{system.bonificadorCalidad}}+{{concat "@BO.bonus"}}+{{concat "@" system.atacaCon ".final"}}+ {{concat system.cantdado system.danio "x>=" system.critumbral }} " data-formula-editor/>
+                   
+                </li>
+               {{else}}
+                 <li class="damage-part flexrow">
+                    <input type="text" name="system.formula" value="{{system.bonificadorMagia}}+{{system.bonificadorCalidad}}+ {{concat system.cantdado system.danio "* 100"}} " data-formula-editor/>                  
+                </li>
+               {{/if}}
+            </ol>
+   
+            {{!-- Item Activation Template --}}
+           
+
+            
+
+            {{!-- Item Action Template --}}
+             </div>
+        </div>
+
+        {{!-- Effects Tab --}}
+        <div class="tab effects flexcol" data-group="primary" data-tab="efectos">
+          EFECTOS:
+        </div>
+	</section>
+</form>

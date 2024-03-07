@@ -1,0 +1,1035 @@
+{
+	"Actor": {
+		"types": [
+			"aventurero","npc","monstruo","vehiculo","animales"
+		],
+		"templates":{
+			"habilidadcomun":{
+				
+				"tamanio":"Mediano",
+				"notas":"",
+				"description":{
+					"value": "",
+					"chat": ""
+				}
+			
+			}, 
+			"namedCharacter":{
+				"caracteristicas":{
+					"destreza":{
+						"value": 0,
+						"level": false,
+						"mod": 0
+					  },
+					"fuerza":{
+						"value": 0,
+						"level": false,
+						"mod": 0
+					  },
+					"intuicion":{
+						"value": 0,
+						"level": false,
+						"mod": 0
+					  },
+					"carisma":{
+						"value": 0,
+						"level": false,
+						"mod": 0						
+					  },
+					"habilidad":{
+						"value": 0,
+						"level": false,
+						"mod": 0
+					  },
+					"constitucion":{
+						"value": 0,
+						"level": false,
+						"mod": 0
+					  },
+					"cultura":{
+						"value": 0,
+						"level": false,
+						"mod": 0
+					  },
+					"movimiento": {
+						"value": 3,
+						"unidad": "Hex",
+						"level": false,
+						"mod": 0
+						}
+					},
+				"languages": {
+						"value": [],
+						"custom": ""
+					},	
+				"dadosespeciales":{
+					"puntoSuerted21": true,
+					"puntoSuerted22": false,
+					"puntoSuerted41": true,
+					"puntoSuerted42": false,
+					"puntoSuerted61": true,
+					"puntoSuerted62": false,
+					"puntosLogicad41": false,
+					"puntosLogicad42": false
+				},
+				"religiones":{
+					"relfuego":{
+						"check":false, 
+						"value":0},
+					"relagua":{
+						"check":false, 
+						"value":0},
+					"reltierra":{
+						"check":false, 
+						"value":0},
+					"relmetal":{
+						"check":false, 
+						"value":0},
+					"relnaturaleza":{
+						"check":false, 
+						"value":0},
+					"relaire":{
+						"check":false, 
+						"value":0},
+					"relarkana":{
+						"check":false, 
+						"value":0},
+					"testvalue":{
+						"check":false, 
+						"value":""}
+				},
+				"calculados":{
+					"puntosvida":{
+						"value": 0,
+						"max": null,
+						"temp":0,
+						"tempmax":0
+					},
+					"puntosvidamax":0,
+					"puntosvidamax2":0,
+					"cargainventario":{
+						"value": 0,
+						"max": null,
+						"calc": "default",
+						"formula": ""
+					},
+					"cargaalmacenaje":{
+						"value": 0,
+						"max": 0,
+						"calc": "default",
+						"gratis": 10
+					},					
+					"cargaalmacenajeMt":{
+						"value": 0,
+						"bonoEf": 0,
+						"max": 0						
+					},
+					"catarmadura":{
+						"valor": 0,
+						"final": 0,
+						"bonoEf": 0
+					},
+					"OA":{
+						"valor": 0,
+						"final": 0,
+						"bonoEf": 0
+					},
+					"totaldefensa":{
+						"valor": 0,
+						"final": 0,
+						"bonoEf": 0
+					},
+					"BO":{
+						"bonus": 0
+					},
+					"BD":{
+						"valor": 0,
+						"final": 0,
+						"bonoEf": 0
+					},
+					"resistenciamagia":{
+						"valor": 0,
+						"final": 0,
+						"bonoEf": 0
+					},
+					"devocion":{
+						"valor": 0,
+						"final": 0,
+						"bonoEf": 0
+					},
+					"capacidadaprendizaje":{
+						"value": 0,
+						"max": 0,
+						"formula": ""
+					},
+					"xp":{
+						"value": 0,						
+						"max": 10,
+						"calc": "default",
+						"formula": "",
+						"leveleo": false
+					},
+					"puntosmagia":{
+						"value":0,
+						"max": 0,
+						"extra":0,
+						"bonoEf": 0
+					},
+					"conjurar":{
+						"value":0,
+						"primaria":0,
+						"secundaria":0,
+						"extra": 0,
+						"avance": 0,
+						"bonoEf": 0
+					}
+				},	
+				"moneda": {
+					"joyas": 0,
+					"mo": 0,
+					"mp": 0,
+					"mb": 0
+				 },
+				 "periciasinicial":{
+					"combate":{"value": 0},
+					"movimiento":{"value": 0},
+					"estaticas":{"value": 0},
+					"interaccion":{"value": 0},
+					"conocimiento":{"value": 0},
+					"extras":{"value": 0},
+					"combinadas":{"value": 0}
+				 },
+				 "pericias":{
+					"combate":{
+						"adosmanos":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"fuerza"
+						},
+						"armaslargas":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"habilidad"
+						},
+						"blancascortas":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"habilidad"
+						},
+						"espadas":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"habilidad"
+						},
+						"hachasymazas":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"habilidad"
+						},
+						"proyectiles":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"habilidad"
+						},
+						"pelea":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"fuerza"
+						}},
+					"movimiento":{
+						"atraparylanzar":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"destreza"
+						},
+						"correr":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"destreza"
+						},
+						"montar":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"destreza"
+						},
+						"nadar":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"destreza"
+						},
+						"saltar":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,							
+							"caracteristica":"destreza"
+						},
+						"sigiloyesconderse":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"destreza"
+						},
+						"trepar":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"destreza"
+						}
+					},
+					"estaticas":{
+						"conexionanimal":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"habilidad"
+						},
+						"dispositivomanual":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"habilidad"
+						},
+						"manufactura":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"habilidad"
+						},
+						"nudosysogas":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"habilidad"
+						},
+						"prestidigitacion":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"habilidad"
+						}
+					},
+					"interaccion":{
+						"persuadir":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"carisma"
+						},
+						"encontrartrampas":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"intuicion"
+						},
+						"supervivencia":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"intuicion"
+						},
+						"seduccion":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"carisma"
+						}
+					},
+					"conocimiento":{
+						"conocnaturaleza":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"cultura"
+						},
+						"conocisladragon":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"cultura"
+						},
+						"cocinaherboristeria":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"cultura"
+						},
+						"primerosauxilios":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica":"cultura",
+							"formula":"1d8"
+						}
+					},
+					"extras":{
+						"periciaextra1":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"nombre":"",
+							"pericia":"",
+							"bonopericia": 0							
+						},
+						"periciaextra2":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"nombre":"",
+							"pericia":"",
+							"bonopericia": 0							
+						},
+						"periciaextra3":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"nombre":"",
+							"pericia":"",
+							"bonopericia": 0							
+						}
+					},
+					"combinadas":{
+						"percepcion":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica1":"intuicion",
+							"caracteristica2":"cultura"					
+						},
+						"reflejos":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica1":"habilidad",							
+							"caracteristica2":"destreza"		
+						},
+						"resistencia":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"caracteristica1":"fuerza",					
+							"caracteristica2":"constitucion"
+						}
+					},
+					"especie":{
+						"periciaespecie1":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"nombre":"",
+							"pericia":"",
+							"bonopericia": 0							
+						},
+						"periciaespecie2":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"nombre":"",
+							"pericia":"",
+							"bonopericia": 0							
+						},
+						"periciaespecie3":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"nombre":"",
+							"pericia":"",
+							"bonopericia": 0							
+						}
+					},
+					"clase":{
+						"periciaclase1":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"nombre":"",
+							"pericia":"",
+							"bonopericia": 0							
+						},
+						"periciaclase2":{
+							"value":0,
+							"avance": 0,
+							"bonoEf": 0,
+							"nombre":"",
+							"pericia":"",
+							"bonopericia": 0							
+						}
+					},
+					"lenguajes": []
+					
+				}		
+			},
+			"npcmonstruos":{
+				"templates":["habilidadcomun"],
+				"nivel":"normal",
+				"puntosvida":{
+					"value": 0,
+					"max": null
+					},
+				"ataque": 0,
+				"danio": 0,
+				"cantdado":0,
+				"critumbral":0,
+				"bonifdefensiva": 0,
+				"puntosMagia": 0,
+				"pericias":1,
+				"resistenciaMagia":0,
+				"especial1": "",
+				"especial2": "",
+				"stats": {
+					"menor":{
+						"puntosvida":{
+							"value": 0,
+							"max": null
+							},
+						"ataque": 0,
+						"danio": 0,
+						"cantdado":0,
+						"critumbral":0,
+						"bonifdefensiva": 0,
+						"puntosMagia": 0,
+						"pericias":0,
+						"resistenciamagia": 0
+						},
+					"normal":{
+						"puntosvida":{
+							"value": 0,
+							"max": null
+							},
+						"ataque": 0,
+						"danio": 0,
+						"cantdado":0,
+						"critumbral":0,
+						"bonifdefensiva": 0,
+						"puntosMagia": 0,
+						"pericias":0,
+						"resistenciamagia": 0
+						},
+					"fuerte":{
+						"puntosvida":{
+							"value": 0,
+							"max": null
+							},
+						"ataque": 0,
+						"danio": 0,
+						"cantdado":0,
+						"critumbral":0,
+						"bonifdefensiva": 0,
+						"puntosMagia": 0,
+						"pericias":0,
+						"resistenciamagia": 0
+						},
+					"excepcional":{
+						"puntosvida":{
+							"value": 0,
+							"max": null
+							},
+						"ataque": 0,
+						"danio": 0,
+						"cantdado":0,
+						"critumbral":0,
+						"bonifdefensiva": 0,
+						"puntosMagia": 0,
+						"pericias":0,
+						"resistenciamagia": 0
+						},
+					"legendario":{
+						"puntosvida":{
+							"value": 0,
+							"max": null
+							},
+						"ataque": 0,
+						"danio": 0,
+						"cantdado":0,
+						"critumbral":0,
+						"bonifdefensiva": 0,
+						"puntosMagia": 0,
+						"pericias":0,
+						"resistenciamagia": 0
+						}
+				} 
+
+			} 
+		},
+		"aventurero":{
+			"templates":["habilidadcomun","namedCharacter"],
+			"clase": "",
+			"claseflag": false,
+			"especie": "",
+			"especieprev": "",
+			"especieflag": false,
+			"elgiohechizos": false,
+			"jugador": "",
+			"edad":0,
+			"altura":0,
+			"pelo":"",
+			"ojos":"",
+			"peinado":"",
+			"detalle":"",
+			"dadoextracul":false,
+			"dadoextracar":false,
+			"habilidades": [],
+			"hechizos":[],
+			"lenguajes":{
+				"0": {"nivel":1,"puntosF":0,"name":"","costo":0},
+				"1": {"nivel":1,"puntosF":0,"name":"","costo":0},
+				"2": {"nivel":1,"puntosF":0,"name":"","costo":0},
+				"3": {"nivel":1,"puntosF":0,"name":"","costo":0},
+				"4": {"nivel":1,"puntosF":0,"name":"","costo":0},
+				"5": {"nivel":1,"puntosF":0,"name":"","costo":0},
+				"6": {"nivel":1,"puntosF":0,"name":"","costo":0}
+			},
+			"biografia": {
+				  "value": "",
+				  "public": ""			
+			  },
+			"recursos": {
+				"primario": {
+				  "value": 0,
+				  "max": 0,
+				  "label": ""
+				},
+				"secundario": {
+				  "value": 0,
+				  "max": 0,
+				  "label": ""
+				},
+				"terciario": {
+				  "value": 0,
+				  "max": 0,
+				  "label": ""
+				}
+			  }
+		},
+		"npc":{
+			"templates":["habilidadcomun","npcmonstruos"],
+			"resistenciaMagia":0
+
+		},
+		"monstruo":{
+			"templates":["habilidadcomun","npcmonstruos"]
+		},
+		"vehiculo":{
+			"templates":["habilidadcomun"],
+			"tipo": "agua",
+			"velocidad":"",
+			"tripulacion": {				
+				"crew":[],
+				"min": "",
+				"value": 0,
+				"max": "",
+				"doble": false
+			},
+			"salud": {
+				"value":"",
+				"max":""
+			},
+			"cargo":{
+				"value":"",
+				"max": ""
+			},
+			"pasajeros":{
+				"passengers":[],
+				"value":"",
+				"max": ""
+			},
+			"armamento":{
+				"principal":{
+					"nombre":"",
+					"cantidad":0
+				},
+				"secundario":{
+					"nombre":"",
+					"cantidad":0
+				}
+			},
+			"dobletrip": false,
+			"mejoras":[]
+			
+		},
+		"animales":{
+			"templates":["habilidadcomun"],
+			"puntosvida":{
+				"value": 0,
+				"max": null
+				},
+			"ataque": 0,
+			"danio": 0,
+			"cantdado":0,
+			"critumbral":0,
+			"bonifdefensiva": 0,			
+			"instinto":0,
+			"movimiento": 0,
+			"destreza": 0,
+			"especial1": "",
+			"especial2": ""
+
+		}
+		
+	},
+	"Item": {
+		"types":[
+			"armas","armaduras","equipaje","equipamiento","consumibles","hechizo","clases","monturas","habilidades","especie","lenguajes"
+		],
+		"templates":{
+			"itemDescription":{
+				"description":{
+					"value": "",
+					"chat": ""
+				}
+			},
+			"itemfisico":{
+				"precio": {
+					"value": 0,
+					"denominacion": "mo"
+				},
+				"cantidad":0,
+				"peso": 0,
+				"Calidad": ["inferior", "normal", "superior"],
+				"equipado":false,
+				"enmontura":false,
+				"damage": {
+					"parts": [],
+					"versatile": ""
+				  }
+				
+				}
+		},
+		"armas":{
+			"templates":["itemDescription","itemfisico"],
+			"atacaCon": "",
+			"formula": "",
+			"danio": 0,
+			"recarga": 0,
+			"otro": 0,
+			"bonificadorCalidad":0,
+			"bonificadorMagia":0,
+			"lanzable":false,
+			"cantdado":0,
+			"critumbral":0
+				
+		},
+		"armaduras":{
+			"templates":["itemDescription","itemfisico"],
+			"categoria": 0,
+			"defensa": 0,
+			"personal": false
+		},
+		"equipaje":{
+			"templates":["itemDescription","itemfisico"],
+			"capacidad": {
+				"tipo": "slots",
+				"value": null,
+				"weightless": false
+			  },
+			  "notas":"",
+			  "montura": false
+		},
+		"equipamiento":{
+			"templates":["itemDescription","itemfisico"],
+			 "moneda": {
+				"joyas": 0,
+				"mo": 0,
+				"mp": 0,
+				"mb": 0
+			  },
+			"tipoEquipamiento": "",
+			"capacidad": {
+				"tipo": "slots",
+				"value": 0,
+				"weightless": false
+			  },
+			  "efecto":"",
+			  "formula":"",
+			  "usos": {
+				"value": 0,
+				"max": 0,
+				"por": ""
+				}
+			   
+
+		},
+		"consumibles":{
+			"templates":["itemDescription","itemfisico"],
+			"tipoConsumible":"",
+			"efecto": "",
+			"formula": "",
+			"estado": ["Preparada","Sin Preparar"],
+			"usos": {
+				"value": 1,
+				"por": ""
+			}
+		},
+		"hechizo":{
+			"templates":["itemDescription"],			
+			"nombre": "",
+			"nivel": [1,2,3,4,5,6,7],
+			"dios": "",			
+			"escuela": "",			
+			"nivelhechizo": 0,
+			"tiempocasteo": 0,
+			"duracion": 0,
+			"pm": 0,
+			"modificadorconjuracion": 0,
+			"preparado": false,
+			"resistible": false,
+			"transferible": false,
+			"formula": ""
+
+		},
+		"clases": {
+			"templates":["itemDescription"],
+			"stats":{
+				"primaria": "",
+				"secundaria":"",
+				"terciaria":""		
+					},
+			"conjurador":false,
+			"escuelas":{
+				"primera":"",
+				"segunda": "",
+				"tercera":"",
+				"cuarta":""
+			},
+			"periciasinicial":{
+				"combate": 0,
+				"movimiento":0,
+				"estaticas": 0,
+				"interaccion": 0,
+				"conocimiento": 0,
+				"extras":0,
+				"combinadas": 0
+			},
+			"periciasentrena":{
+				"combate":{
+					"adosmanos": 0,
+					"armaslargas": 0,
+					"blancascortas":0,
+					"espadas":0,
+					"hachasymazas":0,
+					"proyectiles":0,
+					"pelea":0
+					},
+				"movimiento":{
+					"atraparylanzar":0,
+					"correr":0,
+					"montar":0,
+					"nadar":0,
+					"saltar":0,
+					"sigiloyesconderse":0,
+					"trepar":0
+				},
+				"estaticas":{
+					"conexionanimal":0,
+					"dispositivomanual":0,
+					"manufactura":0,
+					"nudosysogas":0,
+					"prestidigitacion":0
+				},
+				"interaccion":{
+					"persuadir":0,
+					"encontrartrampas":0,
+					"supervivencia":0,
+					"seduccion":0
+				},
+				"conocimiento":{
+					"conocnaturaleza":0,
+					"conocisladragon":0,
+					"cocinaherboristeria":0,
+					"primerosauxilios":0
+				},
+				"extras":{
+					"periciaextra1":0,
+					"periciaextra2":0,
+					"periciaextra3":0
+				},
+				"combinadas":{
+					"percepcion":0,
+					"reflejos":0,
+					"resistencia":0
+				}
+			},
+			"habilidades":[],
+			"inventario":[],
+			"especiales":{
+				"especial1":{
+					"name":"",
+					"value":0,
+					"pericia": ""										
+				},
+				"especial2":{
+					"name":"",
+					"value":0,
+					"pericia": ""
+				},								
+				"puntosuerted2":false,				
+				"puntosuerted4":false,
+				"puntosuerted6":false,
+				"puntoslogicad41":false,
+				"puntoslogicad42":false,
+				"bonifBD":0,
+				"bonifCatArm":0,
+				"bonifPV":{
+					"value":0,
+					"min":0,
+					"max":0
+				},
+				"bonifconjurar":0,
+				"bonifPM":0,
+				"bonifRM":0
+			},
+			"puntologica":{
+				"extra": false,
+				"denominacion": ""
+			},
+			"puntosuerte":{
+				"extra": false,
+				"denominacion": ""
+			}
+
+		},
+		"habilidades":{
+			"templates":["itemDescription"],			
+			"tipo":"",
+			"clase":[""],
+			"requerimiento":"",
+			"formula": "",
+			"formauso": "",
+			"tiempopreparacion": {
+				"valor":0,
+				"unidad": ""
+			},
+			"duracion": {
+				"valor":0,
+				"unidad": ""
+			},
+			"usos": {
+				"value": 0,
+				"max": 0,
+				"por": ""
+				}
+		},
+		"monturas":{
+			"templates":["itemDescription","itemfisico"],
+			"notas":"",
+			"carga":{
+				"value": 0,
+				"max": 0
+			},
+			"pericias": {
+				"ataque":{"value":0},
+				"destreza":{"value":0},
+				"OA":{"value":0},							
+				"instinto": {"value":0},
+				"movimiento": {"value":0}
+				},	
+			"danio":0,
+			"formula":0,
+			"cantdado":0,
+			"critumbral":0,	
+			"montar":false,		
+			"puntosvida":{
+				"value": 0,
+				"max": null,
+				"temp":0,
+				"tempmax":0
+			}
+		},
+		"especie": {
+			"templates":["itemDescription"],
+			"periciasadol":{
+				"combate":{
+					"adosmanos": 0,
+					"armaslargas": 0,
+					"blancascortas":0,
+					"espadas":0,
+					"hachasymazas":0,
+					"proyectiles":0,
+					"pelea":0
+					},
+				"movimiento":{
+					"atraparylanzar":0,
+					"correr":0,
+					"montar":0,
+					"nadar":0,
+					"saltar":0,
+					"sigiloyesconderse":0,
+					"trepar":0
+				},
+				"estaticas":{
+					"conexionanimal":0,
+					"dispositivomanual":0,
+					"manufactura":0,
+					"nudosysogas":0,
+					"prestidigitacion":0
+				},
+				"interaccion":{
+					"persuadir":0,
+					"encontrartrampas":0,
+					"supervivencia":0,
+					"seduccion":0
+				},
+				"conocimiento":{
+					"conocnaturaleza":0,
+					"conocisladragon":0,
+					"cocinaherboristeria":0,
+					"primerosauxilios":0
+				},
+				"extras":{
+					"periciaextra1":0,
+					"periciaextra2":0,
+					"periciaextra3":0
+				},
+				"combinadas":{
+					"percepcion":0,
+					"reflejos":0,
+					"resistencia":0
+				}
+			},
+			"infotexto":"",
+			"periciasextra":{
+				"periciaextra1":{
+					"habilidad":"",
+					"valor": 0,
+					"nombre":""
+				},
+				"periciaextra2":{
+					"habilidad":"",
+					"valor": 0,
+					"nombre":""
+				},
+				"periciaextra3":{
+					"habilidad":"",
+					"valor": 0,
+					"nombre":""
+				}
+
+			},
+			"caracteristicas":{
+				"destreza":0,
+				"fuerza":0,
+				"intuicion":0,
+				"carisma":0,
+				"habilidad":0,
+				"constitucion":0,
+				"cultura":0,
+				"movimiento": 0
+				},
+			"lenguajesesp": []
+		},
+		"lenguajes":{
+			"templates":["itemDescription"],									
+			"costo": 1
+		}
+	}
+}

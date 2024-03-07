@@ -1,0 +1,89 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile" src="{{item.img}}" data-tooltip="{{item.name}}" data-edit="img"/>
+
+		    <div class="header-detalles">
+            <h1 class="itemnombre">               
+                <input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'ARGS.ItemName' }}"/>
+            </h1>
+            <div class="item-subtitulo">
+                <h4 class="item-tipo">{{localize "ITEM.TypeEquipaje"}}:</h4>    
+                <span class="item-status">
+                     {{#if system.equipado}}
+                    {{localize "ARGS.items.equipado" }}
+                   
+                    {{else}}
+                    {{ localize "ARGS.items.noequipado" }}    
+                     {{/if}}
+                    </span>            
+            </div>
+
+            <ul class="tipocalidad">
+                <li>
+                   Calidad:
+                </li>
+                <li>
+                    <select name="system.calidad">
+                        {{#select system.calidad}}
+						{{#each config.tipoCalidad as |name type|}}
+						<option value="{{type}}">{{localize name}}</option>
+						{{/each}}
+						{{/select}}		 
+                    </select>
+                </li>
+                
+            </ul>
+        </div>
+       
+	</header>
+	 {{!-- Item Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item" data-tab="descripcion">{{ localize "ARGS.tab.descripcion" }}</a>
+        <a class="item" data-tab="detalles">{{ localize "ARGS.tab.detalles" }}</a>
+        <a class="item" data-tab="efectos">{{ localize "ARGS.tab.efectos" }}</a>
+    </nav>
+	
+    {{!-- Item Sheet Body --}}
+    <section class="sheet-body">
+		    {{> "systems/ARGS/templates/partials/items-descripcion.hbs" }}
+
+	{{!-- Details Tab --}}
+       <div class="tab detalles" data-group="primary" data-tab="detalles">
+            <div class="equipaje-item item" data-item-id="{{item._id}}">
+            <h3 class="form-header">{{ localize "ARGS.items.itemdetalleequipaje" }}</h3>
+
+            <div class="form-group">               
+                <label style="text-align: right; padding-right: 5px;">{{ localize "ARGS.equipaje.carga" }}</label>
+                <input type="number" name="system.capacidad.value" value="{{system.capacidad.value}}" placeholder="0" /> 
+            </div>            
+            
+            {{!-- equipado --}}
+            <div class="form-group stacked">
+                <label>{{ localize "ARGS.items.itemequipajestatus" }}</label>
+                <div class="form-fields">
+                    <label class="checkbox">
+                        <input type="checkbox" name="system.equipado" {{checked system.equipado}}/> {{ localize "ARGS.items.equipado" }}
+                    </label>   
+                    <label class="checkbox">
+                        <input type="checkbox" name="system.montura" {{checked system.montura}}/> {{ localize "ARGS.equipaje.montura" }}
+                    </label>                      
+                </div>
+                
+            </div>
+
+             {{!-- equipamietno Efecto desc --}}
+            <h3 class="form-header">{{ localize "ARGS.equipaje.notas" }}</h3>
+            <div class="form-group">
+                <input type="text" name="system.notas" value="{{system.notas}}"  />   
+            </div> 
+          
+             </div>
+           
+        </div>
+
+        {{!-- Effects Tab --}}
+        <div class="tab effects flexcol" data-group="primary" data-tab="efectos">
+          EFECTOS:
+        </div>
+	</section>
+</form>

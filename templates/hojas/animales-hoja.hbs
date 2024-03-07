@@ -1,0 +1,198 @@
+
+<form class="{{cssClass}}" autocomplete="off">
+   <header class="animales sheet-header">
+      
+    <div class="animales-descripcion">
+      
+      <div class="animales-img"> 
+        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+      </div>   
+      <div class="animales-nombre"> 
+            <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'ARGS.items.nombre'}}"/>
+      </div>
+         
+      </div>
+   </header>
+  {{!-- Character Sheet Navigation --}}
+     <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="info">{{localize "ARGS.npcmonstruo.info"}}</a> 
+        <!--a class="item" data-tab="inventario">{{localize "ARGS.infotexto.inventario"}}</a-->         
+        <a class="item" data-tab="config">{{localize "ARGS.npcmonstruo.config"}}</a>     
+        <a class="item" data-tab="bio">{{localize "ARGS.infotexto.biografia"}}</a>
+    </nav>
+
+      <section class="sheet-body">
+         <div class="tab info" data-group="primary" data-tab="info">
+          <h3>{{ localize "ARGS.npcmonstruo.tamañotitulo" }}  </h3>  
+
+          <div class="nivel-tamanio">                         
+               <div class="tamanio">
+                <label>{{ localize "ARGS.npcmonstruo.tamañotitulo" }}</label> 
+                <select name="system.tamanio">
+               {{#select system.tamanio}}
+               {{#each config.tamanioToken as |name type|}}
+              
+               <option value="{{type}}">{{ localize (concat "ARGS.npcmonstruo.tamaño."type)}} </option>
+               {{/each}}
+               {{/select}}		 
+               </select>  
+               </div>
+            </div>
+    
+         <div class="sheet-trackeables flexrow">
+            <ul class="tracks flexrow">
+                <li class="track health">
+                    <h4 class="track-name box-title">{{ localize "ARGS.atributos.puntosvida" }}</h4>
+                    <div class="track-value multiple">
+                        <input name="system.puntosvida.value" type="text" value="{{system.puntosvida.value}}" placeholder="10" data-dtype="Number">
+                        <span class="sep"> / </span>
+                        <span>{{ system.puntosvida.max }}</span>                    
+                    </div>                 
+                </li>
+               
+                <li class="track mov">
+                    <h4 class="track-name box-title">{{ localize "ARGS.monturas.movimiento" }}</h4>
+                     <div class="track-value ">
+                        <span>{{system.movimiento}}</span>
+                        <footer class="track-footer">
+                       
+                        </footer>                 
+                    </div>  
+                </li>
+                <li class="track bonifdef">
+                    <h4 class="track-name box-title">{{localize "ARGS.atributos.BD"}}</h4>
+                      <div class="track-value col">
+                         
+                         <footer class="track-footer">
+                            <span style="font-size:30px;"> {{system.bonifdefensiva}}</span>                             
+                          </footer>  
+
+                       </div> 
+                </li>
+                 <li class="track peris" data-property="pericianpc" data-key="pericia-des" data-cat="animal">
+                    <h4 class="track-name box-title">{{ localize "ARGS.monturas.destreza" }}</h4>
+                    <div class="track-value ">                        
+                                
+                        <span style="font-size:30x !important;">{{system.destreza}} [ <a  class="fas fa-dice-d10 pericia-npc-check" data-roll="1d6" ></a> ] </span>                                                   
+                   
+                    </div>                 
+                </li>
+                
+                 <li class="track peris" data-property="pericianpc" data-key="pericia-inst" data-cat="animal">
+                    <h4 class="track-name box-title">{{ localize "ARGS.monturas.instinto" }}</h4>
+                    <div class="track-value ">                        
+                                
+                        <span style="font-size:30x !important;">{{system.instinto}} [ <a  class="fas fa-dice-d10 pericia-npc-check" data-roll="1d6" ></a> ] </span>                                                   
+                   
+                    </div>                 
+                </li>
+                
+            </ul>
+        </div>
+
+           <h3> {{ localize "ARGS.infotexto.ataques" }}</h3>
+         <div class="monstruo-ataques">          
+         
+            <div class="ataque-monstruo" data-actor-id="{{actor.id}}" data-item-id="{{item._id}}">
+              <a class="fas fa-paw-claws ataque-monstruonpc" > {{localize "ARGS.infotexto.atacar"}}</a>             
+            </div>
+            <div class="defensa-monstruo" data-actor-id="{{actor.id}}" data-item-id="{{item._id}}">
+               <a class="fas fa-shield-plus bo-bd"> {{localize "ARGS.infotexto.defender"}}</a> 
+            </div>
+
+         </div>
+         <div class="monstruo-habilidades">
+        <h3> {{localize "ARGS.infotexto.habilidades"}}</h3> 
+        <h4>{{ localize "ARGS.npcmonstruo.especial" }} 1:</h4>
+         {{{especial1HTML}}}
+           <h4>{{ localize "ARGS.npcmonstruo.especial" }} 2:</h4>
+          {{{especial2HTML}}}
+        
+         </div>         
+         
+        </div>  
+         <div class="tab config" data-group="primary" data-tab="config">
+                
+            <h3 class="form-header">{{ localize "ARGS.npcmonstruo.stats" }}</h3>
+              
+            <div class="stats-table">
+               <table class="stats-list">
+                 <tr class="stats-header">                    
+                    <td class="bestiario-bo">BO</td>                    
+                    <td class="bestiario-cantdado"> Dados</td>
+                    <td class="bestiario-dadodenom">dados Denom</td>
+                    <td class="bestiario-dadocrit" >crits on </td>
+                    <td class="bestiario-bd"> BD</td>
+                    <td class="bestiario-mov"> mov </td>
+                    <td class="bestiario-pv"> PV</td>                    
+                    <td class="bestiario-destreza"> destreza</td>
+                    <td class="bestiario-instinto"> instinto</td>
+                </tr>
+                         
+                <tr>
+                 <td> <input class="bestiario-boval inline-edit" type="text" name="system.ataque" value="{{system.ataque}}" placeholder="0" data-dtype="Number" ></td>
+                 <td> <input class="bestiario-cantdadoval inline-edit" type="text" name="system.cantdado" value="{{system.cantdado}}" placeholder="0" data-dtype="Number" ></td>
+                 <td>    <select name="system.danio">
+                           {{#select system.danio}}
+                           {{#each @root.config.dadodenominacion as |denom type|}}
+                           <option value="{{type}}">{{denom}}</option>
+                           {{/each}}
+                           {{/select}}		 
+                           </select>
+                  </td>         
+                 <td> <input class="bestiario-criton inline-edit" type="text" name="system.critumbral" value="{{system.critumbral}}" placeholder="0" data-dtype="Number" ></td>
+                 <td> <input class="bestiario-bd inline-edit" type="text" name="system.bonifdefensiva" value="{{system.bonifdefensiva}}" placeholder="0" data-dtype="Number" ></td>
+                 <td> <input class="bestiario-mov inline-edit" type="text" name="system.movimiento" value="{{system.movimiento}}" placeholder="0" data-dtype="Number" ></td>
+                 <td><input class="bestiario-pvmax inline-edit" type="text" name="system.puntosvida.max" value="{{system.puntosvida.max}}" placeholder="0" data-dtype="Number" ></td>
+                 <td> <input class="bestiario-destreza inline-edit" type="text" name="system.destreza" value="{{system.destreza}}" placeholder="0" data-dtype="Number" ></td>
+                 <td> <input class="bestiario-instinto inline-edit" type="text" name="system.instinto" value="{{system.instinto}}" placeholder="0" data-dtype="Number" ></td>
+                </tr>
+            </table>             
+            
+            </div>
+
+            <div class="especiales">
+               <h3> {{ localize "ARGS.npcmonstruo.especial" }} 1:</h3>
+               <div>
+                   {{editor
+                    especial1HTML
+                    target="system.especial1"
+                    button=true
+                    editable=editable
+                    engine="prosemirror"
+                    collaborate=false
+                }}
+               </div>
+               <h3>{{ localize "ARGS.npcmonstruo.especial" }} 2:</h3>
+               <div>
+                   {{editor
+                    especial2HTML
+                    target="system.especial2"
+                    button=true
+                    editable=editable
+                    engine="prosemirror"
+                    collaborate=false
+                }}
+               </div>
+
+            </div>
+        </div>    
+        <div class="tab biografia" data-group="primary" data-tab="bio">
+
+          
+             <h3>{{localize "ARGS.monturas.notas"}}</h3>
+           
+            <div class="animales-detalles">  
+               {{editor
+                    descriptionHTML
+                    target="system.description.value"
+                    button=true
+                    editable=editable
+                    engine="prosemirror"
+                    collaborate=false
+                }}
+            </div>
+        </div>
+      
+  </SECtion>     
+</form>

@@ -1,0 +1,40 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile" src="{{item.img}}" data-tooltip="{{item.name}}" data-edit="img"/>
+
+		    <div class="header-detalles">
+            <h1 class="itemnombre">               
+                <input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'ARGS.ItemName' }}"/>
+            </h1>
+            <div class="item-subtitulo">
+                <h4 class="item-tipo">{{localize "ITEM.TypeLenguajes"}}:</h4>               
+            </div>            
+        </div>
+       
+	</header>
+	 {{!-- Item Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item" data-tab="descripcion">{{ localize "ARGS.tab.descripcion" }}</a>
+        <a class="item" data-tab="detalles">{{ localize "ARGS.tab.detalles" }}</a>
+    </nav>
+	
+    {{!-- Item Sheet Body --}}
+    <section class="sheet-body">
+		    {{> "systems/ARGS/templates/partials/items-descripcion.hbs" }}
+
+	{{!-- Details Tab --}}
+       <div class="tab detalles" data-group="primary" data-tab="detalles">
+            <div class="armadura-item item" data-item-id="{{item._id}}">
+            <h3 class="form-header">{{ localize "ARGS.lenguajes.detalles" }}</h3>
+
+            {{!-- Weapon Type --}}
+            <div class="form-group">
+                <label>{{ localize "ARGS.lenguajes.costo" }}</label>
+                <input type="number" name="system.costo" value="{{system.costo}}" placeholder="0" />   
+            </div>
+              {{!-- Dado DAño --}}
+            </div>
+        </div>
+
+	</section>
+</form>

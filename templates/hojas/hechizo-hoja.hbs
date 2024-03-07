@@ -1,0 +1,104 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile" src="{{item.img}}" data-tooltip="{{item.name}}" data-edit="img"/>
+
+		    <div class="header-detalles">
+            <h1 class="itemnombre">               
+                <input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'ARGS.ItemName' }}"/>
+            </h1>
+            <div class="item-subtitulo">
+                <h4 class="item-tipo">{{localize "ITEM.TypeHechizo"}}:</h4>
+                <span class="item-status">
+                    {{localize item.system.dios}}  - {{localize item.system.escuela }} 
+                   </span>
+            </div>
+
+            
+        </div>
+       
+	</header>
+	 {{!-- Item Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item" data-tab="descripcion">{{ localize "ARGS.tab.descripcion" }}</a>
+        <a class="item" data-tab="detalles">{{ localize "ARGS.tab.detalles" }}</a>
+        <a class="item" data-tab="efectos">{{ localize "ARGS.tab.efectos" }}</a>
+    </nav>
+	
+    {{!-- Item Sheet Body --}}
+    <section class="sheet-body">
+		    {{> "systems/ARGS/templates/partials/items-descripcion.hbs" }}
+
+	{{!-- Details Tab --}}
+       <div class="tab detalles" data-group="primary" data-tab="detalles">
+            <div class="cons-item item" data-item-id="{{item._id}}">
+               
+            <h3 class="form-header">{{ localize "ARGS.hechizos.detallehechizo" }}</h3>
+
+             {{!-- Consumible Tipo --}}
+            <div class="form-group">
+                <label>{{ localize "ARGS.hechizos.escuela" }}</label>
+                <select name="system.escuela">
+				{{#select system.escuela}}
+				{{#each config.escuelas as |name type|}}
+				<option value="{{type}}">{{localize name}}</option>
+				{{/each}}
+				{{/select}}		 
+				</select>
+                <label>{{ localize "ARGS.hechizos.dios" }}</label>
+                <select name="system.dios">
+				{{#select system.dios}}
+				{{#each config.religionspell as |name type|}}
+				<option value="{{type}}">{{localize name}}</option>
+				{{/each}}
+				{{/select}}		 
+				</select>
+            </div>
+              {{!-- Forma uso del item --}}
+            <h3 class="form-header">{{ localize "ARGS.hechizos.info" }}</h3>
+            <div class="form-group">               
+                <label style="text-align: right; padding-right: 5px;">{{ localize "ARGS.hechizos.nivel" }}</label>
+                <select name="system.nivelhechizo" >
+                    {{#select system.nivelhechizo}}
+                    {{#each config.nivelhechizo as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}	
+                </select>
+                <label style="text-align: right; padding-right: 5px;">{{ localize "ARGS.hechizos.conjmod" }}</label>
+                <input type="number" name="system.modificadorconjuracion" value="{{system.modificadorconjuracion}}" placeholder="0" />   
+                <label style="text-align: right; padding-right: 5px;">{{ localize "ARGS.magia.puntosmagiacosto" }}</label>
+                <input type="text" name="system.pm" value="{{system.pm}}" />
+            </div>
+             
+
+
+             {{!-- Consumible Efecto desc --}}
+            <h3 class="form-header">{{ localize "ARGS.hechizos.usodet" }}</h3>
+           <div class="form-group">
+                 <label style="text-align: right; padding-right: 5px;">{{ localize "ARGS.hechizos.tiempocasteo" }}</label>
+                <input type="number" name="system.tiempocasteo" value="{{system.tiempocasteo}}" placeholder="0" /> 
+                 <label style="text-align: right; padding-right: 5px;">{{ localize "ARGS.hechizos.duracion" }}</label>
+                <input type="number" name="system.duracion" value="{{system.duracion}}" placeholder="0" /> {{ localize "ARGS.hechizos.turnos" }}
+            </div> 
+            <div class="form-group">
+                 <label style="text-align: right; padding-right: 5px;">{{ localize "ARGS.hechizos.resist" }}</label>
+                <input type="checkbox"  name="system.resistible" data-dtype="Boolean" {{checked system.resistible}}>
+                 <label style="text-align: right; padding-right: 5px;">{{ localize "ARGS.hechizos.transf" }}</label>
+                <input type="checkbox"  name="system.transferible" data-dtype="Boolean" {{checked system.transferible}}>
+            </div> 
+             {{!-- Consumible Formula --}}
+            <h3 class="form-header">{{ localize "ARGS.consumible.formula" }}</h3>
+             
+            <div class="form-group">
+                <input type="text" name="system.formula" value="1d20cs<=({{concat "@conjurar.value"}}+{{system.modificadorconjuracion}})"  />   
+            </div> 
+        </div>
+        </div>
+        {{!-- Effects Tab --}}
+        <div class="tab effects flexcol" data-group="primary" data-tab="efectos">
+          
+           {{> "systems/ARGS/templates/partials/efectos.hbs" }}
+          
+        </div>
+	</section>
+</form>

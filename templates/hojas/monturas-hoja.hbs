@@ -1,0 +1,142 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile" src="{{item.img}}" data-tooltip="{{item.name}}" data-edit="img"/>
+
+		    <div class="header-detalles">
+            <h1 class="itemnombre">
+                <input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'ARGS.ItemName' }}"/>
+            </h1>
+            <div class="item-subtitulo">
+                <h4 class="item-tipo">{{localize "ITEM.TypeMonturas"}}:</h4>                
+            </div>
+         
+
+            <ul class="tipocalidad">
+                <li>
+                   Calidad:
+                </li>
+                <li>
+                    <select name="system.calidad">
+                        {{#select system.calidad}}
+						{{#each config.tipoCalidad as |name type|}}
+						<option value="{{type}}">{{localize name}}</option>
+						{{/each}}
+						{{/select}}		 
+                    </select>
+                </li>
+                
+            </ul>
+            
+
+
+
+        </div>
+       
+	</header>
+	 {{!-- Item Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item" data-tab="descripcion">{{ localize "ARGS.tab.descripcion" }}</a>
+        <a class="item" data-tab="detalles">{{ localize "ARGS.tab.detalles" }}</a>
+        <a class="item" data-tab="efectos">{{ localize "ARGS.tab.efectos" }}</a>
+    </nav>
+	
+    {{!-- Item Sheet Body --}}
+    <section class="sheet-body">
+		    {{> "systems/ARGS/templates/partials/items-descripcion.hbs" }}
+    
+	{{!-- Details Tab --}}
+       <div class="tab detalles" data-group="primary" data-tab="detalles">
+             <div class="monturas-item item" data-item-id="{{item._id}}">
+            <h3 class="form-header">{{ localize "ARGS.items.itemdetallemontura" }}</h3>
+
+            {{!-- Stats Montura --}}
+            <h4 class="damage-header">               
+                {{ localize "ARGS.items.itemmonturastats" }}               
+            </h4>
+             <div class="form-group stacked">
+            <ol class="damage-parts form-group">    
+                 <label>{{ localize "ARGS.monturas.destreza" }}
+                     <input type="text" name="system.pericias.destreza.value" value="{{system.pericias.destreza.value}}" />
+                 </label>           
+                
+               <label>{{ localize "ARGS.monturas.OA" }}
+                <input type="text" name="system.pericias.OA.value" value="{{system.pericias.OA.value}}" /> 
+               </label>           
+                    
+                 <label>{{ localize "ARGS.monturas.puntosvida" }}
+                        <input type="text" name="system.puntosvida.max" value="{{system.puntosvida.max}}" />
+                 </label>    
+
+                <label>{{ localize "ARGS.monturas.instinto" }}
+                        <input type="text" name="system.pericias.instinto.value" value="{{system.pericias.instinto.value}}" />
+                </label>           
+                
+                <label>{{ localize "ARGS.monturas.ataque" }}
+                        <input type="text" name="system.pericias.ataque.value" value="{{system.pericias.ataque.value}}" />
+                </label> 
+                <label>{{ localize "ARGS.monturas.movimiento" }}
+                        <input type="text" name="system.pericias.movimiento.value" value="{{system.pericias.movimiento.value}}" />
+                </label>    
+                
+                                  
+                
+            </ol>
+            </div>
+              {{!-- Dado DAño --}}
+            <div class="form-group">
+                <label>{{ localize "ARGS.arma.dadodanio" }}</label>
+                <input type="number" name="system.cantdado" value="{{system.cantdado}}" placeholder={{ localize "ARGS.arma.cantdado" }} data-tooltip="ARGS.arma.cantdado" data-formula-editor/>   
+                <select name="system.danio">
+				{{#select system.danio}}
+				{{#each config.dadodenominacion as |denom type|}}
+				<option value="{{type}}">{{denom}}</option>
+				{{/each}}
+				{{/select}}		 
+				</select>
+                <input type="number" name="system.critumbral" value="{{system.critumbral}}" placeholder={{ localize "ARGS.arma.critumbral"}} data-tooltip="ARGS.arma.critumbral" data-formula-editor/>   
+            </div>
+
+                    
+            {{!-- Capacidad de CArga Montura --}}
+            <div class="form-group stacked">
+                <label>{{ localize "ARGS.items.itemmonturacapacidad" }}</label>
+                <div class="form-fields">
+                     <input type="number" name="system.carga.max" placeholder="0" value="{{system.carga.max}}" /> 
+                     <p style="font-weight: bold;">MAX</p>
+                </div>     
+                <div class="form-fields"></div>
+                     <p style="font-style: italic; font; font-weight: bold;font-size: 12px; color: purple;"> ** {{localize "ARGS.infotexto.monturacarga"}} ** </p>  
+                </div>
+            </div>
+          
+          
+
+            
+            <h3 class="form-header">{{ localize "ARGS.monturas.formula" }}</h3>
+             <h4 class="damage-header">               
+                {{ localize "ARGS.monturas.formula" }}               
+            </h4>
+            <ol class="damage-parts form-group">
+               
+                <li class="damage-part flexrow">
+                    <input type="text" name="system.formula" value="{{system.pericias.ataque.value}}+{{concat system.cantdado system.danio "x>=" system.critumbral }} " data-formula-editor/>
+                   
+                </li>
+               
+            </ol>
+   
+            {{!-- Item Activation Template --}}
+           
+
+            
+
+            {{!-- Item Action Template --}}
+            </div>
+        </div>
+
+        {{!-- Effects Tab --}}
+        <div class="tab effects flexcol" data-group="primary" data-tab="efectos">
+          EFECTOS:
+        </div>
+	</section>
+</form>

@@ -1,0 +1,76 @@
+<form class="{{cssClass}}" autocomplete="off">
+   <header class="sheet-header">
+      <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+      <section class="header-details1">  
+        <table>
+                  <tr>
+                    <td>{{localize "ARGS.infotexto.jugador"}}:</td><td><input name="system.jugador" type="text" value="{{system.jugador}}" placeholder="{{ localize 'Jugador' }}" /></td>
+                  </tr>
+                  <tr>
+                    <td>{{localize "ARGS.infotexto.nombre"}}:</td><td><input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'Name' }}"/></td>                    
+                  </tr>
+        </table>          
+                 
+                   {{!-- <td>{{localize "ARGS.infotexto.especie"}}:</td><td><input name="system.especie" type="text" value="{{system.especie}}"  placeholder="{{ localize 'Especie' }}" /></td>  --}}
+                    {{>
+                        systems/ARGS/templates/partials/selector-items.hbs                        
+                        config=catalogoSelectors.especie
+                         }}
+                    {{!--<td>{{localize "ARGS.infotexto.clase"}}:</td><td><input name="system.clase" type="text" value="{{system.clase}}"  placeholder="{{ localize 'Clase' }}" /></td>    --}}                     
+                  
+                    {{>
+                      systems/ARGS/templates/partials/selector-items.hbs
+                      config=catalogoSelectors.clases
+                    }}
+              
+      </section>  
+     
+      <section class="header-sistema">   
+         <p>ARGS</p>
+    
+      
+      </section> 
+   </header>
+{{!-- Character Sheet Navigation --}}
+     <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="caracteristicas">{{localize "ARGS.tab.caracteristicas"}}</a>
+        <a class="item" data-tab="inventario">{{localize "ARGS.tab.inventario"}}</a>
+        <a class="item" data-tab="habilidades">{{localize "ARGS.tab.habilidades"}}</a>
+       {{#if system.esConjurador}}  <a class="item" data-tab="grimorio">{{localize "ARGS.tab.grimorio"}}</a> {{/if}}
+        <a class="item" data-tab="biografia">{{localize "ARGS.tab.biografia"}}</a>
+         <a class="item" data-tab="efectos">{{localize "ARGS.tab.efectos"}}</a>
+    </nav>
+
+        {{!-- Character Sheet Body --}}
+      <section class="sheet-body">
+      
+        <div class="tab caracteristicas" data-group="primary" data-tab="caracteristicas">
+        
+           {{> "systems/ARGS/templates/partials/aventurero-caracteristicas.hbs" }}
+            
+        </div>  
+        <div class="tab inventario" data-group="primary" data-tab="inventario">
+             {{> "systems/ARGS/templates/partials/aventurero-inventario.hbs" }}
+        </div>
+      
+           <div class="tab habilidades" data-group="primary" data-tab="habilidades">
+          {{> "systems/ARGS/templates/partials/aventurero-habilidades.hbs" }}
+        </div>  
+      {{#if system.esConjurador}}
+        <div class="tab grimorio" data-group="primary" data-tab="grimorio">
+           {{>   "systems/ARGS/templates/partials/aventurero-grimorio.hbs" }}
+      </div>
+      {{/if}}
+        <div class="tab biografia" data-group="primary" data-tab="biografia">
+           {{> "systems/ARGS/templates/partials/aventurero-biografia.hbs" }}
+        </div>
+
+           {{!-- Effects Tab --}}
+        <div class="tab effects flexcol" data-group="primary" data-tab="efectos">
+          
+           {{> "systems/ARGS/templates/partials/efectos.hbs" }}
+          
+        </div>
+      </section>
+     
+</form>

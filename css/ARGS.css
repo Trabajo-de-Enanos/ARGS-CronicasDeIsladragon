@@ -1,0 +1,415 @@
+:root {
+  --background-highlight: rgba(255, 255, 255, 0.25);
+  --clickable: red;
+  --form-background: rgba(0, 0, 0, 0.0392156863);
+  --inactive-control: #A0A09A;
+  --primary: black;
+  --secondary: #78557e;
+}
+@font-face {
+  font-family: "Dubstep Dungeons";
+  src: url("../fonts/Dubstep Dungeons.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Night of the Dragons";
+  src: url("../fonts/Night of the Dragons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dungeon";
+  src: url("../fonts/DUNGRG__.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dominican Small Caps";
+  src: url("../fonts/DOMISC__.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+ :root {
+  --font-header: "Dungeon";
+  
+}
+
+h4 {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+/* Header*/ 
+
+
+.sheet header.sheet-header input[type="text"]{
+  width: 100%;
+  height: 20px;
+  font-family: "cursive";
+  box-sizing: border-box;
+  line-height: 30px;
+  font-size:15px;
+  font-weight:normal;
+  border:0;
+  background: none;
+  border-bottom:1px solid #252525;
+  outline:none;
+  border-radius: 0;
+    
+  
+}
+.sheet header.sheet-header {
+  background-color: none;
+  height: 170px;
+  width: 100%;
+  display: inline-flex;
+  overflow:hidden;
+}
+
+.sheet header.sheet-header .header-details1 table {
+ /* padding:0;
+  margin:0;
+  width: inherit;*/
+  background: none;
+  border-top: none;
+  border-bottom: none;
+}
+.sheet header.sheet-header .header-details1 table td, table th {
+  background:none;
+  padding-right: 2px;
+  /*margin: 0 0;
+  padding: 0 0;
+  width: 250px;*/
+}
+
+.sheet header.sheet-header .header-details2 table {
+  /* padding:0;
+   margin:0;
+   width: inherit;*/
+   background: none;
+   border-top: none;
+   border-bottom: none;
+ }
+ .sheet header.sheet-header .header-details2 table td, table th {
+   background:none;
+   padding-right: 2px;
+   /*margin: 0 0;
+   padding: 0 0;
+   width: 250px;*/
+ }
+
+
+ 
+
+.sheet header.sheet-header .header-details1 {
+  flex: 0 0 250px;
+  align-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Dungeon";
+  font-size: 20px;
+  font-weight: 900;
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+  /*background: url("../assets/CharSheet/perg1y2.png");*/
+}
+
+
+.sheet header.sheet-header .header-details2 {
+  flex: 0 0 250px;
+  align-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Dungeon";
+  font-size: 20px;
+  font-weight: 900;
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+}
+
+.sheet header.sheet-header .header-sistema  {
+  flex:0 0 200px;
+  font-family: "Dubstep Dungeons";
+  font-size: 30px;
+  height: 166px;
+  text-align: center;
+  }
+
+
+
+.sheet .info-char {
+  color: black;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color:var(--dl-color-gray-black);
+  /*background: url("../assets/CharSheet/perg1y2.png");*/
+}
+
+.sheet header.sheet-header img {
+  width: 160px;
+  height: 160px;
+}
+
+/* Body */
+
+
+.sheet .sheet-body input[type="text"]{
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  line-height: 30px;
+  font-size:30px;
+  font-weight: bold;
+  border:0;
+  background: none;
+  border-bottom:1px solid #252525;
+  outline:none;
+  border-radius: 0;
+    
+  
+}
+img {
+  border: 0px solid black;
+  width: 40px;
+  height: 40px;
+}
+.sheet .sheet-body-carac {
+  font-family: "Dungeon";
+  display: inline-flex;
+  flex-direction: row;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /*display: inline-block;*/
+ /* position: relative;*/
+}
+
+
+.sheet .sheet-body-carac .caracteristicas-top{
+ display: flex;
+ font-family: "Dungeon";
+ font-size: 30px;
+ font-weight: bold ;
+ text-align: center;
+  /*display: inline-flex;*/
+  flex: 0 0 100px;
+  align-content: flex-start;
+
+      
+}
+.sheet .sheet-body-carac .caracteristicas-bottom{
+  display: flex;
+  font-family: "Dungeon";
+  font-size: 30px;
+  font-weight: bold ;
+  text-align: center;
+ /* display: inline-flex;*/
+ 
+      
+ }
+.sheet .sheet-body-carac .caracteristicas-top table {
+  padding:0;
+  margin:0;
+  background: none;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+.sheet .sheet-body-carac .caracteristicas-top table td, table th {
+  background:none;
+  margin: 0 0;
+  padding: 0 0;
+  width: 70px;
+}
+
+
+ .sheet .sheet-body-carac .caracteristicas-bottom table {
+  padding:0;
+  margin:0;
+  background: none;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+.sheet .sheet-body-carac .caracteristicas-bottom table td, table th {
+  background:none;
+  margin: 0 0;
+  padding: 0 0;
+  width: 70px;
+}
+
+.sheet .sheet-body-carac .dados-suerte{
+  font-family: "Dungeon";
+  font-size: 30px;
+  font-weight: bold ;
+  text-align: center;
+  flex: 0 0 150px;
+  /*display: block;*/
+  /*position: absolute;   
+  top: -100px;
+  left: 600px;*/
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+
+ }
+
+
+.caracteristicas {
+  
+  display:  inline-block;
+  flex-direction: row;
+  padding-right: 20px;
+  /*flex: 0 0 0px;*/
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+}
+
+.sheet .sheet-body-carac .dados-suerte table {
+  padding:0;
+  margin:0;
+  background: none;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+.sheet .sheet-body-carac .dados-suerte table td, table th {
+  background:none;
+  margin: 0 0;
+  padding: 0 0;
+  width: 50px;
+ }
+
+.sheet .sheet-body-carac .dados-suerte table tr:nth-child(2),table td:nth-child(2) {
+  margin: 0 0;
+  padding: 0 0;
+  height: 10px;
+}
+
+.sheet .sheet-body-carac .dados-suerte h4{
+  font-size: 20px;
+}
+.dados-suerte input{
+  height: 10px;
+  width: 10px;
+  vertical-align: top;
+  padding: 0 0;
+}
+
+.ARGS.sheet .sheet-tabs {
+  display: flex;
+  justify-content: space-around;
+  font-family:"Dominican Small Caps";
+  font-size:20px;
+  font-weight: bold;
+  color: rgb(47, 48, 47);
+}
+
+.ARGS.sheet .sheet-tabs .active{
+  display: flex;
+  justify-content: space-around;
+  font-family:"Dominican Small Caps";
+  font-size:20px;
+  font-weight: bold;
+  color: rgb(49, 11, 11);
+}
+
+.caracteristicas{
+  border: 0px;
+}
+
+
+.sheet .sheet-body .testt{
+  display:block;
+  font-family: "Dungeon";
+  font-size: 30px;
+  font-weight: bold ;
+  text-align: center;
+   /*display: inline-flex;*/
+   flex: 0 0 100px;
+   align-content: flex-start;
+
+       
+ }
+ .ARGS.sheet.Aventurero ul.attributes li.attribute {
+  height: 60px;
+  margin: 0 5px 0 0;
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+ .ARGS.sheet.Aventurero.namedCharacter .sheet-header .attributes .hit-dice {
+     font-size: 24px;
+ }
+ .ARGS.sheet.Aventurero .sheet-header .attributes .attribute {
+     position: relative;
+     height: 70px;
+     margin: 0;
+     border: none;
+     border-right: 2px groove #eeede0;
+     border-radius: 0;
+ }
+ .ARGS.sheet.Aventurero ul.attributes li.attribute {
+     height: 60px;
+     margin: 0 5px 0 0;
+     border: 2px groove #eeede0;
+     border-radius: 4px;
+     text-align: center;
+ }
+ 
+ .ARGS.sheet.Aventurero .sheet-header .attributes .attribute .attribute-name {
+     position: relative;
+ }
+ .ARGS.sheet.Aventurero h4.box-title {
+     height: 18px;
+     line-height: 16px;
+     margin: 4px 8px 2px;
+     font-family: "Modesto Condensed", "Palatino Linotype", serif;
+     font-size: 20px;
+     font-weight: 700;
+     font-size: 18px;
+     color: #4b4a44;
+     border-bottom: 1px solid #c9c7b8;
+     white-space: nowrap;
+ }
+ 
+ .ARGS.sheet.Aventurero .sheet-header .attributes .attribute .attribute-value {
+     height: 30px;
+     line-height: 30px;
+ }
+ 
+ .ARGS.sheet.Aventurero ul.attributes li.attribute .attribute-value {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 28px;
+     line-height: 28px;
+     font-family: "Dungeon";
+     font-size: 20px;
+     font-weight: 700;
+ }
+ 
+ .ARGS.sheet.Aventurero ul.attributes li.attribute .attribute-value.multiple input {flex: 0 0 33%;}
+ .ARGS.sheet.Aventurero ul.attributes li.attribute .attribute-value.multiple span:not(.sep) {
+   flex: 0 0 33%;
+ }
+ 
+ .ARGS.sheet span.sep {
+     flex: none;
+     margin: 0 1px;
+     display: inline;
+     position: relative;
+     color: #7a7971;
+     font-weight: normal;
+ }
+
+
+
+/*borrar */

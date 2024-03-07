@@ -1,0 +1,106 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile" src="{{item.img}}" data-tooltip="{{item.name}}" data-edit="img"/>
+
+		    <div class="header-detalles">
+            <h1 class="itemnombre">               
+                <input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'ARGS.ItemName' }}"/>
+            </h1>
+            <div class="item-subtitulo">
+                <h4 class="item-tipo">{{localize "ITEM.TypeHabilidades"}}:</h4>
+                <span class="item-status">                                      
+                    {{localize system.tipo}}
+                   </span>
+            </div>            
+        </div>
+       
+	</header>
+	 {{!-- Item Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item" data-tab="descripcion">{{ localize "ARGS.tab.descripcion" }}</a>
+        <a class="item" data-tab="detalles">{{ localize "ARGS.tab.detalles" }}</a>
+        <a class="item" data-tab="efectos">{{ localize "ARGS.tab.efectos" }}</a>
+    </nav>
+	
+    {{!-- Item Sheet Body --}}
+    <section class="sheet-body">
+		    {{> "systems/ARGS/templates/partials/items-descripcion.hbs" }}
+
+	{{!-- Details Tab --}}
+       <div class="tab detalles" data-group="primary" data-tab="detalles">
+           
+            <div class="equip-item item" data-item-id="{{item._id}}">
+            <h3 class="form-header">{{ localize "ARGS.habilidades.detallehabilidad" }}</h3>
+
+             {{!-- Consumible Tipo --}}
+            <div class="form-group">
+                <label>{{ localize "ARGS.habilidades.tipohabilidad" }}</label>
+                <select name="system.tipo">
+				{{#select system.tipo}}
+				{{#each config.tipoHabilidad as |name|}}
+				<option value="{{name}}">{{localize name}}</option>
+				{{/each}}
+				{{/select}}		 
+				</select>
+            </div>
+              {{!-- Forma uso del item --}}
+            <h3 class="form-header">{{ localize "ARGS.habilidades.formauso" }}</h3>
+            <div class="form-group">               
+                <label style="text-align: right; padding-right: 5px;">{{ localize "ARGS.items.usos" }}</label>
+                <input type="number" name="system.usos.value" value="{{system.usos.value}}" placeholder="0" /> 
+                <label style="text-align: right; padding-right: 5px;">MAX</label>
+                <input type="number" name="system.usos.max" value="{{system.usos.max}}" placeholder="0" />     
+                <label style="text-align: right; padding-right: 5px;">{{ localize "ARGS.items.itempor" }}</label>
+                <input type="text" name="system.usos.por" value="{{system.usos.por}}" placeholder={{ localize "ARGS.items.itempordesc" }} />
+            </div>
+
+           
+            <div class="form-group">               
+                <label style="text-align: right; padding-right: 5px;">{{ localize "ARGS.habilidades.preparacion" }}</label>
+                <label style="text-align: right; padding-right: 5px;">Prep.</label>
+                <input type="number" name="system.tiempopreparacion.valor" value="{{system.tiempopreparacion.valor}}" placeholder="0" />                 
+                <input type="text" name="system.tiempopreparacion.unidad" value="{{system.tiempopreparacion.unidad}}" placeholder="Turn/hs" />     
+                <label style="text-align: right; padding-right: 5px;">Dur.</label>
+                 <input type="number" name="system.duracion.valor" value="{{system.duracion.valor}}" placeholder="0" />                
+                <input type="text" name="system.duracion.unidad" value="{{system.duracion.unidad}}" placeholder="Turn/hs" />
+            </div>
+                  
+
+           
+
+             {{!-- equipamietno Efecto desc --}}
+            <h3 class="form-header">{{ localize "ARGS.habilidades.formauso" }}</h3>
+            <div class="form-group">
+                <input type="text" name="system.formauso" value="{{system.formauso}}"  />   
+            </div> 
+             <h3 class="form-header">{{ localize "ARGS.habilidades.requerimiento" }}</h3>
+            <div class="form-group">
+                <input type="text" name="system.requerimiento" value="{{system.requerimiento}}"  />   
+            </div> 
+
+            
+           
+            <label>{{ localize "ARGS.infotexto.clase" }}</label>
+                <select  name="system.clase" id="clase-hab">
+				{{#select  system.clase}}
+				{{#each config.clases as |name id|}}
+				<option value="{{id}}">{{localize name}}</option>                 
+				{{/each}}
+				{{/select}}		 
+				</select>
+           
+             {{!-- Equipamiento Formula --}}
+            <h3 class="form-header">{{ localize "ARGS.equipamiento.formula" }}</h3>
+            <div class="form-group">
+                <input type="text" name="system.formula" value="{{system.formula}}"  />   
+            </div> 
+           </div>
+           
+        </div>
+
+        {{!-- Effects Tab --}}
+        <div class="tab effects flexcol" data-group="primary" data-tab="efectos">
+          EFECTOS:
+        </div>
+	</section>
+</form>

@@ -1,0 +1,10 @@
+export const ARGS = {};
+
+ARGS.attackTypes = {
+	nada:"",
+	mosquetes: "ARGS.attack.muskets",
+	artesMarciales: "ARGS.attack.martialArts",
+	magia: "ARGS.attack.magic",
+	criatura: "ARGS.attack.creature",
+	canon: "ARGS.attack.cannon"	
+}

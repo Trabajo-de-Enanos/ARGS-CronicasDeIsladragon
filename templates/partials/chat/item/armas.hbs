@@ -1,0 +1,69 @@
+<div
+	class="args chat-card item-card"
+	data-actor-id="{{actor.id}}"
+	data-item-id="{{item._id}}"
+>
+	<header class="card-header flexrow">
+		<img src="{{item.img}}" data-tooltip="{{item.name}}"/>
+		<h3 class="item-name">{{item.name}}</h3>
+	</header>
+
+	<div class="card-content">
+		<p>
+			<b>{{localize (concat "ARGS.ataque."item.system.atacaCon)}}</b> 
+		</p>
+		{{{description}}}
+	</div>
+        {{#if item.system.equipado}}
+        {{localize "ARGS.items.equipado" }}
+        <div class="chat-card-buttons">
+		<button
+			class="item-control"
+			data-actor-id="{{actor.id}}"
+			data-item-id="{{item._id}}"
+			data-action="tirar-ataque"
+		>
+			{{localize 'ARGS.infotexto.atacar'}}
+		</button>
+			{{#if (eq actor.system.caracteristicas.destreza.final  7)}}
+			<button
+			class="item-control"
+			data-actor-id="{{actor.id}}"
+			data-item-id="{{item._id}}"
+			data-action="tirar-ambidiestro"
+			>
+			{{localize 'ARGS.infotexto.ambidiestro'}}
+			</button>
+			{{/if}}
+		<button
+			class="item-control"
+			data-actor-id="{{actor.id}}"
+			data-item-id="{{item._id}}"
+			data-action="tirar-defensa"
+		>
+			{{localize 'ARGS.infotexto.defender'}}
+		</button>
+		
+	    </div>
+        {{else}}
+            {{ localize "ARGS.items.noequipado" }}    
+        {{/if}}
+	
+
+	<!--footer class="card-footer">
+		<ul class="tags">
+			<li class="tag tag_primary tag_small">
+				{{localize "SHADOWDARK.item.spell_tier"}}
+				{{ item.system.tier }}
+			</li>
+			<li class="tag tag_secondary tag_small">
+				{{localize "SHADOWDARK.item.spell_duration"}}:
+				
+			</li>
+			<li class="tag tag_secondary tag_small">
+				{{localize "SHADOWDARK.item.spell_range"}}:
+			
+			</li>
+		</ul>
+	</footer-->
+</div>

@@ -1,0 +1,17 @@
+{
+  "ARGS": {
+	  "attack": {
+			"none":"",
+			"muskets": "Muskets",
+			"martialArts": "Martial Arts",
+			"magic": "Magic",
+			"creature": "Creature",
+			"cannon": "Cannon"
+	  },
+	     "weapon": {
+			"attackWith":"Attack with:",
+			"damage": "Damage",
+			"reload": "Reload",
+		},
+  }
+}

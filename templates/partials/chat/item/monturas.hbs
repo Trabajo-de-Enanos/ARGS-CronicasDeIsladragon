@@ -1,0 +1,55 @@
+
+<section class="monturas" data-actor-id="{{actor.id}}"
+	data-item-id="{{item._id}}">
+    <div class="monturas-header">
+        <ol class="monturas-list">
+            <li class="item flexrow" data-item-id="{{item._id}}">
+                    <div class="mount-name">
+                        <div class="mount-image" data-item-id="{{item._id}}">
+                        <img src="{{item.img}}" title="{{item.name}}" />
+                        </div>
+                        <div class="nombremount">{{item.name}}</div>
+                        
+            </li>
+        </ol>
+    </div>
+    <div class="mount-tracks item"  style="display: block !important;" data-item-id="{{item._id}}">      
+           <div class="track-value multiple">
+                <img src="/systems/ARGS/assets/CharSheet/mont-pg.png"  >
+                <span>{{item.system.puntosvida.value}} </span>
+                <span class="sep"> / </span>
+                <span>{{ item.system.puntosvida.max }}</span>                    
+            </div>
+           
+            <div class="track-value multiple">
+                <img src="/systems/ARGS/assets/CharSheet/kg.png"  >
+                 <span>{{actor.system.calculados.cargaalmacenajeMt.value}}</span>
+                <span class="sep"> / </span>
+                <span>{{item.system.carga.max}}</span>                
+               
+            </div>           
+             <div class="track-value multiple2">
+                    <span>{{localize "ARGS.monturas.doble"}}</span>
+                </div> 
+             
+    </div>
+    <section class="statsmount" data-actor-id="{{actor.id}}" data-item-id="{{item._id}}">
+        <ol class="stats-mount">          
+        {{#each item.system.pericias as |pericia key|}}         
+          <li class="pericias item flexrow"  data-actor-id="{{@root.actor.id}}" data-item-id="{{@root.item._id}}">
+           <!--label for="system.pericias.{{key}}" class="pericia-label">{{localize (concat "ARGS.monturas."key)}}</label-->          
+            <img src="/systems/ARGS/assets/CharSheet/mont-{{key}}.png" data-tooltip="{{localize (concat "ARGS.monturas."key)}}" >
+            <span>=</span>
+            <span >{{pericia.value}}</span> 
+            {{#if (eq key "instinto") }}
+             <div  class="fas fa-dice-d10 mont_instinto" data-roll="1d10<=@pericias.{{key}}.final" data-label="{{localize (concat "ARGS.monturas."key)}}"  data-actor-id="{{@root.actor.id}}" data-item-id="{{@root.item._id}}">{{!--numberFormat prcombate.value decimals=0 sign=true--}}</div> 
+            {{/if}}
+            {{#if (eq key "ataque")}}
+             <div  class="fas fa-dice-d10 mont_ataque" data-roll-type="item"  data-actor-id="{{@root.actor.id}}" data-item-id="{{@root.item._id}}"></div>
+            {{/if}}           
+          </li> 
+                
+        {{/each}}
+        </ol>
+    </section>
+</section>

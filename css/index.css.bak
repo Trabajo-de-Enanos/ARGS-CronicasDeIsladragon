@@ -1,0 +1,9 @@
+
+}
+ARGS.sheet.player .home-textinput1 {
+  top: 42px;
+  left: 278px;
+  width: 239px;
+  height: 30px;
+  position: absolute;
+}

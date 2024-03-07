@@ -1,0 +1,52 @@
+<div
+	class="ARGS chat-card pericia-card"
+	data-actor-id="{{data.actor.id}}"
+	data-item-id="{{data.item.id}}"
+	{{#if tokenId}}data-token-id="{{tokenId}}"{{/if}}
+>
+	<header class="card-header flexrow">	
+		<div class="header-title">
+			<h3 class="item-name">{{title}}</h3>
+		</div>
+	</header>	
+	<div class="d10-roll card-check-rolls">
+		<div
+			class="card-check-roll blindable"
+			data-blind="{{data.rolls.main.blind}}"
+		>
+			{{#if data.rolls.main}}
+				
+				
+				{{#if data.rolls.main.renderedHTML1}}
+				
+				<div>{{{data.rolls.main.renderedHTML1}}}</div>
+				<h3>{{localize "ARGS.infotexto.segundoroll"}}</h3>
+				<div>{{{data.rolls.main.renderedHTML2}}}</div>
+				{{/if}}
+				
+				<div>{{{data.rolls.main.renderedHTML}}}</div>
+				
+				{{#if (eq data.rolls.main.critical "success")}}
+					<div class="critico">
+						<blink>{{localize "ARGS.infotexto.critico"}}</blink>
+					</div>
+				{{/if}}
+				{{#if (eq data.rolls.main.critical "failure")}}
+					<div class="pifia">
+						<blink>{{localize "ARGS.infotexto.pifia"}}</blink>
+					</div>
+				{{/if}}
+				{{#if (eq data.rolls.main.success true)}}
+					<div class="pericia-valor">{{localize "ARGS.infotexto.periciaOK"}}</div>
+				{{else}}	
+					<div class="pericia-valor">{{localize "ARGS.infotexto.periciaNO"}}</div>
+				{{/if}}
+
+			{{/if}}
+		</div>
+	</div>
+
+	<footer class="card-footer">
+		
+	</footer>
+</div>

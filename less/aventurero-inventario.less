@@ -1,0 +1,622 @@
+ /* ----------------------------------------- */
+  /*  Sheet Body                               */
+  /* ----------------------------------------- */
+
+
+.ARGS.sheet.aventurero {
+   ul.attributes {
+    flex: 0 0 60px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+        h4 {
+            margin-top: 2px;
+            margin-bottom: 0px;
+            //font-size: 16px;
+            height: 23px;
+                box-sizing: border-box;
+                //line-height: 30px;
+                font-size: 20px;
+                font-family: "FHACondFrenchNC";
+                font-weight: bold;
+            border-bottom: 1px solid #8f8f8f;
+        }
+       
+        li.attribute {
+        height: 60px;
+        margin: 0 5px 0 0;
+        border: 2px groove #eeede0;
+        border-radius: 4px;
+        text-align: center;
+         .attribute-value {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 32px;
+            line-height: 28px;
+            font-family: "FHACondFrenchNC";
+            font-size: 20px;
+            font-weight: 700;
+            
+        }
+        input[type="text"]{
+                width: 100%;
+                height: 23px;
+                box-sizing: border-box;
+                line-height: 30px;
+                font-size: 22px;
+                font-family: "FHACondFrenchNC";
+                font-weight: bold;
+                border:0;
+                background: none;
+                //border-bottom:1px solid #8f8f8f;
+                //background-color: rgba(0, 0, 0, 0.1);
+                outline:none;
+                //border-radius: 0;
+                display: flexbox;
+            }
+        }
+   }
+  .sheet-body {
+      .central {
+        display: flex;
+        flex-direction: row;
+        h3 {
+          font-size: 20px;
+          font-family: "FHACondFrenchNC";
+          font-weight: bold;
+          text-align: center; 
+          padding-top: 1px;
+          margin-bottom: 0px;
+          background-color: rgba(0, 0, 0, 0.15);
+        }
+       
+        .items-list{
+            margin: 0 0;
+            padding: 0 0 0 0;
+
+          .item {
+            align-items: center;
+            padding: 0 2px;
+            border-bottom: 1px solid #c9c7b8;
+          }
+
+          li.item.flexrow.items-header {
+            font-size: 16px;
+            color: rgb(49, 49, 49);
+            border-bottom: 1px solid gray;
+            background-color: rgba(0, 0, 0, 0.05);
+            height: 20px;
+            line-height: 25px;
+          }
+
+          li {
+            
+            font-family: "FHACondFrenchNC";
+            font-weight: normal;
+            font-size: 12px;
+            margin-top: 1px;
+            align-items: center;
+            text-align: center;
+            border-right: 1px solid #c9c7b8;
+            word-break: break-word;
+            white-space: nowrap;
+            overflow: hidden;
+            .item-name {
+              flex: 0 0 50%;
+              display: flex;
+              overflow: hidden;
+              .nombreitem {
+                display: flex;
+                flex: 2;
+                //flex: 0 0 100px;
+                margin: 0;
+                overflow: hidden;
+                font-size: 13px;
+                text-align: left;
+                align-items: center;
+                padding-left: 2px;
+              }
+              .item-image {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+            
+                background-size: contain;
+                background-repeat: no-repeat;
+            
+                font-size: 14px;
+                vertical-align: middle;
+                text-align: center;
+                color: transparent;
+                    .fa-lg {
+                        font-size: 1.25em;
+                        line-height: inherit;
+                        width: 30px;
+                        height: 30px;
+                        margin: 0px;
+                        padding-top: 5px;
+                    }
+                      &:hover {
+                        font-size: 1.25;
+                        line-height: -3em;
+                        vertical-align: baseline;
+                        width: 30px;
+                        height: 30px;
+                        background:none !important;
+                        color: white;
+                }
+              }
+              img{
+                height: 30px;
+                width: 30px;
+                background-size: cover;
+                background-position: 50% 0;
+                border: none;
+                margin-right: 5px;
+              }
+            }
+            .item-peso {
+              flex: 0 0 30px;
+              border-left: 1px solid #c9c7b8;
+		          border-right: 1px solid #c9c7b8;
+
+            }
+            .item-defensa {
+              flex: 0 0 22px;
+              border-left: 1px solid #c9c7b8;
+		          border-right: 1px solid #c9c7b8;
+              text-align: center;
+            }
+            
+            .item-controls {
+              //flex: 0 0 15%;
+              display: flex;
+              justify-content: flex-end;
+              //overflow: hidden;
+             // font-size: 10px;
+            }
+            
+           
+           
+
+          }
+          
+
+        }
+        .izquierda {
+         // background-color: aquamarine;
+          flex: 0 0 30%;
+          
+           border: 2px groove #eeede0;
+            border-radius: 4px;
+            
+
+        }
+
+        .medio  {
+          
+           // background-color: burlywood;
+            flex: 0 0 40%;
+             
+             border: 2px groove #eeede0;
+             border-radius: 4px;
+             .item-namecenter {
+              flex: 0 0 40%;
+              display: flex;
+              overflow: hidden;
+              .nombreitem {
+                display: flex;
+                flex: 2;
+                //flex: 0 0 100px;
+                margin: 0;
+                overflow: hidden;
+                font-size: 13px;
+                text-align: left;
+                align-items: center;
+                padding-left: 2px;
+              }
+              .item-image {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+            
+                background-size: contain;
+                background-repeat: no-repeat;
+            
+                font-size: 14px;
+                vertical-align: middle;
+                text-align: center;
+                color: transparent;
+
+                  .fa-lg {
+                      font-size: 1.25em;
+                      line-height: inherit;
+                      width: 30px;
+                      height: 30px;
+                      margin: 0px;
+                      padding-top: 5px;
+                  }
+                    &:hover {
+                      font-size: 1.25;
+                      line-height: -3em;
+                      vertical-align: baseline;
+                      width: 30px;
+                      height: 30px;
+                background:none !important;
+                color: white;
+              }
+              }
+              img{
+                height: 30px;
+                width: 30px;
+                background-size: cover;
+                background-position: 50% 0;
+                border: none;
+                margin-right: 5px;
+                
+              }
+            }
+             .item-peso {
+              flex: 0 0 30px;
+              border-left: 1px solid #c9c7b8;
+		          border-right: 1px solid #c9c7b8;
+
+            }
+            .item-defensa {
+              flex: 0 0 22px;
+              border-left: 1px solid #c9c7b8;
+		          border-right: 1px solid #c9c7b8;
+              text-align: center;
+            }
+            .item-cant {
+              flex: 0 0 30px;
+              //border-left: 1px solid #c9c7b8;
+		          //border-right: 1px solid #c9c7b8;
+
+            }
+            .item-usos {
+              display: flex;
+              flex: 0 0 50px;
+              border-left: 1px solid #c9c7b8;
+		          border-right: 1px solid #c9c7b8;
+              justify-content: center;
+              align-items: center;
+              .item-usomax {
+                flex: 0 0 30px;
+                text-align: left;
+              }
+              .sep {
+                flex: 0 0 10px;
+                font-weight: bold;
+
+              }
+              input[type="text"] {
+                flex: 0 0 10px;
+                //height: 30px;
+                box-sizing: border-box;
+                //line-height: 30px;
+                font-size: 15px;
+                font-weight: bold;
+                border: 0;
+                background: none;
+                color: purple;
+                //border-bottom: 1px solid #252525;
+                //background-color: rgba(0, 0, 0, 0.1);
+                outline: none;
+                border-radius: 0;
+                padding: 0px;
+                text-align: right;
+                }
+            }
+           
+            .item-controls {
+              //flex: 0 0 15%;
+              display: flex;
+              justify-content: flex-end;
+              //overflow: hidden;
+             // font-size: 10px;
+            }
+        }
+        .derecha{
+         // background-color: cornflowerblue;
+          flex: 0 0 30%;          
+          border: 2px groove #eeede0;
+           border-radius: 4px;
+           .monturas{
+              border: 2px groove #eeede0;
+               border-radius: 4px;
+              .mount-tracks{
+                display: flex;
+                .track-value {
+                  flex: 0 0 50%;
+                  border: 2px groove #eeede0;
+                  border-radius: 4px;
+                  display: flex;
+                  justify-content: center;
+                  font-size: 18px;
+                  //font-weight: bold;                
+
+                  img {
+                    height: 20px;
+                    width: 20px;
+                    border: none;
+                    margin-right: 5px;
+                    align-items: baseline;
+                  }
+                }
+                input[type="text"]{
+                  width: 25%;
+                  height: 20px;
+                  box-sizing: border-box;
+                  line-height: 20px;                  
+                  font-size:18px;
+                  font-weight: bold;
+                  border:0;
+                  background: none;
+                  border-bottom:1px solid #2f2f2f;
+                  outline:none;
+                  border-radius: 0;
+                  padding-right: 5px;
+                  }
+              }
+           
+              
+            
+           .monturas-list{
+            margin: 0 0;
+            padding: 0 0 0 0;
+            display: flex;
+            flex: 0 0 100%;
+            height: 50px;
+          
+          .montura {
+            align-items: center;
+            padding: 0 2px;
+            flex: 0 0 100%;
+            border-bottom: 1px solid #c9c7b8;
+          }
+
+          li.item.flexrow.items-header {
+            font-size: 16px;
+            color: rgb(49, 49, 49);
+            border-bottom: 1px solid gray;
+            background-color: rgba(0, 0, 0, 0.05);
+            height: 20px;
+            line-height: 25px;
+          }
+
+          li {
+            
+            font-family: "FHACondFrenchNC";
+            font-weight: normal;
+            font-size: 12px;
+            margin-top: 1px;
+            align-items: center;
+            text-align: center;
+            border-right: 1px solid #c9c7b8;
+            word-break: break-word;
+            flex: 0 0 100%;
+            align-items: center;
+            white-space: nowrap;
+            overflow: hidden;
+            .mount-name {
+              flex: 0 0 100%;
+              display: flex;
+              overflow: hidden;
+              font-size: 20px;
+              align-items: center;
+              .nombremount {
+                display: flex;
+                flex: 2;
+                //flex: 0 0 100px;
+                margin: 0;
+                overflow: hidden;
+                font-size: 20px;
+                text-align: left;
+                align-items: center;
+                padding-left: 2px;
+              }
+              .item-controls {
+                font-size: 15px;
+                align-items: center;
+              }
+              .mount-image {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+            
+                background-size: contain;
+                background-repeat: no-repeat;
+            
+                font-size: 14px;
+                vertical-align: middle;
+                text-align: center;
+                color: transparent;
+
+                  .fa-lg {
+                      font-size: 2.25em;
+                      line-height: inherit;
+                      width: 50px;
+                      height: 50px;
+                      margin: 0px;
+                      padding-top: 5px;
+                  }
+                    &:hover {
+                      font-size: 2.25;
+                      line-height: -3em;
+                      vertical-align: baseline;
+                      width: 50px;
+                      height: 50px;
+                background:none !important;
+                color: white;
+              }           
+              }
+              img{
+                height: 50px;
+                width: 50px;
+                background-size: cover;
+                background-position: 50% 0;
+                border: none;
+                margin-right: 5px;
+              }
+            }              
+          }
+          }
+          .statsmount {
+            font-family: "Dungeon";
+            font-weight: bold;
+            font-size:20px;
+            
+            //color: darkslateblue;
+           
+            ol.stats-mount {
+              padding: 0px;
+              margin:0px;
+              display: grid;
+              grid-template-columns: 50% 50%;
+              li {
+                align-items: center;
+                border: 1px dashed  gray;
+                text-align: center;
+                .fas:hover {
+                  color: #111;
+                  text-shadow: 0 0 10px purple;
+                }
+                img{
+                  width: 30px !important; 
+                  height: 30px !important;
+                  border: none;
+                  margin-right: 5px;
+                }
+              }
+             
+            }
+          }
+        }
+        
+        }
+      }
+      .exceso {
+        font-size: 20px;
+        font-family: "FHACondFrenchNC";
+        font-weight: bold;
+        text-align: center; 
+        padding-top: 1px;
+        margin-bottom: 0px;
+        
+      }  
+
+
+      
+  .riqueza{
+    width: 75%;
+    
+    border: 2px groove #eeede0;
+    border-radius: 5px ;
+    .riqueza-todo{
+      display: flex;
+
+    }
+    img {
+      height: 35px;
+      width: 35px;
+      padding-right: 3px;
+      border: none;
+    }
+    
+    .riqueza-titulo{
+      display: flex;
+      flex: 0 0 20%;
+      margin: 0px;
+        h3{
+        font-family: "Dungeon";
+        font-size: 30px;
+        font-weight: bold;
+        align-items: center;
+      
+      }
+    }
+    .riqueza-monedas {
+      display: flex;
+      //flex: 0 0 100%;
+      font-size: 25px;
+      font-family: "Dungeon";
+      font-weight: bold;
+        .bronce {
+          display: flex;
+          flex: 0 0 25%;
+          input[type="text"]{
+            flex: 0 0 30%;
+            text-align: center;
+            font-size: 20px;
+            margin-right: 5px;
+          }
+        }
+        .plata {
+          display: flex;
+          flex: 0 0 25%;
+          input[type="text"]{
+            flex: 0 0 30%;
+            text-align: center;
+            font-size: 20px;
+            margin-right: 5px;
+          }
+        }
+        .oro {
+          display: flex;
+          flex: 0 0 25%;
+          
+          input[type="text"]{
+            flex: 0 0 30%;
+            text-align: center;
+            font-size: 20px;
+            margin-right: 5px;
+          }
+        }
+        .joyas {
+          display: flex;
+          flex: 0 0 25%;
+          input[type="text"]{
+            flex: 0 0 30%;
+            text-align: center;
+            font-size: 20px;
+            margin-right: 5px;
+          }
+        }
+      } 
+      .monedacarga {
+        font-family: "Dungeon";
+        font-weight: bold;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+      }
+      }
+    }  
+
+
+
+}
+  // Custom Resources
+  .resource .attribute-value {
+    > input {
+      flex: 0 0 25%;
+    }
+    label.recharge {
+      height: 32px;
+      position: relative;
+      font-family: "Signika", sans-serif;
+      font-size: 11px;
+      text-align: center;
+      color: @colorOlive;
+      align-items: center;
+      input[type="checkbox"] {
+        flex-basis: 14px;
+        height: 14px;
+        width: 14px;
+        margin: 0;
+        top: -6px;
+      }
+    }
+  }

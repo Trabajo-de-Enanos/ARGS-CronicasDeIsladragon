@@ -1,0 +1,210 @@
+.ARGS.sheet.aventurero {
+    .sheet-header{
+        background-color: none;
+        height: 153px;
+        width: 100%;
+        display: inline-flex;
+        overflow:hidden;
+        input[type="text"]{
+            width: 95%;
+            height: 30px;
+            box-sizing: border-box;
+            line-height: 30px;
+            font-family: initial;
+            font-size:20px;
+            font-weight: bold;
+            border:0;
+            background: none;
+            border-bottom:1px solid #2f2f2f;
+            outline:none;
+            border-radius: 0;
+            padding-right: 5px;
+        }
+        img {
+            width: 160px;
+            height: 160px;
+          }
+        .header-details1 {
+            flex: 0 0 350px;
+            align-content: flex-start;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-family: "Dungeon";
+            font-size: 20px;
+            font-weight: 900;
+            border: 2px groove #eeede0;
+            border-radius: 3px;
+            /*background: url("../assets/CharSheet/perg1y2.png");*/
+                table {               
+                
+                background: none;
+                border-top: none;
+                border-bottom: none;
+                    td {  
+                        background:none;
+                        padding: 0px;
+                        padding-right: 2px;
+                   }
+                    th {
+                        padding: 0px;
+                    }
+                    td:first-child {
+                        padding-left: 2px;
+                        justify-content: end;
+                        text-align: end;
+                    }
+                   
+                 }
+            .pc_especie {                
+                display: grid;
+                grid-template-columns: 15% 5% 75%;
+                gap: 5px;
+                text-align: right;
+                .compendium-items {
+                    text-align: center;
+                }
+            }
+            .pc_clases {
+                display: grid;
+                grid-template-columns: 15% 5% 75%;
+                gap: 5px;
+                text-align: right;
+                .compendium-items {
+                    text-align: center;
+                }
+            }
+        }
+        
+        .header-sistema  {
+            flex:0 0 200px;
+            font-family: "Dubstep Dungeons";
+            font-size: 30px;
+            height: 166px;
+            text-align: center;
+            }
+        .info-char {
+                color: black;
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                border-color: var(--dl-color-gray-black);
+                border-width: 1px;
+                border-radius: 4px;
+                background-color:var(--dl-color-gray-black);
+                /*background: url("../assets/CharSheet/perg1y2.png");*/
+        }
+    }
+    .sheet-tabs {
+        display: flex;
+        justify-content: space-around;
+        font-family:"Dominican Small Caps";
+        font-size:16px;
+        font-weight: bold;
+        color: rgb(47, 48, 47);
+        .item{padding: 0px;
+            
+            border-bottom: 1px solid #a1a1a1;  }
+        .item.active {
+            text-shadow: 0 0 10px purple;
+            //background-color: rgba(0,0,0,0.1); 
+            //border-top: 1px solid #a1a1a1;    
+            //border-left: 1px solid #a1a1a1;         
+            //border-right: 1px solid #a1a1a1;    
+            //border-bottom: none;
+           
+          }
+    }
+    .sheet-body {
+        input[type="text"]{
+            width: 100%;
+            height: 30px;
+            box-sizing: border-box;
+            line-height: 30px;
+            font-size:30px;
+            font-weight: bold;
+            border:0;
+            background: none;
+            border-bottom:1px solid #252525;
+            background-color: rgba(0, 0, 0, 0.1);
+            outline:none;
+            border-radius: 0;
+            display: flexbox;
+        }
+        .editor {
+            position:relative;
+            max-height: 100%;
+            max-width: 100%;
+            width: 90%;
+            overflow: auto;
+        }
+        .editor-edit {
+            display: contents;
+            font-size: 1.25em;
+            position: relative;
+            top: 5px;
+            left: 5px;
+            background: rgba(187, 187, 187, 0.75);
+            border: 1px solid var(--color-border-dark-1);
+            border-radius: 4px;
+            padding: 1px 2px;
+            box-shadow: 0 0 1px var(--color-shadow-dark);
+        }
+        .biografia {
+            height: 250px;
+            .editor{ 
+                height: 100%;
+                height: 350px;
+                width: 100%;
+            }
+            .header-details2 {
+                flex: 0 0 250px;
+                align-content: flex-start;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-family: "Dungeon";
+                font-size: 20px;
+                font-weight: 900;
+                border: 2px groove #eeede0;
+                border-radius: 3px;
+
+                input[type="text"] {
+                    width: 100%;
+                    height: 25px;
+                    box-sizing: border-box;
+                    line-height: 30px;
+                    font-size: 20px;
+                    text-align: left;
+                }
+                    table { 
+                    background: none;
+                    border-top: none;
+                    border-bottom: none;
+                        tbody {
+                            margin-right: 10px;
+                        }
+                        tr{
+                            height: 20px;
+                        }
+                        td {  
+                            padding: 0px;
+                            background:none;
+                            padding-right: 2px;
+                            text-align: right;
+                            padding-left: 2px;
+                         }
+                         th {  
+                            padding: 0px;
+                            background:none;
+                            padding-right: 2px;
+                         }
+                         td:first-child {
+                            padding-left: 2px;
+                            justify-content: end;
+                            text-align: end;
+                        }
+                        }     
+            }
+        }
+    }    
+}

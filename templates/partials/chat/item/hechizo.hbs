@@ -1,0 +1,45 @@
+<div
+	class="args chat-card item-card"
+	data-actor-id="{{actor.id}}"
+	data-item-id="{{item._id}}"
+>
+	<header class="card-header flexrow">
+		<img src="{{item.img}}" data-tooltip="{{item.name}}"/>
+		<h3 class="item-name">{{item.name}}</h3>
+	</header>
+
+	<div class="card-content">
+		<p>
+			<b>{{localize (concat "ARGS.magia.escuelas."item.system.escuela)}}</b> <em>{{localize (concat "ARGS.hechizos."item.system.dios)}}</em>
+		</p>
+		{{{description}}}
+	</div>
+
+	<div class="chat-card-buttons">
+		<button
+			class="item-control"
+			data-actor-id="{{actor.id}}"
+			data-item-id="{{item._id}}"
+			data-action="lanzar-hechizo"
+		>
+			{{localize 'ARGS.hechizos.lanzar'}}
+		</button>
+	</div>
+
+	<!--footer class="card-footer">
+		<ul class="tags">
+			<li class="tag tag_primary tag_small">
+				{{localize "SHADOWDARK.item.spell_tier"}}
+				{{ item.system.tier }}
+			</li>
+			<li class="tag tag_secondary tag_small">
+				{{localize "SHADOWDARK.item.spell_duration"}}:
+				
+			</li>
+			<li class="tag tag_secondary tag_small">
+				{{localize "SHADOWDARK.item.spell_range"}}:
+			
+			</li>
+		</ul-->
+	</footer>
+</div>

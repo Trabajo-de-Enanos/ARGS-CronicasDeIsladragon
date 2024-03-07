@@ -1,0 +1,52 @@
+{
+  "folder": null,
+  "name": "Jabalina",
+  "type": "armas",
+  "img": "icons/weapons/polearms/javelin-flared.webp",
+  "system": {
+    "description": {
+      "value": "<h2>Jabalina:</h2><blockquote><p>Bonificador +1 a Lanzar</p></blockquote><p>Precios:</p><ul><li><p>Calidad Inferior: 1 Mo</p></li><li><p>Calidad Normal: 3 Mo</p></li><li><p>Calidad Superior: 6 Mo</p></li></ul>",
+      "chat": ""
+    },
+    "precio": {
+      "value": 3,
+      "denominacion": "MO"
+    },
+    "cantidad": 1,
+    "peso": 2,
+    "Calidad": [
+      "inferior",
+      "normal",
+      "superiorete"
+    ],
+    "equipado": false,
+    "enmontura": false,
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "atacaCon": "armaslargas",
+    "formula": "0+0+@armaslargas.final+ 1d8x>=8 ",
+    "danio": "d8",
+    "recarga": false,
+    "otro": 0,
+    "bonificadorCalidad": 0,
+    "bonificadorMagia": 0,
+    "lanzable": true,
+    "cantdado": 1,
+    "critumbral": 8,
+    "calidad": "normal"
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "ARGS",
+    "systemVersion": "1.0.1",
+    "coreVersion": "11.305",
+    "createdTime": 1696687470051,
+    "modifiedTime": 1696687600333,
+    "lastModifiedBy": "ARGSCompiler000"
+  },
+  "sort": 0,
+  "_id": "Vu6Hw5kyVuDEeUD3"
+}

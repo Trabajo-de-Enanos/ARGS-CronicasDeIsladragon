@@ -1,0 +1,302 @@
+<section class="magia-top">
+    <div class="puntos-magia">
+        <h3>{{localize "ARGS.magia.puntosmagia"}}:</h3>
+
+        <div class="puntos-magia-calc">
+            <div class="ptosm-stats">
+            <span><img src="/systems/ARGS/assets/CharSheet/car-cultura.png" height="100%" width="80px" > +</span>
+            <span><img src="/systems/ARGS/assets/CharSheet/car-intuicion.png" height="100%" width="80px" > +</span>
+            <span><img src="/systems/ARGS/assets/CharSheet/car-carisma.png" height="100%" width="80px" > +</span>
+            <span><img src="/systems/ARGS/assets/CharSheet/devocion.png" height="100%" width="80px" > +</span>
+            <span><input type="text" name="system.calculados.puntosmagia.extra" value="{{system.calculados.puntosmagia.extra}}" data-dtype="Number"/>  = </span>
+             
+             <span> <input type="text" name="system.calculados.puntosmagia.value" value="{{system.calculados.puntosmagia.value}}" data-dtype="Number"/>{{localize "ARGS.infotexto.de"}} {{system.calculados.puntosmagia.max}} Total<img src="/systems/ARGS/assets/CharSheet/pm.png" height="150%" width="180px" ></span>
+            </div>
+            <div class="botellas">
+                {{#times 30}}
+                <div class="mark-container">                
+                 {{#if (gte ../system.calculados.puntosmagia.value @index)}}
+                 <div class="ptos-mgc">
+                    <img src="icons/consumables/potions/bottle-corked-blue.webp" height="30">
+                </div>       
+                 {{else}}   
+                <div class="ptos-mgc">
+                    <img src="icons/consumables/potions/bottle-corked-empty.webp" height="30">
+                </div>
+                {{/if}}
+                </div>
+                {{/times}}
+            </div>        
+        </div>
+        <div class="puntos-magia-res">
+            
+        </div>
+    </div>
+    <div class="conjurar">
+        <ol class="conjurar-lista">
+            <div  class="conjurar-titulo">
+            <span><img src="/systems/ARGS/assets/CharSheet/conjuracion.png" height="100%" width="80px" > </span>
+            <div class="conjurarescuelas"> 
+            
+            <h3>{{localize "ARGS.magia.conjurar"}}</h3>
+            <h4>{{localize "ARGS.magia.escuelas.escuelas"}}</h4>
+            <div class="escuelas grid grid-2col"> 
+              {{#each items as |item iid|}}                              
+                {{#if (eq item.type "clases")}}     
+                
+              <span>{{localize item.system.escuelas.primera}}</span>
+              <span>{{localize item.system.escuelas.segunda}}</span>
+              <span>{{localize item.system.escuelas.tercera}}</span>
+              <span>{{localize item.system.escuelas.cuarta}}</span>
+              
+             
+            </div>
+              
+            </div>
+          
+          </div>   
+          <!--span>{{@root.system.calculados.conjurar.penalizaRM}}  {{localize "ARGS.magia.penalizaRM"}}</span-->       
+          <li class="conjurar-titulos">
+            <span>{{item.system.stats.primaria}}</span>
+            <span> + </span>
+            <span>{{item.system.stats.secundaria}}</span>
+              <span> + </span>
+            <span>{{localize "TYPES.item.TypeClases"}}</span>
+            <span> + </span>
+            <span>Bonus</span>
+            <span> = </span>
+            <span>Total</span>
+            <span>{{localize "ARGS.hechizos.lanzar"}}</span>
+            <img src="/systems/ARGS/assets/CharSheet/criticopifias.png" >
+          </li>    
+           {{/if}}
+              {{/each}}
+          <li class="conjurar-tirada flexrow">                 
+            
+                <span>{{ system.calculados.conjurar.primaria}}</span>            
+                <span>+</span>
+                <span>{{system.calculados.conjurar.secundaria}}</span>
+                 <span>+</span>
+                <span>{{system.calculados.conjurar.bonoclase}}</span>                      
+                <span>+</span>
+            <input type="text" name="system.calculados.conjurar.extra" value="{{system.calculados.conjurar.extra}}" data-dtype="Number"/>            
+            <span>=</span>
+            <span>{{system.calculados.conjurar.value}}</span>
+            <span  class="fas fa-dice-d20 rollable" data-roll="1d20cs<=@conjurar.value" data-label="">{{!--numberFormat prcombate.value decimals=0 sign=true--}}</span> 
+            <input type="text" name="system.calculados.conjurar.avance" value={{system.calculados.conjurar.avance}}  data-tooltip="Max: {{system.calculados.capacidadaprendizaje.max}}" data-dtype="Number">
+          </li> 
+        </ol> 
+    </div>
+
+  
+</section>
+
+{{#if (eq system.elgiohechizos false)}}
+<section>
+    <div class="agregar-hechizos">
+<i class="fas fa-solid fa-circle-plus"> {{localize "ARGS.hechizos.agregar"}}</i>
+</div>
+{{/if}}
+</section>
+
+<section>
+
+  {{#each config.escuelas as |escuela ide|}}
+
+    {{#if (eq escuela @root.system.CPrimeraEscuela)}}
+  <h3>{{localize (concat "ARGS.magia.escuelas."ide)}}</h3>
+
+    {{> "systems/ARGS/templates/partials/hechizos-lista.hbs" ide=ide school=escuela}} 
+    
+     {{!-- each religiones config para 1a escuela. --}}
+    {{/if}}  {{!-- cierre if loop escuela =  1a escuela. --}}
+
+    {{#if (and (eq escuela @root.system.CSegundaEscuela) (ne @root.system.CSegundaEscuela "") )}}
+    <h3>{{localize (concat "ARGS.magia.escuelas."ide)}}</h3>
+
+    {{> "systems/ARGS/templates/partials/hechizos-lista.hbs" ide=ide school=escuela}}  
+
+    {{/if}} {{!-- cierre if loop escuela =  2a escuela. --}}
+
+    {{#if (and (eq escuela @root.system.CTerceraEscuela) (ne @root.system.CTerceraEscuela "") )}} {{!-- Aca estan tambien las de clase propia --}}
+     <h3>{{localize (concat "ARGS.magia.escuelas."ide)}}</h3>
+      {{!-- Aca estan tambien las de clase propia --}}
+        
+      {{> "systems/ARGS/templates/partials/hechizos-lista.hbs" ide=ide school=escuela}} 
+
+    {{/if}} {{!-- cierre if loop escuela =  3a escuela. --}}
+
+    {{#if (and (eq escuela @root.system.CCuartaEscuela) (ne @root.system.CCuartaEscuela "") )}}
+    <h3>{{localize (concat "ARGS.magia.escuelas."ide)}}</h3>    
+    {{> "systems/ARGS/templates/partials/hechizos-lista.hbs" ide=ide school=escuela}} 
+    {{/if}}  {{!-- cierre if loop escuela = 4a escuela. --}}
+  {{/each}}
+
+  {{!-- Hechizos de otras escuelas --}}
+  <h2>{{localize "ARGS.hechizos.otrosconj"}}</h2>
+
+   {{#each config.religionspell as |religion idr|}} 
+   
+        {{#if (eq idr @root.system.rel1)}}
+         <h3>{{localize (concat "ARGS.hechizos."idr)}}</h3>
+         <ol class="items-list-{{@root.system.rel1}}">
+                      <li class="item flexrow items-header">
+                          <div class="item-namecenter">{{localize "ARGS.hechizos.conjuros" }}: {{localize (concat "ARGS.hechizos." @root.system.rel1) }}</div>                    
+                          <div class="item-level"> {{localize "ARGS.hechizos.nivelab"}}</div>
+                          <div class="item-pm">{{localize "ARGS.magia.puntosmagia"}}</div>
+                          <div class="item-modconj" >{{localize "ARGS.hechizos.conjmod"}}</div>
+                          <div class="item-tiempocast"> {{localize "ARGS.hechizos.tiempocasteo"}}</div>
+                          <div class="item-duracion"> {{localize "ARGS.hechizos.duracion"}}</div>
+                          <div class="item-resistible"> {{localize "ARGS.hechizos.resistab"}}</div>
+                          <div class="item-transferible"> {{localize "ARGS.hechizos.transfab"}}</div>
+                          <div class="item-preparado"> {{localize "ARGS.hechizos.preparado"}}?</div>
+                          <div class="item-controls"> Ctrls </div>
+                      </li>
+         {{#each @root.items as |item iid|}} 
+    
+            {{#if (and (and (eq item.type "hechizo") (eq item.system.dios idr) )
+          (ne (concat "ARGS.magia.escuelas."item.system.escuela) @root.system.CPrimeraEscuela) (ne  (concat "ARGS.magia.escuelas."item.system.escuela) @root.system.CSegundaEscuela)
+          (ne  (concat "ARGS.magia.escuelas."item.system.escuela) @root.system.CTerceraEscuela) (ne  (concat "ARGS.magia.escuelas."item.system.escuela) @root.system.CCuartaEscuela) )}}
+    
+             <li class="item flexrow {{#if ctx.isExpanded}}expanded{{/if}}" data-item-id="{{item._id}}">
+                <div class="item-namecenter">
+                         <div class="item-image" style="background-image: url({{item.img}})"
+									      data-item-id="{{item._id}}">
+                        <!--a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a-->
+                        <i class="fas fa-comment fa-lg"></i>
+                        </div>
+                       <div class="nombreconjuro">{{item.name}} ({{localize (concat "ARGS.magia.escuelas."item.system.escuela)}})</div>
+                    </div>
+                 <div class="item-level">{{item.system.nivelhechizo}}</div>
+                 <div class="item-pm">{{item.system.pm}}</div>
+                 <div class="item-modconj">{{item.system.modificadorconjuracion}}</div>
+                 <div class="item-tiempocast">{{item.system.tiempocasteo}}</div>
+                 <div class="item-duracion">{{item.system.duracion}}</div>
+                 {{#if (eq item.system.resistible true)}} <i class="fas fa-duotone fa-check"></i> {{else}} <i class="fas fa-solid fa-x"></i> {{/if}}
+                 {{#if (eq item.system.transferible true)}} <i class="fas fa-duotone fa-check"></i> {{else}} <i class="fas fa-solid fa-x"></i> {{/if}}
+                 <a class="item-control item-toggle" data-action="itemToggle"  title="{{localize "ARGS.consumible.preparado"}}"> 
+                          {{#if (eq item.system.preparado true)}} <i class="fa-solid fa-star"></i></a>{{else}}<i class="fa-regular fa-star"></i>  {{/if}}
+                <div class="item-controls">  
+                  <a class="item-control hechizos-rapidos" title="Cast Spell" data-actor-id="{{@root.actor.id}}"
+	                      data-item-id="{{item._id}}" data-roll-type="item"><i class="fas fa-solid fa-hand-sparkles" title="{{localize 'ARGS.hechizos.lanzar'}}"></i></a>                      
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                    
+
+              </li>
+            
+            {{/if}}
+          {{/each}} 
+          </ol>              
+        {{/if}}
+        {{#if (eq idr @root.system.rel2)}}
+         <h3>{{localize (concat "ARGS.hechizos."idr)}}</h3>
+           <ol class="items-list-{{idr}}">
+                      <li class="item flexrow items-header">
+                          <div class="item-namecenter">{{localize "ARGS.hechizos.conjuros" }}: {{localize (concat "ARGS.hechizos."idr) }}</div>                    
+                          <div class="item-level"> {{localize "ARGS.hechizos.nivelab"}}</div>
+                          <div class="item-pm">{{localize "ARGS.magia.puntosmagia"}}</div>
+                          <div class="item-modconj" >{{localize "ARGS.hechizos.conjmod"}}</div>
+                          <div class="item-tiempocast"> {{localize "ARGS.hechizos.tiempocasteo"}}</div>
+                          <div class="item-duracion"> {{localize "ARGS.hechizos.duracion"}}</div>
+                          <div class="item-resistible"> {{localize "ARGS.hechizos.resistab"}}</div>
+                          <div class="item-transferible"> {{localize "ARGS.hechizos.transfab"}}</div>
+                          <div class="item-preparado"> {{localize "ARGS.hechizos.preparado"}}?</div>
+                          <div class="item-controls"> Ctrls </div>
+                      </li>
+         {{#each @root.items as |item iid|}} 
+    
+            {{#if (and (and (eq item.type "hechizo") (eq item.system.dios idr) )
+          (ne (concat "ARGS.magia.escuelas."item.system.escuela) @root.system.CPrimeraEscuela) (ne  (concat "ARGS.magia.escuelas."item.system.escuela) @root.system.CSegundaEscuela)
+          (ne  (concat "ARGS.magia.escuelas."item.system.escuela) @root.system.CTerceraEscuela) (ne  (concat "ARGS.magia.escuelas."item.system.escuela) @root.system.CCuartaEscuela) )}}
+    
+             <li class="item flexrow {{#if ctx.isExpanded}}expanded{{/if}}" data-item-id="{{item._id}}">
+                <div class="item-namecenter">
+                         <div class="item-image" style="background-image: url({{item.img}})"
+									      data-item-id="{{item._id}}">
+                        <!--a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a-->
+                        <i class="fas fa-comment fa-lg"></i>
+                        </div>
+                       <div class="nombreconjuro">{{item.name}} ({{localize (concat "ARGS.magia.escuelas."item.system.escuela)}})</div>
+                    </div>
+                 <div class="item-level">{{item.system.nivelhechizo}}</div>
+                 <div class="item-pm">{{item.system.pm}}</div>
+                 <div class="item-modconj">{{item.system.modificadorconjuracion}}</div>
+                 <div class="item-tiempocast">{{item.system.tiempocasteo}}</div>
+                 <div class="item-duracion">{{item.system.duracion}}</div>
+                 {{#if (eq item.system.resistible true)}} <i class="fas fa-duotone fa-check"></i> {{else}} <i class="fas fa-solid fa-x"></i> {{/if}}
+                 {{#if (eq item.system.transferible true)}} <i class="fas fa-duotone fa-check"></i> {{else}} <i class="fas fa-solid fa-x"></i> {{/if}}
+                 <a class="item-control item-toggle" data-action="itemToggle"  title="{{localize "ARGS.consumible.preparado"}}"> 
+                          {{#if (eq item.system.preparado true)}} <i class="fa-solid fa-star"></i></a>{{else}}<i class="fa-regular fa-star"></i>  {{/if}}
+                <div class="item-controls"> 
+                  <a class="item-control hechizos-rapidos" title="Cast Spell" data-actor-id="{{@root.actor.id}}"
+	                      data-item-id="{{item._id}}" data-roll-type="item"><i class="fas fa-solid fa-hand-sparkles" title="{{localize 'ARGS.hechizos.lanzar'}}"></i></a>                       
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                    
+
+              </li>
+           
+            {{/if}}
+          {{/each}} 
+           </ol> 
+        {{/if}}
+        {{#if (eq idr @root.system.rel3)}}
+         <h3>{{localize (concat "ARGS.hechizos."idr)}}</h3>
+           <ol class="items-list-{{idr}}">
+                      <li class="item flexrow items-header">
+                          <div class="item-namecenter">{{localize "ARGS.hechizos.conjuros" }}: {{localize (concat "ARGS.hechizos." idr) }}</div>                    
+                          <div class="item-level"> {{localize "ARGS.hechizos.nivelab"}}</div>
+                          <div class="item-pm">{{localize "ARGS.magia.puntosmagia"}}</div>
+                          <div class="item-modconj" >{{localize "ARGS.hechizos.conjmod"}}</div>
+                          <div class="item-tiempocast"> {{localize "ARGS.hechizos.tiempocasteo"}}</div>
+                          <div class="item-duracion"> {{localize "ARGS.hechizos.duracion"}}</div>
+                          <div class="item-resistible"> {{localize "ARGS.hechizos.resistab"}}</div>
+                          <div class="item-transferible"> {{localize "ARGS.hechizos.transfab"}}</div>
+                          <div class="item-preparado"> {{localize "ARGS.hechizos.preparado"}}?</div>
+                          <div class="item-controls"> Ctrls </div>
+                      </li>
+         {{#each @root.items as |item iid|}} 
+    
+            {{#if (and (and (eq item.type "hechizo") (eq item.system.dios idr) )
+          (ne (concat "ARGS.magia.escuelas."item.system.escuela) @root.system.CPrimeraEscuela) (ne  (concat "ARGS.magia.escuelas."item.system.escuela) @root.system.CSegundaEscuela)
+          (ne  (concat "ARGS.magia.escuelas."item.system.escuela) @root.system.CTerceraEscuela) (ne  (concat "ARGS.magia.escuelas."item.system.escuela) @root.system.CCuartaEscuela) )}}
+    
+              <li class="item flexrow {{#if ctx.isExpanded}}expanded{{/if}}" data-item-id="{{item._id}}">
+                <div class="item-namecenter">
+                         <div class="item-image" style="background-image: url({{item.img}})"
+									      data-item-id="{{item._id}}">
+                        <!--a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a-->
+                        <i class="fas fa-comment fa-lg"></i>
+                        </div>
+                       <div class="nombreconjuro">{{item.name}} ({{localize (concat "ARGS.magia.escuelas."item.system.escuela)}})</div>
+                    </div>
+                 <div class="item-level">{{item.system.nivelhechizo}}</div>
+                 <div class="item-pm">{{item.system.pm}}</div>
+                 <div class="item-modconj">{{item.system.modificadorconjuracion}}</div>
+                 <div class="item-tiempocast">{{item.system.tiempocasteo}}</div>
+                 <div class="item-duracion">{{item.system.duracion}}</div>
+                 {{#if (eq item.system.resistible true)}} <i class="fas fa-duotone fa-check"></i> {{else}} <i class="fas fa-solid fa-x"></i> {{/if}}
+                 {{#if (eq item.system.transferible true)}} <i class="fas fa-duotone fa-check"></i> {{else}} <i class="fas fa-solid fa-x"></i> {{/if}}
+                 <a class="item-control item-toggle" data-action="itemToggle"  title="{{localize "ARGS.consumible.preparado"}}"> 
+                          {{#if (eq item.system.preparado true)}} <i class="fa-solid fa-star"></i></a>{{else}}<i class="fa-regular fa-star"></i>  {{/if}}
+                <div class="item-controls">    
+                  <a class="item-control hechizos-rapidos" title="Cast Spell" data-actor-id="{{@root.actor.id}}"
+	                      data-item-id="{{item._id}}" data-roll-type="item"><i class="fas fa-solid fa-hand-sparkles" title="{{localize 'ARGS.hechizos.lanzar'}}" title="{{localize 'ARGS.hechizos.lanzar'}}"></i></a>                    
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                    
+
+              </li>
+            
+            {{/if}}
+          {{/each}} 
+          </ol> 
+        {{/if}}
+    
+  {{/each}}
+
+</section>

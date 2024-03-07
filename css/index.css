@@ -1,0 +1,570 @@
+
+@font-face {
+  font-family: "Dubstep Dungeons";
+  src: url("../fonts/Dubstep Dungeons.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Night of the Dragons";
+  src: url("../fonts/Night of the Dragons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dungeon";
+  src: url("../fonts/DUNGRG__.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-header: "Dungeon";
+}
+
+
+.home-container {
+  width: 1158;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.home-container1 {
+  width: 58px;
+  height: 204px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-bottom: 6px;
+  justify-content: center;
+}
+.home-image {
+  top: 14px;
+  left: 14px;
+  width: 149px;
+  height: 131px;
+  position: absolute;
+  object-fit: cover;
+}
+.home-textinput {
+  top: 32px;
+  left: 284px;
+  width: 10px;
+  height: 38px;
+  z-index: 100;
+  position: absolute;
+}
+.home-textinput01 {
+  top: 75px;
+  left: 283px;
+  width: 214px;
+  height: 29px;
+  z-index: 100;
+  position: absolute;
+}
+.home-select {
+  top: 110px;
+  left: 294px;
+  width: 211px;
+  height: 33px;
+  z-index: 100;
+  position: absolute;
+}
+.home-select1 {
+  left: 293px;
+  width: 210px;
+  bottom: 27px;
+  height: 34px;
+  z-index: 100;
+  position: absolute;
+}
+.home-text01 {
+  top: 43px;
+  left: 213px;
+  z-index: 100;
+  position: absolute;
+  align-self: stretch;
+}
+.home-text02 {
+  top: 81px;
+  left: 214px;
+  z-index: 100;
+  position: absolute;
+  align-self: stretch;
+}
+.home-text06 {
+  top: 119px;
+  left: 215px;
+  z-index: 100;
+  position: absolute;
+  align-self: stretch;
+}
+.home-text09 {
+  left: 216px;
+  bottom: 16px;
+  z-index: 120;
+  position: absolute;
+  align-self: stretch;
+}
+.home-text13 {
+  left: 61px;
+  bottom: 26px;
+  position: absolute;
+  font-family: "Dubstep Dungeons";
+}
+.home-image01 {
+  top: 12px;
+  left: 177px;
+  width: 366px;
+  height: 188px;
+  z-index: 50;
+  position: absolute;
+  object-fit: cover;
+}
+.home-text14 {
+  top: 54px;
+  right: 106px;
+  margin: auto;
+  position: absolute;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Night of the Dragons";
+}
+.home-image02 {
+  top: 14px;
+  left: 548px;
+  width: 340px;
+  height: 175px;
+  z-index: 50;
+  position: absolute;
+  object-fit: cover;
+}
+.home-text20 {
+  top: 245px;
+  left: 61px;
+  position: absolute;
+  font-size: 20px;
+}
+.home-text21 {
+  top: 351px;
+  left: 56px;
+  position: absolute;
+  font-size: 20px;
+}
+.home-text22 {
+  top: 245px;
+  left: 466px;
+  position: absolute;
+  font-size: 20px;
+}
+.home-text23 {
+  top: 351px;
+  left: 470px;
+  position: absolute;
+  font-size: 20px;
+}
+.home-text24 {
+  top: 244px;
+  left: 269px;
+  position: absolute;
+  font-size: 20px;
+}
+.home-text25 {
+  top: 351px;
+  left: 250px;
+  position: absolute;
+  font-size: 20px;
+}
+.home-image03 {
+  top: 435px;
+  left: 916px;
+  width: 60px;
+  height: 50px;
+  z-index: 100;
+  position: absolute;
+  object-fit: cover;
+}
+.home-image04 {
+  top: 435px;
+  right: 152px;
+  width: 60px;
+  height: 50px;
+  z-index: 100;
+  position: absolute;
+  object-fit: cover;
+}
+.home-image05 {
+  top: 435px;
+  right: 82px;
+  width: 60px;
+  height: 50px;
+  z-index: 100;
+  position: absolute;
+  object-fit: cover;
+}
+.home-checkbox {
+  top: 366px;
+  left: 918px;
+  z-index: 100;
+  position: absolute;
+}
+.home-checkbox01 {
+  top: 365px;
+  right: 189px;
+  z-index: 100;
+  position: absolute;
+}
+.home-checkbox02 {
+  top: 365px;
+  right: 110px;
+  z-index: 100;
+  position: absolute;
+}
+.home-checkbox03 {
+  top: 366px;
+  left: 936px;
+  z-index: 100;
+  position: absolute;
+}
+.home-checkbox04 {
+  top: 365px;
+  right: 171px;
+  z-index: 100;
+  position: absolute;
+}
+.home-checkbox05 {
+  top: 365px;
+  right: 92px;
+  z-index: 100;
+  position: absolute;
+}
+.home-image06 {
+  top: 284px;
+  right: 68px;
+  width: 70px;
+  height: 70px;
+  z-index: 100;
+  position: absolute;
+  object-fit: cover;
+}
+.home-image07 {
+  top: 286px;
+  right: 142px;
+  width: 81px;
+  height: 68px;
+  z-index: 100;
+  position: absolute;
+  object-fit: cover;
+}
+.home-image08 {
+  top: 284px;
+  left: 910px;
+  width: 60px;
+  height: 75px;
+  z-index: 100;
+  position: absolute;
+  object-fit: cover;
+}
+.home-image09 {
+  top: 190px;
+  right: 36px;
+  width: 287px;
+  height: 347px;
+  z-index: 50;
+  position: absolute;
+  object-fit: cover;
+}
+.home-checkbox06 {
+  top: 492px;
+  right: 260px;
+  z-index: 100;
+  position: absolute;
+}
+.home-checkbox07 {
+  top: 493px;
+  right: 187px;
+  z-index: 100;
+  position: absolute;
+}
+.home-checkbox08 {
+  top: 493px;
+  right: 115px;
+  z-index: 100;
+  position: absolute;
+}
+.home-checkbox09 {
+  top: 492px;
+  right: 241px;
+  z-index: 100;
+  position: absolute;
+}
+.home-checkbox10 {
+  top: 493px;
+  right: 168px;
+  z-index: 100;
+  position: absolute;
+}
+.home-checkbox11 {
+  top: 493px;
+  right: 96px;
+  z-index: 100;
+  position: absolute;
+}
+.home-text26 {
+  top: 252px;
+  right: 126px;
+  z-index: 100;
+  position: absolute;
+  font-family: Georgia;
+}
+.home-text27 {
+  top: 394px;
+  right: 134px;
+  z-index: 100;
+  position: absolute;
+  text-align: center;
+  font-family: Georgia;
+}
+.home-text32 {
+  top: 43px;
+  left: 615px;
+  z-index: 100;
+  position: absolute;
+}
+.home-text36 {
+  top: 43px;
+  left: 745px;
+  z-index: 100;
+  position: absolute;
+}
+.home-text39 {
+  top: 74px;
+  left: 754px;
+  z-index: 100;
+  position: absolute;
+}
+.home-text42 {
+  top: 75px;
+  left: 620px;
+  z-index: 100;
+  position: absolute;
+}
+.home-text45 {
+  top: 110px;
+  left: 591px;
+  z-index: 100;
+  position: absolute;
+}
+.home-text48 {
+  top: 147px;
+  left: 599px;
+  z-index: 100;
+  position: absolute;
+}
+.home-text51 {
+  top: 243px;
+  left: 692px;
+  position: absolute;
+  font-size: 20px;
+}
+.home-text52 {
+  top: 349px;
+  left: 696px;
+  position: absolute;
+  font-size: 20px;
+}
+.home-image10 {
+  top: 277px;
+  left: 54px;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  object-fit: cover;
+}
+.home-image11 {
+  top: 391px;
+  left: 53px;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  object-fit: cover;
+}
+.home-image12 {
+  top: 276px;
+  left: 250px;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  object-fit: cover;
+}
+.home-image13 {
+  top: 390px;
+  left: 247px;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  object-fit: cover;
+}
+.home-image14 {
+  top: 275px;
+  left: 449px;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  object-fit: cover;
+}
+.home-image15 {
+  top: 393px;
+  left: 447px;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  object-fit: cover;
+}
+.home-image16 {
+  top: 274px;
+  left: 677px;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  object-fit: cover;
+}
+.home-image17 {
+  top: 395px;
+  left: 676px;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  object-fit: cover;
+}
+.home-text53 {
+  top: 423px;
+  left: 817px;
+  position: absolute;
+}
+.home-text54 {
+  top: 452px;
+  left: 735px;
+  position: absolute;
+}
+.home-textinput02 {
+  top: 279px;
+  left: 121px;
+  width: 59px;
+  height: 48px;
+  position: absolute;
+}
+.home-textinput03 {
+  top: 279px;
+  left: 321px;
+  width: 59px;
+  height: 48px;
+  position: absolute;
+}
+.home-textinput04 {
+  top: 277px;
+  left: 520px;
+  width: 59px;
+  height: 48px;
+  position: absolute;
+}
+.home-textinput05 {
+  top: 275px;
+  left: 745px;
+  width: 59px;
+  height: 48px;
+  position: absolute;
+}
+.home-textinput06 {
+  top: 392px;
+  left: 121px;
+  width: 59px;
+  height: 48px;
+  position: absolute;
+}
+.home-textinput07 {
+  top: 393px;
+  left: 321px;
+  width: 59px;
+  height: 48px;
+  position: absolute;
+}
+.home-textinput08 {
+  top: 395px;
+  left: 521px;
+  width: 59px;
+  height: 48px;
+  position: absolute;
+}
+.home-textinput09 {
+  top: 397px;
+  left: 748px;
+  width: 59px;
+  height: 48px;
+  position: absolute;
+}
+.home-image18 {
+  top: 346px;
+  left: 818px;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  object-fit: cover;
+}
+.home-textinput10 {
+  top: 34px;
+  left: 659px;
+  width: 80px;
+  height: 33px;
+  z-index: 100;
+  position: absolute;
+  padding-right: 0px;
+}
+.home-textinput11 {
+  top: 35px;
+  left: 796px;
+  width: 61px;
+  height: 33px;
+  z-index: 100;
+  position: absolute;
+  padding-right: 0px;
+}
+.home-textinput12 {
+  top: 70px;
+  left: 659px;
+  width: 80px;
+  height: 33px;
+  z-index: 100;
+  position: absolute;
+  padding-right: 0px;
+}
+.home-textinput13 {
+  top: 69px;
+  left: 795px;
+  width: 61px;
+  height: 33px;
+  z-index: 100;
+  position: absolute;
+  padding-right: 0px;
+}
+.home-textinput14 {
+  top: 104px;
+  left: 659px;
+  width: 183px;
+  height: 33px;
+  z-index: 100;
+  position: absolute;
+  padding-right: 0px;
+}
+.home-textinput15 {
+  top: 138px;
+  left: 659px;
+  width: 183px;
+  height: 33px;
+  z-index: 100;
+  position: absolute;
+  padding-right: 0px;
+}

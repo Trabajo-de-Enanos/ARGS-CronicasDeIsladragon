@@ -1,0 +1,209 @@
+<div class="tab flexrow active" data-group="primary" data-tab="descripcion">
+
+    <div class="item-properties">
+        {{#if esFisico}}            
+        <div class="form-group">
+            <label>{{ localize "ARGS.items.cantidad" }}:</label>
+            {{numberInput system.cantidad name="system.cantidad"}}
+        </div>
+
+        <div class="form-group">
+            <label>{{ localize "ARGS.items.peso" }}:</label>
+            {{numberInput system.peso name="system.peso"}}
+        </div>
+
+        <div class="form-group">
+            <label>{{ localize "ARGS.items.precio" }}</label>
+            {{numberInput system.precio.value name="system.precio.value"}}
+            <select name="system.precio.denominacion">-
+               {{#select system.precio.denominacion}}
+						{{#each config.monedas as |name type|}}
+						<option value="{{type}}">{{localize (concat "ARGS.monedas.monedasabre" type)}}</option>
+						{{/each}}
+			    {{/select}}		
+                         {{!--selectOptions config.monedas as selected=system.precio.denominacion labelAttr= (localize config.monedas.abreviacion)--}}
+
+           </select>
+        </div>
+        {{/if}}
+
+        {{#if (eq item.type "habilidades") }}
+        <div class="form-group-nofisico">
+           
+            <h3>{{ localize "ARGS.armadura.propiedades" }}:</h3>
+                                
+            <h4>{{ localize "ARGS.equipamiento.formauso" }}:</h4>
+            <ul>
+            <li><label>{{system.usos.value}}/{{system.usos.max}} - {{system.usos.por}}</label></li>
+            </ul>
+                <label style="text-align: left; padding-right: 5px;">Prep.</label>
+            <ul>
+                <li>{{system.tiempopreparacion.valor}}</li>                 
+                <li>{{system.tiempopreparacion.unidad}}</li>  
+            </ul>
+                <label style="text-align: left; padding-right: 5px;">Dur.</label>
+            <ul>
+                 <li>{{system.duracion.valor}}</li>                
+                <li>{{system.duracion.unidad}}</li>
+            </ul>    
+            <h4>{{ localize "ARGS.habilidades.requerimiento" }}:</h4>
+            <ul>
+            <li><label>{{system.requerimiento}}</label></li>
+            {{#if system.clase}}
+            <li><label>{{localize (concat "ARGS.clases." system.clase)}}  </label></li>
+            {{/if}}
+            </ul>
+        </div>
+        {{/if}}
+        {{#if (eq item.type "hechizo") }}
+            <h3>{{ localize "ARGS.hechizos.info" }}:</h3>
+             <ul>
+            <li> <label>{{ localize "ARGS.hechizos.escuela" }}:</label>
+            {{system.escuela}}</li>
+            </ul>
+            <ul>
+            <li> <label>{{ localize "ARGS.hechizos.dios" }}:</label>
+            {{system.dios}}</li>
+            </ul>
+            <h3>{{ localize "ARGS.hechizos.propiedades" }}:</h3>
+            <ul>
+                <li>{{ localize "ARGS.hechizos.nivel" }}: {{system.nivelhechizo}}</li>
+                <li>{{ localize "ARGS.hechizos.conjmod" }}: {{system.modificadorconjuracion}}</li>
+                <li>{{ localize "ARGS.magia.puntosmagiacosto" }}: {{system.pm}}</li>
+                <li>{{ localize "ARGS.hechizos.tiempocasteo" }}: {{system.tiempocasteo}}</li>
+                <li>{{ localize "ARGS.hechizos.duracion" }}: {{system.duracion}} {{ localize "ARGS.hechizos.turnos" }}</li>
+                {{#if (eq system.resistible true)}}
+                <li>{{ localize "ARGS.hechizos.resist" }}</li>
+                {{/if}}
+                {{#if (eq system.transferible true)}}
+                <li>{{ localize "ARGS.hechizos.transf" }}</li>
+                {{/if}}
+            </ul>
+        {{/if}}
+
+         {{#if (eq item.type "armaduras")}}
+        <h4 class="properties-header">{{localize "ARGS.armadura.propiedades"}}</h4>
+        <ol class="properties-list">
+            <li>
+                <label>{{ localize "ARGS.armadura.categoria" }}:</label>
+            </li>
+            <li>
+              {{ system.categoria }}   
+            </li>           
+            <li>
+                <label>{{ localize "ARGS.armadura.defensa" }}:</label>
+            </li>
+            <li>
+                 {{system.defensa }}
+            </li>
+        </ol>
+        {{/if}}
+          
+        {{#if (eq item.type "clases")}}
+               <h3>{{localize "ARGS.clases.periciasentrena"}}</h3>
+                <div>
+                 
+                {{#each system.periciasentrena as |percat ncat|}}
+
+                    {{#each percat as |prcombate key|}}          
+                     {{#if (gt prcombate 0)}}
+                    <div class="pericia-valor">
+                    <label for="system.periciasentrena.{{ncat}}.{{key}}" class="pericia-label">{{localize (concat "ARGS.pericias." ncat "." key)}}: </label>                  
+                     <label for="system.periciasentrena.{{ncat}}.{{key}}">{{prcombate}}</label>                     
+                     </div>          
+                     {{/if}}
+                    {{/each}}                   
+                {{/each}}
+                </div>
+                <div class="pericias-iniciales">
+                <h3>{{localize "ARGS.clases.periciasinicial"}} </h3>
+                <h4 style="font-size: 12px; color:purple;margin:0px;">{{localize "ARGS.clases.ptosagastar"}} </h4>
+                
+                {{#each system.periciasinicial as |percat ncat|}}
+                 {{#if (gt percat 0)}}
+                    <div class="percat-group">                               
+                         <div class="pericia-valor">
+                        <label for="system.periciasinicial.{{ncat}}" class="pericia-label">{{localize (concat "ARGS.pericias." ncat ".nombre")}}:</label>
+                        <label>{{percat}}</label>
+                        </div>
+                    </div>
+                    {{/if}}
+                {{/each}}
+                </div>
+             
+
+        {{/if}}
+        {{#if (eq item.type "especie")}}
+               <h3>{{localize "ARGS.especies.caracppales"}} </h3>
+                <div>
+                 
+                {{#each system.caracteristicas as |percat ncat|}}
+                 {{#if (ne percat 0)}}
+                    <div class="percat-group">                               
+                         <div class="pericia-valor">
+                        <label for="system.caracteristicas.{{ncat}}" class="pericia-label">{{localize (concat "ARGS.caracteristicas." ncat)}}:</label>
+                        <label>{{percat}}</label>
+                        </div>
+                    </div>
+                    {{/if}}
+                {{/each}}
+                {{#if system.infotexto}}
+                    <h4>{{localize "ARGS.especies.infotextotit"}} </h4>
+                    {{system.infotexto}}
+                {{/if}}
+                </div>
+                   <br>
+                <div class="pericias-iniciales">
+                 <h3>{{localize "ARGS.especies.periciasinicial"}}</h3>
+                <h4 style="font-size: 12px; color:purple;margin:0px;">{{localize "ARGS.clases.ptosagastar"}} </h4>
+             
+                {{#each system.periciasadol as |percat ncat|}}
+
+                    {{#each percat as |prcombate key|}}          
+                     {{#if (gt prcombate 0)}}
+                    <div class="pericia-valor">
+                    <label for="system.periciasadol.{{ncat}}.{{key}}" class="pericia-label">{{localize (concat "ARGS.pericias." ncat "." key)}}: </label>                  
+                     <label for="system.periciasadol.{{ncat}}.{{key}}">{{prcombate}}</label>                     
+                     </div>          
+                     {{/if}}
+                    {{/each}}                   
+                {{/each}}
+                </div>
+                <br>
+               
+                {{#if (ne system.especie.periciasextra.periciaextra1.nombre "")}}
+                    <h3>{{localize "ARGS.especies.periciasextra"}}</h3>
+                    <label for="system.periciasextra.periciaextra1.nombre" class="pericia-label">{{system.especie.periciasextra.periciaextra1.nombre}} </label>
+
+                {{/if}}
+
+        {{/if}}
+
+        {{#if itemProperties.length}}
+        <h4 class="properties-header">{{localize "DND5E.Properties"}}</h4>
+        <ol class="properties-list">
+            {{#each itemProperties}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ol>
+        {{/if}}
+    
+  
+    {{!--editor enriched system.description.value target="system.description.value" button=true editable=editable engine="prosemirror"
+             collaborate=false--}}
+             
+     </div>    
+
+   <div class="item-description">
+              
+                {{editor
+                    descriptionHTML
+                    target="system.description.value"
+                    button=true
+                    editable=editable
+                    engine="prosemirror"
+                    collaborate=false
+                }}
+    </div>
+
+ </div>   

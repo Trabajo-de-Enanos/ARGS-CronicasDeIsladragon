@@ -1,0 +1,127 @@
+<div
+	class="ARGS chat-card item-card"
+	data-actor-id="{{data.actor.id}}"
+	data-item-id="{{data.item.id}}"
+	{{#if tokenId}}data-token-id="{{tokenId}}"{{/if}}
+>
+	<header class="card-header flexrow">
+		{{#if data.item}}
+			{{#if isNPC}}
+				<img src="{{data.actor.img}}" data-tooltip="{{data.item.name}}"/>
+			{{else}}
+				<img src="{{data.item.img}}" data-tooltip="{{data.item.name}}"/>
+			{{/if}}
+			{{#if (eq data.item.type "monturas" )}}
+			<h3 class="item-name">{{title}}</h3>
+			{{else}}
+ 			<h3 class="item-name">{{data.item.name}}</h3>
+			{{/if}}
+		{{else}}
+			<img src="{{data.actor.img}}" data-tooltip="{{title}}"/>
+			<h3 class="item-name">{{title}}</h3>
+		{{/if}}
+		
+	</header>	
+	<div class="d20-roll card-attack-rolls">
+		<div
+			class="card-attack-roll blindable"
+			data-blind="{{data.rolls.main.blind}}"
+		>
+			{{#if data.rolls.main}}
+				<div>
+					<h3>
+						{{#if (eq data.item.type "hechizo")}}
+							{{localize "ARGS.infotexto.lanzandohechizo"}}:
+						{{/if}}
+						{{#if (eq data.item.type "armas")}}
+							{{title}}:
+						{{/if}}
+					</h3>
+				</div>
+				<div>{{{data.rolls.main.renderedHTML}}}</div>
+			{{/if}}
+		</div>
+	</div>
+
+	{{#if (eq data.item.type "hechizo")}}
+		{{#if (eq data.rolls.main.critical "success")}}
+			<div class="card-spell-critical">
+				<div class="critico">
+					{{localize "ARGS.infotexto.critico"}}	
+				</div>
+				<div class="critico-texto">
+					{{localize "ARGS.hechizos.critico"}}
+				</div>					
+			</div>
+		{{/if}}
+		{{#if (eq data.rolls.main.critical "failure")}}
+			<div class="card-spell-critical">
+				<div class="pifia">
+					{{localize "ARGS.infotexto.pifia"}}
+				</div>
+				<div class="pifia-texto">
+					{{localize "ARGS.hechizos.nopuedelanzar"}}
+				</div>
+			</div>
+		{{/if}}
+		{{#if (eq data.rolls.main.success true)}}
+					<div class="conjuro-valor">{{localize "ARGS.infotexto.conjuroOK"}}</div>
+				{{else}}	
+					<div class="conjuro-valor">{{localize "ARGS.infotexto.conjuroNO"}}</div>
+		{{/if}}
+	{{/if}}
+
+	{{#if (or (eq data.item.type "armas")
+			(eq data.actor.type "npc")
+			(eq data.actor.type "animales")
+			(eq data.actor.type "monstruo")
+			(eq data.item.type "monturas")
+						)}}
+		
+			<div class="card-damage-rolls">
+				<div
+						class="card-damage-roll-single blindable"
+						data-blind="{{data.rolls.main.blind}}"
+					>
+						{{#if (eq data.rolls.main.critical "success")}}
+							<div class="card-spell-critical">
+								<div class="critico">
+									{{localize "ARGS.infotexto.critico"}}	
+								</div>								
+							</div>
+						{{/if}}
+						{{#if (eq data.rolls.main.critical "failure")}}
+							<div class="card-spell-critical">
+								<div class="pifia">
+									{{localize "ARGS.infotexto.pifia"}}
+								</div>								
+							</div>
+						{{/if}}
+					</div>		
+						
+			</div>
+			
+			{{#if (or (eq data.flagInstinto 1)
+					(eq data.flagDestreza 1)
+			)}}
+				{{#if (eq data.rolls.main.success true)}}
+					<div class="pericia-valor">{{localize "ARGS.infotexto.periciaOK"}}</div>
+				{{else}}	
+					<div class="pericia-valor">{{localize "ARGS.infotexto.periciaNO"}}</div>
+				{{/if}}		
+			{{/if}}	
+	{{/if}}
+
+	<footer class="card-footer">		
+		{{#if (eq data.esDefensa true)}}
+		<div class="bo-como-bd">
+			{{localize "ARGS.infotexto.bocomobd"}}: 
+		</div>
+		<div class="bo-como-bd-val">
+			{{data.BOBD}}
+		</div>
+		
+		{{/if}}
+	</footer>
+	
+</div>

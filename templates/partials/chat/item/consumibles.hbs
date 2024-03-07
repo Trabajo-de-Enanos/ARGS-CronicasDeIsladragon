@@ -1,0 +1,30 @@
+<div
+	class="args chat-card item-card"
+	data-actor-id="{{actor.id}}"
+	data-item-id="{{item._id}}"
+>
+	<header class="card-header flexrow">
+		<img src="{{item.img}}" data-tooltip="{{item.name}}"/>
+		<h3 class="item-name">{{item.name}}</h3>
+	</header>
+
+	<div class="card-content">
+		<p>
+			<b>{{localize  "ITEM.TypeConsumibles"}}</b> <em> {{localize (concat "ARGS.consumible." item.system.tipoConsumible)}}</em>
+		</p>
+		{{{description}}}
+	</div>
+<footer class="card-footer">
+		<ul class="tags">
+            <li class="tag tag_primary tag_small">
+				{{localize "ARGS.items.itemconsstatus"}}:
+				{{localize (concat "ARGS.consumible."item.system.estado) }}
+			</li>
+			<li class="tag tag_secondary tag_small">
+				{{localize "ARGS.items.itemuso"}}:
+				{{item.system.usos.value}}
+			</li>
+		
+		</ul>
+        </footer>
+</div>

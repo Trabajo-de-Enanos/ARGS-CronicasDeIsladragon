@@ -1,0 +1,117 @@
+.clase-banner{
+    background-color: rgb(32, 32, 32);
+    color: whitesmoke;
+    height: 100px;
+    
+    h3{margin:0px}
+    .clase-info{
+        display: grid;
+        grid-template-columns: 40% 50% 10%;
+        height: 80px;
+        .item-name{
+            display: grid;
+            grid-template-columns: 30% 70%;
+            height: 80%;
+            align-items: center;
+            .item-image{
+                border: none;
+                img{border:none;}
+            }
+            .nombreitem{
+                font-size: 20px;
+            }
+        }
+        img{
+            border: none;
+            width: 80px;
+            height: 80px;
+        };
+        .item-stats {
+            display: flex;
+            align-content: space-between;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 20px;
+        }
+        .item-controls{
+            display: flex;
+            align-content: space-between;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 20px;
+        }
+    }
+ 
+}
+
+.habilidad-banner{
+    height: 100px;
+    
+    h3{margin:0px}
+    .habilidad-info{
+        display: grid;
+        grid-template-columns: 30% 60% 10%;
+        height: 80px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        .combate, .campamento,.otros {
+          // background-color: rgb(44, 15, 15);
+           // color: whitesmoke;
+           border: 2px groove #eeede0;
+           border-radius: 3px;   
+        display: grid;
+        grid-template-columns: 30% 60% 10%;
+        height: 80px;
+                .item-name{
+                    display: grid;
+                    grid-template-columns: 30% 70%;
+                    height: 80%;
+                    align-items: center;
+                    .item-image{
+                        border: none;
+                        img{border:none;}
+                    }
+                    .nombreitem{
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+                }
+                img{
+                    border: none;
+                    width: 70px;
+                    height: 70px;
+                };
+                .item-description {
+                    display: flex;
+                    //align-content: space-between;
+                    //justify-content: space-around;
+                    //align-items: center;
+                    flex-wrap: wrap;
+                    font-size: 15px;
+                    .editor {                        
+                        position: relative !important;
+                        max-height:max-content !important;
+                        max-width: 100% !important;
+                        width: 100% !important;
+                        overflow:scroll !important;
+                    }
+                    .editor-content {
+                        height: 73px !important;
+                        overflow-y: auto;
+                        word-break: break-word;
+                        font-size: 12px;
+                    }
+                }
+                .item-controls{
+                    display: flex;
+                    align-content: space-between;
+                    justify-content: space-around;
+                    align-items: center;
+                    font-size: 20px;
+                }
+            } 
+              
+    }
+
+}
+

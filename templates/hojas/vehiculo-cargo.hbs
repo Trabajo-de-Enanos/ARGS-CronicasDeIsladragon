@@ -1,0 +1,128 @@
+
+<ol class="items-list inventory-list-vehic"> 
+
+{{#each sections as |section sid|}}
+
+    <li class="items-header flexrow">
+        <h3 class="item-name flexrow">{{localize section.label}}</h3>
+
+        {{#if section.columns}}
+            {{#each section.columns}}
+            <div class="item-detail {{css}}">{{label}}</div>
+            {{/each}}       
+        {{/if}}
+
+        {{#if ../owner}}
+        <div class="item-controls flexrow">
+            <a class="item-control item-create" data-action="itemCreate" data-tooltip="ARGS.vehiculos.agregar"
+               {{#each section.dataset as |v k|}}data-{{k}}="{{v}}"{{/each}}>
+               
+                <i class="fas fa-plus"></i> {{localize "ARGS.vehiculos.agregar"}}
+            </a>
+        </div>
+        {{/if}}
+    </li>
+
+    <ol class="item-list">
+    {{#each section.items as |item iid|}}   
+       
+        <li class="item flexrow {{section.css}} " data-item-id="{{item.id}}"
+            {{#if section.editableName}}data-item-index="{{iid}}"{{/if}}>
+            <div class="item-name flexrow">
+                {{#if section.editableName}}                
+                <input type="text" value="{{item.name}}">
+                {{else}}
+                <div class="item-image" tabindex="0" role="button" aria-label="{{item.name}}" style="background-image: url('{{item.img}}')"></div>
+                <div class="item-name">{{item.name~}} - {{item.system.isCargo}}</div>                  
+                
+                {{/if}}
+            </div>
+            {{#if section.columns}}
+                {{#each section.columns as |columna valor|}}             
+                 
+                    <div class="item-detail {{css}}">                      
+                            {{#if (eq property "cantidad")}}
+                                  <input type="text" data-dtype="{{editable}}" data-property="{{property}}" 
+                                   value="{{item.cantidad}}" placeholder="&mdash;">    
+                            {{else}}
+                               {{#if (eq property "system.cantidad")}}                               
+                            <input type="text" data-dtype="{{editable}}" data-property="{{property}}" 
+                                   value="{{item.system.cantidad}}" placeholder="&mdash;">                        
+                                {{/if}}
+                                {{#if (eq property "system.precio.value")}}
+                            <input type="text" data-dtype="{{editable}}" data-property="{{property}}" 
+                                   value="{{item.system.precio.value}}" placeholder="&mdash;">                        
+                                {{/if}}
+                                {{#if (eq property "system.peso")}}
+                                 <input type="text" data-dtype="{{editable}}" data-property="{{property}}"  
+                                   value="{{item.system.peso}}" placeholder="&mdash;">                        
+                                {{/if}}
+                                   {{#if (eq property "descripcion")}}                                  
+                                 <input type="text" data-dtype="{{editable}}" data-property="{{property}}"  
+                                   value="{{item.descripcion}}" placeholder="&mdash;">                        
+                                {{/if}}
+                                    {{#if (eq property "efectos")}}
+                                 <input type="text" data-dtype="{{editable}}" data-property="{{property}}"  
+                                   value="{{item.efectos}}" placeholder="&mdash;">                        
+                                {{/if}}
+                                    {{#if (eq property "valor")}}
+                                 <input type="number" data-dtype="{{editable}}" data-property="{{property}}"  
+                                   value="{{item.valor}}" placeholder="&mdash;">                        
+                                {{/if}}
+                            {{/if}}
+                    </div>
+                {{/each}}
+            {{else}}
+                {{#if @root.isCharacter}}
+                <div class="item-detail item-weight">
+                    {{#if ctx.totalWeight}}
+                        <div class="item-detail">
+                            {{ ctx.totalWeight }} {{ @root.weightUnit }}
+                        </div>
+                    {{/if}}
+                </div>
+                {{/if}}
+
+                <div class="item-detail item-quantity">
+                  bb  <input type="text" value="{{item.system.cantidad}}" placeholder="0" data-dtype="Number" data-name="system.quantity">
+                </div>
+
+                <div class="item-detail item-uses">
+                    {{#if ctx.hasUses }}
+                      cc  <input type="text" value="{{item.system.uses.value}}" placeholder="0" data-dtype="Number" data-name="system.uses.value">
+                        / {{item.system.uses.max}}
+                    {{/if}}
+                </div>
+
+                <div class="item-detail item-action">
+                    {{#if item.system.activation.type }}
+                        {{item.labels.activation}}
+                    {{/if}}
+                </div>
+            {{/if}}
+
+            {{#if @root.owner}}
+            <div class="item-controls flexrow">
+                {{#if ctx.canToggle}}
+                <a class="item-control item-toggle {{ctx.toggleClass}}" data-action="itemToggle" data-tooltip='{{ctx.toggleTitle}}'>
+                    <i class="fas fa-shield-alt"></i>
+                </a>
+                {{/if}}
+                {{#unless section.editableName}}
+                <a class="item-control item-edit" data-action="itemEdit" data-tooltip="ARGS.vehiculos.editar">
+                    <i class="fas fa-edit"></i>
+                </a>
+                {{/unless}}
+                <a class="item-control item-delete" data-action="itemDelete" data-tooltip="ARGS.vehiculos.borrar">
+                    <i class="fas fa-trash"></i>
+                </a>
+            </div>
+            {{/if}}
+
+          
+        </li>
+   
+    {{/each}}
+    </ol>
+{{/each}}
+</ol>

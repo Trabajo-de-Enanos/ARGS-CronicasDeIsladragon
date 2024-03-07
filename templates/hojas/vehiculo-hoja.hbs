@@ -1,0 +1,265 @@
+
+<form class="{{cssClass}}" autocomplete="off">
+   <header class="vehiculo sheet-header">
+      <div class="vehiculo-nombre"> 
+            <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'ARGS.items.nombre'}}"/> 
+         </div>
+      
+      <div class="vehiculo-descripcion">
+      <div class="vehiculo-img"> 
+        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+      </div>   
+     
+     <Div class="infoderecha">
+
+
+          <div class="nivel-tamanio">           
+               <div class="nivel">
+               
+                <label>{{ localize "ARGS.vehiculos.tipos" }}</label>
+                <select name="system.tipo">
+               {{#select system.tipo}}
+               {{#each config.tipoVehic as |name type|}}
+               <option value="{{type}}">{{localize name}}</option>
+               {{/each}}
+               {{/select}}		 
+               </select>                 
+               </div>
+               
+               <div class="tamanio">
+                <label>{{ localize "ARGS.npcmonstruo.tamañotitulo" }}</label> 
+                <select name="system.tamanio">
+               {{#select system.tamanio}}
+               {{#each config.tamanioVehic as |name type|}}
+              
+               <option value="{{type}}">{{ localize name}} </option>
+               {{/each}}
+               {{/select}}		 
+               </select>  
+               </div>
+            </div>
+    <label >{{localize ve_label}}</label>
+         <div class="sheet-trackeables flexrow">
+            <ul class="tracks flexrow">
+                <li class="track health">
+                    <h4 class="track-name box-title">{{ localize "ARGS.atributos.puntosvida" }}</h4>
+                    <div class="track-value multiple">
+                        <input name="system.salud.value" type="text" value="{{system.salud.value}}" placeholder="1" data-dtype="Number">
+                        <span class="sep"> / </span>
+                         <input name="system.salud.max" type="text" value="{{system.salud.max}}" placeholder="{{pht_pv}}" data-dtype="Number">
+                        
+                    </div>                 
+                </li>
+                
+                  <li class="track velocidad">
+                    <h4 class="track-name box-title">{{ localize "ARGS.vehiculos.velocidad" }}</h4>
+                    <div class="track-value ">                        
+                      <input name="system.velocidad" type="text" value="{{system.velocidad}}" placeholder="{{pht_mov}}" data-dtype="Number">  
+                      <label> ( {{system.velocidadFinal}} )</label>
+                                                                                                        
+                    </div>                 
+                   
+                </li>                 
+                <li class="track tripulaciones">
+                    <h4 class="track-name box-title">{{ localize "ARGS.vehiculos.tripulacion" }} </h4>
+                    <div class="track-value col">
+                    <div class="multip">
+                        <input name="system.tripulacion.value" type="text" value="{{tripTotal}}" placeholder="0" data-dtype="Number">
+                        <span class="sep"> / </span>
+                      <input name="system.tripulacion.max" type="text" value="{{system.tripulacion.max}}" placeholder="0" data-dtype="Number">    
+                         </div>
+                         <footer class="track-footer">
+                            <span style="font-size:15px;"> Min: {{pht_trip}}</span>                             
+                          </footer>  
+
+                       </div> 
+                </li>
+                   <li class="track tripulaciones">
+                    <h4 class="track-name box-title">{{ localize "ARGS.vehiculos.pasajeros" }} </h4>
+                    <div class="track-value col">
+                    <div class="multip">
+                        <input name="system.pasajeros.value" type="text" value="{{pplTotal}}" placeholder="0" data-dtype="Number">
+                        <span class="sep"> / </span>
+                      <input name="system.pasajeros.max" type="text" value="{{system.pasajeros.max}}" placeholder="{{pht_pas}}" data-dtype="Number">    
+                         </div>
+                         <footer class="track-footer">
+                                   
+                          </footer>  
+
+                       </div> 
+                </li>
+            </ul>
+        </div>
+
+        
+    
+        <div class="sheet-trackeables flexrow">
+            <ul class="tracks flexrow">
+                <li class="track bodega">
+                    <h4 class="track-name box-title">{{ localize "ARGS.vehiculos.bodega" }}</h4>
+                    <div class="track-value multiple">
+                      <label >{{totalWeight}}</label>                        
+                        <span class="sep"> / </span>
+                         <input name="system.cargo.max" type="text" value="{{system.cargo.max}}" placeholder="{{pht_bod}}" data-dtype="Number">                
+                    </div>                 
+                </li>
+           
+                <li class="track valorcargo">
+                    <h4 class="track-name box-title">{{ localize "ARGS.vehiculos.totaloro" }}</h4>
+                    <div class="track-value ">                      
+                        <span>{{totalGold}} - mo</span>                    
+                    </div>                 
+                </li>
+           </ul>
+        </div>
+
+        <label >Doble Tripulacion</label><input type="checkbox" name="system.dobletrip" data-dtype="Boolean" {{checked system.dobletrip}}>  
+    
+      </div>{{!-- fin header foto y data --}}
+
+
+
+
+   </header>
+  {{!-- Character Sheet Navigation --}}
+     <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="info">{{localize "ARGS.npcmonstruo.info"}}</a> 
+        <a class="item" data-tab="cargo">{{localize "ARGS.vehiculos.cargo"}}</a>         
+        <a class="item" data-tab="descripcion">{{localize "ARGS.tab.descripcion"}}</a>
+    </nav>
+
+      <section class="sheet-body">
+         <div class="tab info" data-group="primary" data-tab="info">
+         
+            <div class="armas-canons item" data-item-id="{{item._id}}">                
+                {{#each items as |item iid|}}       
+                {{#if (eq item.system.atacaCon "artilleria")}}      
+                <div class="cannon-t">
+                    <div class="cuadro-imagen">
+                     <div class="item-image" style="background-image: url({{item.img}})"
+									      data-item-id="{{item._id}}">                                                                                                            
+                     </div>
+                     <div class="item-controls">
+                          <ol class="items-list"  >
+                        <li class="item flexrow" data-item-id="{{item._id}}">
+                          <div class="item-controls" >                        
+                            
+                             {{#if (eq system.tripulado false)}}
+                                 <a class="item-control item-trip" title="{{localize "ARGS.vehiculos.tripasign"}}" ><i class="fas fa-person-simple"></i></a>
+                            {{else}}
+                                    <a class="item-control item-notrip" title="{{localize "ARGS.vehiculos.tripnoasign"}}"><i class="fa-regular fa-person-digging"></i></a>
+                            {{/if}}                            
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                         </div>
+                         </li>
+                         </ol>
+                     </div>
+                    </div>
+
+
+                     <div class="info">
+                        <div class="nombre">
+                            <label>{{item.name}} </label>
+                        </div>
+                        <div class="ataque-arma" data-actor-id="{{actor.id}}" data-item-id="{{item._id}}">                                
+                        <a class="fas fa-axe-battle rollable" data-roll="{{item.system.formula}}" >  {{localize "ARGS.infotexto.atacar"}}</a> 
+                        {{#if (eq item.name "Harpon Retractil")}} -  <a class="fas fa-droplet rollable"data-roll="1d2*100" data-tooltip="{{localize "ARGS.vehiculos.drenar"}}"></a>{{/if}}
+                        </div>
+                        <div class="recarga item"   data-actor-id="{{actor.id}}" data-item-id="{{item._id}}">
+                                
+                            <h4>  <i class="fa-solid fa-ball-pile"></i> {{localize "ARGS.items.recarga"}} - {{localize "ARGS.hechizos.turnos"}}</h4>                       
+                          
+                            {{#if (eq item.name "Cañon")}}
+                            <label><input type="checkbox" data-property="system.carga1" data-dtype="Boolean" {{checked item.system.carga1}}/></label>
+                            <label><input type="checkbox" data-property="system.carga2" data-dtype="Boolean" {{checked item.system.carga2}}/></label>
+                            {{/if}}
+                            {{#if (eq item.name "Harpon Retractil")}}                            
+                                <input type="checkbox" data-property="system.carga1" data-dtype="Boolean" {{checked item.system.carga1}}/>
+                                <input type="checkbox" data-property="system.carga2" data-dtype="Boolean" {{checked item.system.carga2}}/>
+                                <input type="checkbox" data-property="system.carga3" data-dtype="Boolean" {{checked item.system.carga3}}/>
+                                <input type="checkbox" data-property="system.carga4" data-dtype="Boolean" {{checked item.system.carga4}}/>
+                            {{/if}}
+                             
+                        </div>                     
+                     </div>
+
+                </div>    
+                {{/if}}
+                {{/each}}
+            </div>
+
+
+        
+         
+            <div class="municiones">
+             <ol class="items-list">
+                 <li class="item flexrow items-header">
+                    <div class="item-namecenter">{{localize "ARGS.consumible.municiones" }}</div>                    
+                    <div class="item-peso"> {{localize "ARGS.items.peso"}}</div>
+                    <div class="item-cant">{{localize "ARGS.items.cantres"}}</div>
+                    <div class="item-usos" >{{localize "ARGS.items.usos"}}</div>                    
+                    <div class="item-controls"> Ctrl </div>
+                </li>
+              {{#each items as |item iid|}}       
+                {{#if (eq item.system.tipoConsumible "municiones")}}   
+                 <li class="item flexrow" data-item-id="{{item._id}}">
+                    <div class="item-namecenter">
+                         <div class="item-image" style="background-image: url({{item.img}})"
+									      data-item-id="{{item._id}}">
+                                           <i class="fas fa-comment fa-lg"></i>                        
+                        <!--a class="rollable" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></a-->
+                         
+                        </div>
+                       <div class="nombreitem">{{item.name}}</div>
+                    </div>
+                    <div class="item-peso ">{{item.system.peso}}</div>
+                    <div class="item-cant">{{item.system.cantidad}}</div>
+
+                    <div class="item-usos">                        
+                        <input class="item-usos inline-edit" type="text" data-property="system.usos.value" value="{{item.system.usos.value}}" placeholder="0" data-dtype="Number" >                       
+                        
+                    </div>                      
+                    {{#if items.totalWeight}}
+                        <div class="item-detail">
+                            {{ items.totalWeight }} PESADO
+                        </div>
+                    {{/if}}
+                    <div class="item-controls">                      
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                    </li>
+
+
+                {{/if}}
+                {{/each}}
+                </ol>
+         </div>
+
+            
+            {{> "systems/ARGS/templates/hojas/vehiculo-cargo.hbs" sections=features}}   
+
+        </div>
+         <div class="tab cargo" data-group="primary" data-tab="cargo">
+
+            {{> "systems/ARGS/templates/hojas/vehiculo-cargo.hbs" sections=cargo}}           
+
+         </div>         
+         <div class="tab config" data-group="primary" data-tab="config"></div>
+         
+         <div class="tab descr" data-group="primary" data-tab="descripcion">
+             <div class="vehiculo-detalles"> 
+            
+               {{editor
+                    descriptionHTML
+                    target="system.description.value"
+                    button=true
+                    editable=editable
+                    engine="prosemirror"
+                    collaborate=false
+                }}
+         </div>
+      </div>
+  </SECtion>     
+</form>

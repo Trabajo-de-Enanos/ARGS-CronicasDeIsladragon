@@ -1,0 +1,170 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile" src="{{item.img}}" data-tooltip="{{item.name}}" data-edit="img"/>
+
+		    <div class="header-detalles">
+            <h1 class="itemnombre">
+                <input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'ARGS.ItemName' }}"/>
+            </h1>                       
+        </div>
+       
+	</header>
+	 {{!-- Item Sheet Navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item" data-tab="descripcion">{{ localize "ARGS.tab.descripcion" }}</a>
+        <a class="item" data-tab="detalles">{{ localize "ARGS.tab.detalles" }}</a>
+      
+    </nav>
+	
+    {{!-- Item Sheet Body --}}
+    <section class="sheet-body">
+		    {{> "systems/ARGS/templates/partials/items-descripcion.hbs" }}
+
+	{{!-- Details Tab --}}
+       <div class="tab detalles" data-group="primary" data-tab="detalles">
+             <div class="clase-item item" data-item-id="{{item._id}}">
+            <h2 class="form-header"> {{ localize "ARGS.especies.especiedetalles"}}</h2>
+              <h3>{{localize "ARGS.especies.caracppales"}}</h3>
+                     
+                {{!-- BonosCaracteristicas. --}}
+            <div class="pericias-iniciales">
+                
+                <div class="pericias-grid grid grid-3col">
+                {{#each system.caracteristicas as |carac ncat|}}
+                    <div class="percat-group">                               
+                         <div class="pericia-valor">
+                        <label for="system.caracteristicas.{{ncat}}" class="pericia-label">{{localize (concat "ARGS.caracteristicas." ncat )}}</label>
+                        <input type="text" name="system.caracteristicas.{{ncat}}" value="{{carac}}" data-dtype="Number"/>
+                        </div>
+                    </div>
+                {{/each}}
+                   
+                </div>
+             </div>       
+             <div class="pericias-grid grid grid-1col">
+             <h3>{{localize "ARGS.especies.infotextotit"}} </h3>           
+             <h4>{{localize "ARGS.especies.infotextosubtit"}} </h4>
+                        <input type="text" name="system.infotexto" placeholder="{{localize "ARGS.especies.infotexto"}}" value="{{system.infotexto}}"/>
+
+            </div>
+              {{!-- Pericias de Adolescencia --}}
+            <div class="pericias-entrenamiento">
+                <h3>{{localize "ARGS.especies.periciasinicial"}}</h3>
+                <div class="pericias-grid grid grid-3col">
+                 
+                {{#each system.periciasadol as |percat ncat|}}
+                    <div class="percat-group">
+                        <div  class="percat-title">
+                        <h4>{{localize (concat "ARGS.pericias." ncat ".nombre")}}</h4>                
+                        </div>                     
+                    {{#each percat as |prcombate key|}}          
+                    <div class="pericia-valor">
+                    <label for="system.periciasadol.{{ncat}}.{{key}}" class="pericia-label">{{localize (concat "ARGS.pericias." ncat "." key)}}</label>                  
+                     <input type="text" name="system.periciasadol.{{ncat}}.{{key}}" value="{{prcombate}}" data-dtype="Number"/>                   
+                     </div>          
+                    {{/each}}
+                    </div>                    
+                {{/each}}
+             </div>   
+            </div>
+
+            <div class="pericias-extra-especie">
+                    <h3>{{localize "ARGS.especies.periciasextra"}}</h3>
+                <div class="pericias-grid grid grid-3col">
+                             
+                    <div class="percat-group">
+                        <div  class="percat-title">
+                        <h4>{{localize (concat "ARGS.pericias.extras.periciaextra1")}}</h4>                
+                        </div>                     
+                        <div class="pericia-valor">
+                            <h4>{{localize (concat "ARGS.especies.periciasextranm")}}</h4>                              
+                        <input type="text" name="system.especie.periciasextra.periciaextra1.nombre" value="{{system.especie.periciasextra.periciaextra1.nombre}}" data-dtype="text"/>                   
+                        </div>    
+                        <div class="pericia-valor">
+                            <h4>{{localize (concat "ARGS.especies.periciasextravalor")}}</h4>                              
+                        <input type="text" name="system.especie.periciasextra.periciaextra1.valor" value="{{system.especie.periciasextra.periciaextra1.valor}}" data-dtype="Number"/>                                        
+                        </div>     
+                        <div class="pericia-valor">
+                            <h4>{{localize (concat "ARGS.especies.periciaextrabase")}}</h4>              
+                                <select name="system.especie.periciasextra.periciaextra1.habilidad">
+                                {{#select system.especie.periciasextra.periciaextra1.habilidad}}
+                                {{#each config.caracteristicas as |name type|}}
+                                    <option value="{{type}}">{{localize name}} </option>
+                                {{/each}}
+                                {{/select}}		 
+                                </select>                                   
+                        </div>           
+                    </div>  
+                     <div class="percat-group">
+                        <div  class="percat-title">
+                        <h4>{{localize (concat "ARGS.pericias.extras.periciaextra2")}}</h4>                
+                        </div>                     
+                        <div class="pericia-valor">
+                            <h4>{{localize (concat "ARGS.especies.periciasextranm")}}</h4>                              
+                        <input type="text" name="system.especie.periciasextra.periciaextra2.nombre" value="{{system.especie.periciasextra.periciaextra2.nombre}}" data-dtype="text"/>                   
+                        </div>    
+                        <div class="pericia-valor">
+                            <h4>{{localize (concat "ARGS.especies.periciasextravalor")}}</h4>                              
+                        <input type="text" name="system.especie.periciasextra.periciaextra2.valor" value="{{system.especie.periciasextra.periciaextra2.valor}}" data-dtype="Number"/>                                        
+                        </div>     
+                        <div class="pericia-valor">
+                            <h4>{{localize (concat "ARGS.especies.periciaextrabase")}}</h4>              
+                                <select name="system.especie.periciasextra.periciaextra2.habilidad">
+                                {{#select system.especie.periciasextra.periciaextra2.habilidad}}
+                                {{#each config.caracteristicas as |name type|}}
+                                    <option value="{{type}}">{{localize name}}</option>
+                                {{/each}}
+                                {{/select}}		 
+                                </select>                                   
+                        </div>           
+                    </div>  
+                     <div class="percat-group">
+                        <div  class="percat-title">
+                        <h4>{{localize (concat "ARGS.pericias.extras.periciaextra3")}}</h4>                
+                        </div>                     
+                        <div class="pericia-valor">
+                            <h4>{{localize (concat "ARGS.especies.periciasextranm")}}</h4>                              
+                        <input type="text" name="system.especie.periciasextra.periciaextra3.nombre" value="{{system.especie.periciasextra.periciaextra3.nombre}}" data-dtype="text"/>                   
+                        </div>    
+                        <div class="pericia-valor">
+                            <h4>{{localize (concat "ARGS.especies.periciasextravalor")}}</h4>                              
+                        <input type="text" name="system.especie.periciasextra.periciaextra3.valor" value="{{system.especie.periciasextra.periciaextra3.valor}}" data-dtype="Number"/>                                        
+                        </div>     
+                        <div class="pericia-valor">
+                            <h4>{{localize (concat "ARGS.especies.periciaextrabase")}}</h4>              
+                                <select name="system.especie.periciasextra.periciaextra3.habilidad">
+                                {{#select system.especie.periciasextra.periciaextra3.habilidad}}
+                                {{#each config.caracteristicas as |name type|}}
+                                    <option value="{{type}}">{{localize name}} </option>
+                                {{/each}}
+                                {{/select}}		 
+                                </select>                                   
+                        </div>           
+                    </div>                    
+              
+             </div>        
+
+
+
+            </div>
+            
+           
+
+              {{!-- Lenguajes --}}
+            <div class="pericias-especiales">
+                <h3>{{localize "ITEM.TypeLenguajespl"}} </h3>
+               
+                <div class="choice-selector item-detail">
+                    {{>
+                    systems/ARGS/templates/partials/selector-opciones.hbs
+                    config=lenguajeFijoConfig
+                    editable=editable
+                    }}
+                </div>
+            </div>
+        </div>
+
+        
+        
+	</section>
+</form>

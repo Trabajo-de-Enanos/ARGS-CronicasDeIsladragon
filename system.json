@@ -1,0 +1,371 @@
+{
+	"id": "ARGS",
+	"title": "Advanced Roleplaying Game System 1E",
+	"desciption": "Cronicas de Isladragon",
+	"version": "1.0.1",
+	"compatibility": {
+		"minimum": "10",
+		"verified": "11"
+	},
+	"url": "https://www.instagram.com/argsdungeonlair/",
+	"authors": [
+    {
+			"name": "Juanjo Vilaseca",
+			"instagram": "@brucewayne__ok"
+		},
+		{
+			"name": "Federico Lauro",
+			"instagram": "@lic_federico_lauro"			
+		}
+  ],
+	"esmodules": ["ARGS.mjs"],
+	"styles":["ARGS.css"],	
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		},
+		{
+			"lang": "es",
+			"name": "Español",
+			"path": "lang/es.json"
+		}			
+	],
+	"packs": [
+		{
+			"name": "armas",
+			"label": "Armas",
+			"system": "ARGS",
+			"path": "packs/armas",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "habilidades",
+			"label": "Habilidades",
+			"system": "ARGS",
+			"path": "packs/habilidades",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "items",
+			"label": "Items Bazar",
+			"system": "ARGS",
+			"path": "packs/items",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "clases",
+			"label": "Clases",
+			"system": "ARGS",
+			"path": "packs/clases",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "especies",
+			"label": "Especies",
+			"system": "ARGS",
+			"path": "packs/especies",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "lenguajes",
+			"label": "Lenguajes",
+			"system": "ARGS",
+			"path": "packs/lenguajes",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "armaduras",
+			"label": "Armaduras",
+			"system": "ARGS",
+			"path": "packs/armaduras",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "resguardo",
+			"label": "Hechizos Resguardo",
+			"system": "ARGS",
+			"path": "packs/resguardo",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "enlace",
+			"label": "Hechizos Enlace",
+			"system": "ARGS",
+			"path": "packs/enlace",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "llamamiento",
+			"label": "Hechizos Llamamiento",
+			"system": "ARGS",
+			"path": "packs/llamamiento",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "canalizacion",
+			"label": "Hechizos Canalizacion",
+			"system": "ARGS",
+			"path": "packs/canalizacion",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "enmascaramiento",
+			"label": "Hechizos Enmascaramiento",
+			"system": "ARGS",
+			"path": "packs/enmascaramiento",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "alteracion",
+			"label": "Hechizos Alteracion",
+			"system": "ARGS",
+			"path": "packs/alteracion",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "revelacion",
+			"label": "Hechizos Revelacion",
+			"system": "ARGS",
+			"path": "packs/revelacion",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "paladin",
+			"label": "Hechizos Paladin",
+			"system": "ARGS",
+			"path": "packs/paladin",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "monjeguerrero",
+			"label": "Hechizos Monje Guerrero",
+			"system": "ARGS",
+			"path": "packs/monjeguerrero",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "magosangre",
+			"label": "Hechizos Mago de Sangre",
+			"system": "ARGS",
+			"path": "packs/magosangre",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "druida",
+			"label": "Hechizos Druida",
+			"system": "ARGS",
+			"path": "packs/druida",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "bestias",
+			"label": "Bestias",
+			"system": "ARGS",
+			"path": "packs/bestias",
+			"type": "Actor",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "mitologicos",
+			"label": "Criaturas Mitologicas",
+			"system": "ARGS",
+			"path": "packs/mitologicos",
+			"type": "Actor",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "dragones",
+			"label": "Dragones",
+			"system": "ARGS",
+			"path": "packs/dragones",
+			"type": "Actor",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "npcs",
+			"label": "NPCs",
+			"system": "ARGS",
+			"path": "packs/npcs",
+			"type": "Actor",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "animales",
+			"label": "Animales",
+			"system": "ARGS",
+			"path": "packs/animales",
+			"type": "Actor",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "monturas",
+			"label": "Monturas",
+			"system": "ARGS",
+			"path": "packs/monturas",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "vehiculos",
+			"label": "Vehiculos",
+			"system": "ARGS",
+			"path": "packs/vehiculos",
+			"type": "Actor",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "consumibles",
+			"label": "Consumibles",
+			"system": "ARGS",
+			"path": "packs/consumibles",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "mapas",
+			"label": "Mapas",
+			"system": "ARGS",
+			"path": "packs/mapas",
+			"type": "Scene",
+			"private": false,
+			"flags": {}
+		  },
+		  {
+			"name": "screen",
+			"label": "ARGS Screen - Reglas",
+			"system": "ARGS",
+			"path": "packs/screen",
+			"type": "JournalEntry",
+			"private": false,
+			"flags": {}
+		  }
+		  
+	],
+	"packFolders": [
+		{
+		  "name": "ARGS Content",
+		  "sorting": "m",
+		  "color": "#a0410d",
+		  "packs": [
+			"reglas",
+			"tablas",
+			"aventureros",
+			"screen"
+		  ],
+		  "folders": [
+			{
+				"name": "Armas y Armaduras",
+				"sorting": "m",
+				"color": "#941919",
+				"packs": [
+				  "armas","armaduras"
+				  
+				]
+			  },			  
+			  {
+				"name": "Items Bazar",
+				"sorting": "m",
+				"color": "#7a7716",
+				"packs": [
+				  "items","monturas","consumibles"
+				  
+				]
+			  },
+			  {
+				"name": "Hechizos",
+				"sorting": "m",
+				"color": "#bf99ff",
+				"packs": [
+				  "resguardo","enlace","paladin","llamamiento","canalizacion","enmascaramiento","alteracion","revelacion","monjeguerrero","magosangre","druida"
+				  
+				]
+			  },
+			  {
+				"name": "Aventureros",
+				"sorting": "m",
+				"color": "#46450a",
+				"packs": [
+				  "clases","especies","habilidades","lenguajes"				  
+				]
+			  },
+			  {
+				"name": "Criaturas",
+				"sorting": "m",
+				"color": "#32004b",
+				"packs": [
+				  "bestias","dragones","mitologicos","npcs","animales"				  
+				]
+			  },
+			  {
+				"name": "Vehiculos",
+				"sorting": "m",
+				"color": "#005826",
+				"packs": [
+				  "vehiculos"				  
+				]
+			  },
+			  {
+				"name": "Mapas",
+				"sorting": "m",
+				"color": "#1cbbb4",
+				"packs": [
+				  "mapas"				  
+				]
+			  }
+			]
+		}
+	],	  
+	"socket": true,
+  "gridDistance": 1,
+  "initiative": "1d20 + @destreza.finalss"  ,
+  "gridUnits": "hex",
+  "primaryTokenAttribute": "calculados.puntosvida",
+  "secondaryTokenAttribute": "puntosmagia",
+  "background": "systems/ARGS/assets/artwork/args_cover.webp"
+}

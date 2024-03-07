@@ -1,0 +1,52 @@
+{
+  "folder": null,
+  "name": "Alabarda",
+  "type": "armas",
+  "img": "icons/weapons/polearms/halberd-crescent-small-spiked.webp",
+  "system": {
+    "description": {
+      "value": "<h2>Alabarda:</h2><blockquote><p>Ataca a 2 metros de distancia</p><p>Requiere Habilidad=5</p></blockquote><p>Precios:</p><ul><li><p>Calidad Inferior: 4 Mo</p></li><li><p>Calidad Normal: 8 Mo</p></li><li><p>Calidad Superior: 15 Mo</p></li></ul>",
+      "chat": ""
+    },
+    "precio": {
+      "value": 8,
+      "denominacion": "MO"
+    },
+    "cantidad": 1,
+    "peso": 6,
+    "Calidad": [
+      "inferior",
+      "normal",
+      "superiorete"
+    ],
+    "equipado": false,
+    "enmontura": false,
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "atacaCon": "armaslargas",
+    "formula": "0+0+@armaslargas.final+ 1d8x>=8 ",
+    "danio": "d8",
+    "recarga": false,
+    "otro": 0,
+    "bonificadorCalidad": 0,
+    "bonificadorMagia": 0,
+    "lanzable": false,
+    "cantdado": 1,
+    "critumbral": 8,
+    "calidad": "normal"
+  },
+  "effects": [],
+  "flags": {},
+  "_stats": {
+    "systemId": "ARGS",
+    "systemVersion": "1.0.1",
+    "coreVersion": "11.305",
+    "createdTime": 1696687273125,
+    "modifiedTime": 1696687452819,
+    "lastModifiedBy": "ARGSCompiler000"
+  },
+  "sort": 0,
+  "_id": "OYsMCe2YrAfYiULh"
+}

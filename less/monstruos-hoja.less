@@ -1,0 +1,318 @@
+.editable{
+    background-image: url(/systems/ARGS/assets/parchment-smooth.webp) !important;
+}
+.sheet-tabs {
+    display: flex;
+    justify-content: space-around;
+    font-family:"Dominican Small Caps";
+    font-size:16px;
+    font-weight: bold;
+    color: rgb(47, 48, 47);
+    .item{padding: 0px;
+        
+        border-bottom: 1px solid #a1a1a1;  }
+    .item.active {
+        text-shadow: 0 0 10px purple;
+        //background-color: rgba(0,0,0,0.1); 
+        //border-top: 1px solid #a1a1a1;    
+        //border-left: 1px solid #a1a1a1;         
+        //border-right: 1px solid #a1a1a1;    
+        //border-bottom: none;
+       
+      }
+}
+.monstruo.sheet-header{
+    display: flex;
+   // background-color: orange;
+    
+   .monstruo-nombre{
+    flex: 0 0 100%;
+    height: 15%;
+    font-family: "Dungeon";
+    font-weight: bold;
+    font-size:50px;
+    text-align: center;
+    input{
+        height: 40px;
+    }
+    }
+    .monstruo-descripcion{
+        display: flex;
+        flex: 0 0 100%;
+        height: 320px;
+       // flex-direction: column;
+
+        .monstruo-img{
+            flex: 0 0 320px            ;
+            img {
+                width: 100%;              
+                border: 0px;
+                height: 100%;
+                padding-right: 5px;
+                max-width: 320px;
+                max-height: 320px;
+              }
+        }
+        .monstruo-detalles{
+            flex: 1 0 0;
+            height: 265px;
+            padding-top: 10px; 
+            .prosemirror {
+                display: flex;
+                height: 100%;     
+            }         
+            .editor-content {
+                height: 310px;
+                overflow-y: auto;
+                word-break: break-word;
+            }     
+            .editor {
+                position: relative;
+                max-height: 320px;
+                max-width: 100%;
+                overflow: auto;
+            }
+        }
+    }
+}
+.nivel-tamanio{
+    display: flex;
+    padding-bottom: 5px;
+    .nivel{
+    flex: 0 0 50%;
+    text-align: center;
+    }
+    .tamanio{
+    flex: 0 0 50%;
+    text-align: center;
+    }
+
+}
+
+.sheet-trackeables{
+    display: flex;
+    border: 2px groove #eeede0;
+    border-radius: 3px;
+     ul.tracks {
+        flex: 0 0 100%;
+        margin: 0;
+        padding-left: 0px;
+        li.track {
+            position: relative;
+            height: 70px;
+            margin: 0;
+            border: none;
+            border-right: 2px groove #eeede0;
+            border-radius: 0;
+            list-style: none;
+            ::marker{display: none;}
+            .track-name {
+                font-family: "Modesto Condensed";
+                justify-content: center;
+                border-bottom: 1px solid rgb(78, 78, 78);
+                font-size: 18px;
+                text-align: center;
+                list-style: none;
+                ::marker{display: none;}
+            }
+            .track.health {
+                span.value {
+                    line-height: 64px;
+                    flex: 0 0 64px;
+                    
+                }
+            } 
+            .track-value {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 28px;
+                line-height: 28px;
+                font-family: "Dungeon";
+                font-size: 30px;
+                font-weight: 700;
+                .track-footer{
+                    display: grid;
+                    font-size: 20px;
+                }
+                .fa-dice-d6:hover {
+                    color: #111;
+                    text-shadow: 0 0 10px purple;
+                }
+              }
+              .col{
+                flex-direction: column;
+                //line-height: 15px;
+                justify-content: normal;
+            }
+              input {
+                width: 20%;
+                text-align: right;
+                border-bottom: none;
+              } 
+
+            }
+        }
+    }
+.monstruo-ataques{
+    height: 100px;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .ataque-monstruo,.defensa-monstruo {
+        font-size: 20px;
+        .fas:hover{
+            font-size: 30px ;
+            color: #111;
+            text-shadow: 0 0 10px purple;
+        }
+    }
+}
+.monstruo-habilidades{
+    height: 200px;
+}
+.especiales{
+    .editor{
+        height: 200px;
+    }
+}
+.animales-descripcion{
+    display: flex;
+    .animales-img{
+        height: 75px;
+        width: 75px;
+        img{height: 75px;
+            width: 75px;
+            border: none;    
+        }
+    }
+    .animales-nombre{
+        flex: 0 0 (100% - 50px);
+        font-family: "Dungeon";
+        font-size: 50px;
+        font-weight: bold;
+        input{
+            height: 50px
+        };
+
+    }
+}
+.animales-detalles{
+    display: block;
+    .editor{ 
+        position: relative;
+        max-height: 100%;
+        max-width: 100%;
+        overflow: auto;
+        height: 250px;}
+}
+//// HECHIZOS
+.items-list-monst {
+    border: 2px groove #eeede0;
+    border-radius: 4px;  
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 1px;
+    li.item.flexrow.items-header { 
+        background-color: rgb(53, 52, 52, 0.75);
+        color: whitesmoke;        
+    } 
+    li.item.flexrow {text-align: center;
+        border-bottom: 1px groove rgb(53, 52, 52);
+        justify-content: center;
+        ALIGN-ITEMS: center;
+    }
+    li.item-summary::marker{display: none;color: rgba(0,0,0,0.0);}
+    .item-summary {
+        flex: 0 0 100%;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 0.25em 0.5em;
+        color: #191813;
+        border-top: 1px solid #c9c7b8;
+    }
+    .boton-hechizo {
+        ::marker{display: none;color: rgba(0,0,0,0.0);}
+          button {
+            background: rgba(66, 66, 66, 0.568);
+            width: 20%;
+            border: 2px groove var(--color-border-light-highlight);
+            button::marker{display: none;color: rgba(0,0,0,0.0);} 
+            }
+        
+       }
+       .chat-card-buttons::marker{display: none;color: rgba(0,0,0,0.0);}
+    .item-namecenter {
+        flex: 0 0 24%;
+        display: flex;
+        overflow: hidden;
+        .nombreconjuro {
+          display: flex;
+          flex: 2;
+          //flex: 0 0 100px;
+          margin: 0;
+          overflow: hidden;
+          font-size: 13px;
+          text-align: left;
+          align-items: center;
+          padding-left: 2px;
+          &:hover {
+            text-shadow: 0 0 10px purple;
+          }
+        }
+        .item-image {
+         // flex: 0 0 30px;
+          height: 30px;
+         
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		font-size: 14px;
+		vertical-align: middle;
+		text-align: center;
+
+		color: transparent;
+
+        .fa-lg {
+            font-size: 1.25em;
+            line-height: inherit;
+            width: 30px;
+            height: 30px;
+            margin: 0px;
+            padding-top: 5px;
+        }
+          &:hover {
+            font-size: 1.25;
+            line-height: -3em;
+            vertical-align: baseline;
+            width: 30px;
+            height: 30px;
+			background:none !important;
+			color: white;
+		}
+        }
+        img{
+          height: 30px;
+          width: 30px;
+          background-size: cover;
+          background-position: 50% 0;
+          border: none;
+          margin-right: 5px;
+        }
+      }
+    .item-level {flex: 0 0 5%;}
+    .item-pm {flex: 0 0 6%;}
+    .item-modconj {flex: 0 0 8%;}
+    .item-tiempocast {flex: 0 0 8%;}
+    .item-duracion {flex: 0 0 8%;}
+    .item-resistible {flex: 0 0 10%;}
+    .item-transferible {flex: 0 0 10%;}
+    .item-preparado {flex: 0 0 9%;}
+    .item-controls {flex: 0 0 10%;}
+}  
+li.item-summary::marker{display: none;color: rgba(0,0,0,0.0);}

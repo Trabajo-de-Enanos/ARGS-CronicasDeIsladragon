@@ -1,0 +1,365 @@
+.ARGS.chat-card.item-card {
+    .card-header {
+      padding: 3px 0;
+      border-top: 2px groove #FFF;
+      border-bottom: 2px groove #FFF;
+  
+      img {
+        flex: 0 0 36px;
+        margin-right: 5px;
+        width: 36px;
+        height: 36px;
+        border-radius: 3px;
+      }
+  
+      h3{
+        flex: 1;
+        align-items: center;
+        margin: 0;
+        line-height: 1;
+        align-self: center;
+        font-size: 28px;
+        font-family: 'Dungeon';
+        font-weight: bold;
+      }
+    }
+  
+    .card-content {
+      padding: 3px 0 3px;
+  
+      p {
+        //padding: 3px 0 3px;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+        line-height: 22px;
+      }
+    }
+  
+    .card-attack-roll {
+      padding: 3px 0 3px;
+     
+    }
+  
+    .card-damage-rolls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    
+    }
+    .pericia-valor{
+      font-weight: bold;
+      font-size: 15px;
+      text-align: center;
+    }
+    .card-damage-roll {
+      padding: 2px 6px 3px;
+  
+      h3 {
+        font-size: 12px;
+      }
+  
+    }
+  
+    .card-damage-roll-single {
+      padding: 12px 0 3px;
+      grid-column: span 2;
+    }
+  
+    .card-spell-critical {
+      font-size: 12px;
+      padding: 3px 0 0;
+      .critico{
+        color:green;
+        font-weight: bold;
+        font-size: 25px;
+        text-align: center;
+        font-family: "Dungeon";
+       }
+      .pifia{
+        color: darkred;
+        font-weight: bold;
+        font-size: 25px;
+        text-align: center;
+        font-family: "Dungeon";
+        span{
+          font-weight: bold;
+          font-size: 15px;
+          text-align: center;
+        }
+      }
+      .critico-texto, .pifia-texto {
+        font-weight: bold;
+        font-size: 15px;
+        text-align: center;
+      }
+      
+    }
+    .conjuro-valor{
+      font-weight: bold;
+      font-size: 15px;
+      text-align: center;
+    }
+    .card-buttons {
+      padding: 3px 0 3px;
+      display: none;
+    }
+  
+    .card-buttons.hp {
+      padding: 3px 0 3px;
+      display: block;
+    }
+  
+    .card-footer {
+      padding: 3px 0 0;
+      border-top: 2px groove #FFF;
+      .bo-como-bd{
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .bo-como-bd-val{
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        color: purple;
+        padding: 3px 0;
+        border: 2px groove #FFF;
+
+      }
+      span {
+        border: 2px groove #FFF;
+        border-radius: 5px;
+        padding: 0 4px 0 4px;
+        font-size: 10px;
+      }
+    }
+    
+  }
+
+
+  .monturas{
+    border: 2px groove #eeede0;
+     border-radius: 4px;
+    .mount-tracks{
+      display: flex;
+      .track-value {
+        flex: 0 0 50%;
+        border: 2px groove #eeede0;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        //font-weight: bold;                
+
+        img {
+          height: 20px;
+          width: 20px;
+          border: none;
+          margin-right: 5px;
+          align-items: baseline;
+        }
+      }
+      input[type="text"]{
+        width: 25%;
+        height: 20px;
+        box-sizing: border-box;
+        line-height: 20px;                  
+        font-size:18px;
+        font-weight: bold;
+        border:0;
+        background: none;
+        border-bottom:1px solid #2f2f2f;
+        outline:none;
+        border-radius: 0;
+        padding-right: 5px;
+        }
+    }
+ 
+    
+  
+ .monturas-list{
+  margin: 0 0;
+  padding: 0 0 0 0;
+  display: flex;
+  flex: 0 0 100%;
+  height: 50px;
+
+.montura {
+  align-items: center;
+  padding: 0 2px;
+  flex: 0 0 100%;
+  border-bottom: 1px solid #c9c7b8;
+}
+
+li.item.flexrow.items-header {
+  font-size: 16px;
+  color: rgb(49, 49, 49);
+  border-bottom: 1px solid gray;
+  background-color: rgba(0, 0, 0, 0.05);
+  height: 20px;
+  line-height: 25px;
+}
+
+li {
+  
+  font-family: "FHACondFrenchNC";
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 1px;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid #c9c7b8;
+  word-break: break-word;
+  flex: 0 0 100%;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  .mount-name {
+    flex: 0 0 100%;
+    display: flex;
+    overflow: hidden;
+    font-size: 20px;
+    align-items: center;
+    .nombremount {
+      display: flex;
+      flex: 2;
+      //flex: 0 0 100px;
+      margin: 0;
+      overflow: hidden;
+      font-size: 20px;
+      text-align: left;
+      align-items: center;
+      padding-left: 2px;
+    }
+    .item-controls {
+      font-size: 15px;
+      align-items: center;
+    }
+    .mount-image {
+      flex: 0 0 50px;
+      height: 50px;              
+    }
+    img{
+      height: 50px;
+      width: 50px;
+      background-size: cover;
+      background-position: 50% 0;
+      border: none;
+      margin-right: 5px;
+    }
+  }              
+}
+}
+.statsmount {
+  font-family: "Dungeon";
+  font-weight: bold;
+  font-size:20px;
+  
+  //color: darkslateblue;
+ 
+  ol.stats-mount {
+    padding: 0px;
+    margin:0px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    li {
+      align-items: center;
+      border: 1px dashed  gray;
+      text-align: center;
+      .fas:hover {
+        color: #111;
+        text-shadow: 0 0 10px purple;
+      }
+      img{
+        width: 30px !important; 
+        height: 30px !important;
+        border: none;
+        margin-right: 5px;
+      }
+    }
+   
+  }
+  }//statsmount fin
+
+
+}
+
+.ARGS.chat-card.pericia-card{
+  //background-color: darkolivegreen;
+  .card-header{
+    //background-color: orange;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    //.header-image{flex: 0 0 30%;}
+    .header-title{flex: 0 0 100%;}
+    h3{
+      flex: 1;
+      align-items: center;
+      margin: 0;
+      line-height: 1;
+      align-self: center;
+      font-size: 28px;
+      font-family: 'Dungeon';
+      font-weight: bold;
+    }
+  }
+    .d10-roll {
+     // background-color: orangered;
+      .card-check-roll{
+       // background-color: orangered;
+        .critico{
+          color:green;
+          font-weight: bold;
+          font-size: 25px;
+          text-align: center;
+          font-family: "Dungeon";
+
+        }
+        .pifia{
+          color: darkred;
+          font-weight: bold;
+          font-size: 25px;
+          text-align: center;
+          font-family: "Dungeon";
+        }
+        .pericia-valor{
+          font-weight: bold;
+          font-size: 15px;
+          text-align: center;
+        }
+      }
+    }
+  
+ 
+}
+
+.ARGS.chat-card.stat-card{
+  .card-header {
+    padding: 3px 0;
+    border-top: 2px groove #FFF;
+    border-bottom: 2px groove #FFF;
+
+    h3{
+      flex: 1;
+      align-items: center;
+      margin: 0;
+      line-height: 1;
+      align-self: center;
+      font-size: 28px;
+      font-family: 'Dungeon';
+      font-weight: bold;
+    }
+  }  
+  .dice-tooltip{
+    display: block !important;
+    
+  }
+  .stat-valor{
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+  }
+}
+

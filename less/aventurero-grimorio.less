@@ -1,0 +1,367 @@
+.magia-top {
+    display: flex;
+    .puntos-magia {
+        flex: 0 0 60%;
+        border: 2px groove #eeede0;
+        border-radius: 4px;
+        h3 {
+            font-family: "Dungeon";
+            font-weight: bold;
+            text-align: center;
+            font-size: 25px;
+            height: 20px;
+            line-height: 20px;
+            margin-bottom: 1px;
+        }
+        .puntos-magia-calc {
+            font-family: "Dungeon";
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(158, 47, 6);
+            img{
+                height: 40px;
+                width: 40px;
+                border: none;
+            }
+            .ptosm-stats{
+                justify-content: center;
+                display: flex;
+                height: 30px;
+                margin-bottom: 2px;
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+                span{
+                    margin-right: 5px;
+                    input[type="text"] {
+                        width: 30px;
+                        line-height: 24px;
+                        border-bottom: none;
+                        margin-bottom: 1px;
+                        text-align: center;
+                        color: purple;
+                    }
+                }
+              
+            }
+            .botellas {
+                display: grid;
+                border: none;
+                width: 100%;
+                grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% ;
+                background-color: #0e0e0e;
+                padding-top: 4px;
+                .mark-container{
+                    //display: flex;
+
+                    img{
+                        border: none;
+                        width: 30px;
+                        height: 30px;
+                    }
+                .ptos-mgc{
+                    flex: 0 5 40px;
+
+                }
+                }
+            }//fin botellas
+        } //fin puntos-magia-calc
+        .puntos-magia-res {
+            display: flex;
+            flex-direction: 0 0 60%;
+        }
+        
+    }//fin puntos-magia
+    .conjurar {
+        flex: 0 0 40%;
+        border: 2px groove #eeede0;
+        border-radius: 4px;
+        h3 {
+            font-family: "Dungeon";
+            font-weight: bold;
+            text-align: center;
+            font-size: 25px;
+            height: 20px;
+            line-height: 20px;
+            margin-bottom: 1px;
+            flex: 1;
+            margin: 5px;
+        }
+        .conjurar-lista{
+            padding: 2px;
+            margin: 0px;
+           
+            .conjurar-titulo{                
+                display: flex;                
+                height: 110px;
+                .conjurarescuelas{
+                    h4{
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                    width: 100%;
+                    justify-content: space-around;
+                }
+                img {
+                    height: 80px;
+                    width: 80px;
+                    border: none;
+                   }
+            }
+            .conjurar-titulos{
+                //display: flex;
+                //justify-content: space-around;
+                font-family: "FHACondFrenchNC";
+                font-weight: bold; 
+                align-items: end;
+                display: grid;
+                //grid-template-columns: 15% 5% 15% 5% 15% 5% 10% 15% 15%;
+                grid-template-columns: 15% 5% 15% 5% 10% 5% 10% 5% 10% 10% 10%;
+                text-align: center;
+                img {
+                    display: flex;
+                    justify-content: flex-start;
+                    width: 40px;
+                    height: 20px;
+                    border: none;
+                }
+            }
+            li.conjurar-tirada {
+                border: 2px groove #eeede0;
+                border-radius: 4px;   
+                font-family: "Dungeon";
+                font-weight: bold;
+                font-size: 21px;
+                //justify-content: space-around;
+                display: grid;
+                //grid-template-columns: 15% 5% 15% 5% 15% 5% 10% 15% 15%;
+                grid-template-columns: 15% 5% 15% 5% 10% 5% 10% 5% 10% 10% 10%;
+                .fas {                    
+                    text-align: center;
+                    color: #999;
+                  }
+                .fas:hover {
+                    color: #111;
+                    text-shadow: 0 0 10px purple;
+                  }
+                span{                    
+                    text-align: center;
+                    //flex: 0 0 25px;                    
+                }                 
+                    input[type="text"] {
+                        display: block;
+                        height: 24px;
+                        line-height: 24px;
+                        border-bottom: none;
+                        text-align: center;
+                        color: purple;
+                    }
+                }
+            
+        }
+    }
+   
+} //fin Magia-top
+.agregar-hechizos {
+    display: flex;
+    height: 25px;    
+    align-items: center;
+    justify-content: space-around;
+    border: 2px groove #eeede0;
+    border-radius: 4px;  
+    font-family: "Dungeon";
+    font-weight: bold; 
+    color: whitesmoke;
+    background-color: rgb(36, 3, 36);
+    //span {font-family: "Dungeon";
+      //  font-size: 20px;    }
+      .fas:hover {
+        color: #ebad04;
+        text-shadow: 0 0 10px rgb(255, 251, 0);
+      }
+}
+.items-list-agua, .items-list-fuego , .items-list-aire, .items-list-metal, .items-list-naturaleza, .items-list-arkana, .items-list-tierra {
+    border: 2px groove #eeede0;
+    border-radius: 4px;  
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 1px;
+   
+    .item-summary {
+        flex: 0 0 100%;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 0.25em 0.5em;
+        color: #191813;
+        border-top: 1px solid #c9c7b8;
+    }
+    .boton-hechizo {
+        ::marker{display: none;color: rgba(0,0,0,0.0);}
+          button {
+            background: rgba(66, 66, 66, 0.568);
+            width: 20%;
+            border: 2px groove var(--color-border-light-highlight);
+            button::marker{display: none;color: rgba(0,0,0,0.0);} 
+            }
+        
+       }
+       .chat-card-buttons::marker{display: none;color: rgba(0,0,0,0.0);}
+    .item-namecenter {
+        flex: 0 0 24%;
+        display: flex;
+        overflow: hidden;
+        .nombreconjuro {
+          display: flex;
+          flex: 2;
+          //flex: 0 0 100px;
+          margin: 0;
+          overflow: hidden;
+          font-size: 13px;
+          text-align: left;
+          align-items: center;
+          padding-left: 2px;
+          &:hover {
+            text-shadow: 0 0 10px purple;
+          }
+        }
+        .item-image {
+         // flex: 0 0 30px;
+          height: 30px;
+         
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		font-size: 14px;
+		vertical-align: middle;
+		text-align: center;
+
+		color: transparent;
+
+        .fa-lg {
+            font-size: 1.25em;
+            line-height: inherit;
+            width: 30px;
+            height: 30px;
+            margin: 0px;
+            padding-top: 5px;
+        }
+          &:hover {
+            font-size: 1.25;
+            line-height: -3em;
+            vertical-align: baseline;
+            width: 30px;
+            height: 30px;
+			background:none !important;
+			color: white;
+		}
+        }
+        img{
+          height: 30px;
+          width: 30px;
+          background-size: cover;
+          background-position: 50% 0;
+          border: none;
+          margin-right: 5px;
+        }
+      }
+    .item-level {flex: 0 0 5%;}
+    .item-pm {flex: 0 0 6%;}
+    .item-modconj {flex: 0 0 8%;}
+    .item-tiempocast {flex: 0 0 8%;}
+    .item-duracion {flex: 0 0 8%;}
+    .item-resistible {flex: 0 0 10%;}
+    .item-transferible {flex: 0 0 10%;}
+    .item-preparado {flex: 0 0 9%;}
+    .item-controls {flex: 0 0 10%;}
+}  
+li.item-summary::marker{display: none;color: rgba(0,0,0,0.0);}
+.items-list-agua {
+    li.item.flexrow.items-header { 
+        background-color: rgba(4, 62, 138, 0.75);
+        color: whitesmoke;        
+    } 
+    li.item.flexrow {text-align: center;
+        border-bottom: 1px groove rgb(4, 62, 138);
+        justify-content: center;
+        ALIGN-ITEMS: center;
+    }
+    li.item-summary::marker{display: none;color: rgba(0,0,0,0.0);}
+} 
+
+.items-list-fuego {
+    li.item.flexrow.items-header { 
+        background-color:rgba(90, 16, 16, 0.65);
+        color: whitesmoke;        
+    } 
+    li.item.flexrow {text-align: center;
+        border-bottom: 1px groove rgb(90, 16, 16);
+        justify-content: center;
+        ALIGN-ITEMS: center;
+    }
+    li.item-summary::marker{display: none;color: rgba(0,0,0,0.0);}
+} 
+.items-list-tierra {
+    li.item.flexrow.items-header { 
+        background-color: rgb(61, 41, 11, 0.75);
+        color: whitesmoke;        
+    } 
+    li.item.flexrow {text-align: center;
+        border-bottom: 1px groove rgb(61, 41, 11);
+        justify-content: center;
+        ALIGN-ITEMS: center;
+    }
+    li.item-summary::marker{display: none;color: rgb(0,0,0,0.0);}
+} 
+.items-list-metal {
+    li.item.flexrow.items-header { 
+        background-color: rgb(53, 52, 52, 0.75);
+        color: whitesmoke;        
+    } 
+    li.item.flexrow {text-align: center;
+        border-bottom: 1px groove rgb(53, 52, 52);
+        justify-content: center;
+        ALIGN-ITEMS: center;
+    }
+    li.item-summary::marker{display: none;color: rgba(0,0,0,0.0);}
+} 
+.items-list-naturaleza {
+    li.item.flexrow.items-header { 
+        background-color: rgba(32, 56, 12, 0.75);
+        color: whitesmoke;        
+    } 
+    li.item.flexrow {text-align: center;
+        border-bottom: 1px groove rgb(32, 56, 12);
+        justify-content: center;
+        ALIGN-ITEMS: center;
+    }
+    li.item-summary::marker{display: none;color: rgba(0,0,0,0.0);}
+} 
+.items-list-aire {
+    li.item.flexrow.items-header { 
+        background-color:rgba(190, 247, 255, 0.75);
+        color: black;        
+    } 
+    li.item.flexrow {text-align: center;
+        border-bottom: 1px groove  rgb(190, 247, 255);
+        justify-content: center;
+        ALIGN-ITEMS: center;
+    }
+    li.item-summary::marker{display: none;color:  rgba(0, 0, 0, 0);}
+} 
+.items-list-arkana {
+    li.item.flexrow.items-header { 
+        background-color: rgba(45, 4, 58, 0.75);
+        color: whitesmoke;        
+    } 
+    li.item.flexrow {text-align: center;
+        border-bottom: 1px groove   rgba(45, 4, 58);
+        justify-content: center;
+        ALIGN-ITEMS: center;
+    }
+    li.item-summary::marker{display: none;color: rgba(0, 0, 0, 0);}
+} 

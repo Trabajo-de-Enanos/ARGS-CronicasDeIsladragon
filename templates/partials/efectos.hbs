@@ -1,0 +1,46 @@
+<ol class="items-list effects-list">
+    <li class="items-header flexrow">
+        <div class="item-name effect-name flexrow">Effect</div>
+        <div class="effect-source">Fuente</div>
+        <div class="effect-duration">{{localize "ARGS.hechizos.duracion"}}</div> 
+        <div class="item-controls effect-controls flexrow">
+            <a class="effect-control" data-action="create" data-tooltip="ARGS.efectos.agregar">
+                <i class="fas fa-plus"></i> {{localize "ARGS.efectos.agregar"}}
+            </a>
+        </div>
+        
+    </li>
+
+    
+    
+    {{#each effects as |effect|}}
+    
+       <li class="item effect flexrow" data-effect-id="{{effect.id}}">
+        <div class="item-name effect-name flexrow"> 
+              <img class="item-image" src="{{effect.icon}}"/>
+                <div>{{effect.name}}</div>
+        </div>
+        <div class="effect-source">{{effect.sourceName}}</div>
+        <div class="effect-duration">{{effect.duration.label}} </div>
+        <div class="effect-controls">
+            <a class="effect-control" data-action="toggle"
+                   data-tooltip=" {{localize "ARGS.efectos.activar"}} / {{localize "ARGS.efectos.desactivar"}}">
+                    <i class="fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}"></i>
+                </a>
+                <a class="effect-control" data-action="edit" data-tooltip="ARGS.efectos.editar">
+                    <i class="fas fa-edit"></i>
+                </a>
+                <a class="effect-control" data-action="delete" data-tooltip="ARGS.efectos.borrar">
+                    <i class="fas fa-trash"></i>
+                </a>
+        </div>
+          
+
+       </li>
+       
+       
+    {{/each}}
+    
+    </ol>
+    </div>
+</form>

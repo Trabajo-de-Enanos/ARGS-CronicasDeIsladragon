@@ -1,0 +1,523 @@
+    <div class="infotexto1-control" >
+      <div class="roll-stats">{{localize "ARGS.statroll.rollstats"}}: <i class="fas fa-dice tirar-stats"></i></div>
+      <label> {{ localize 'ARGS.infotexto.statsclase' }} </label>
+       {{#each items as |item iid|}}        
+         
+        {{#if (eq item.type "clases")}}
+        <div>
+         {{item.name}}:
+          1- {{item.system.stats.primaria}} 2- {{item.system.stats.secundaria}} 3- {{item.system.stats.terciaria}}
+        </div>  
+        {{/if}}
+        
+        {{#if (and (eq item.type "especie") item.system.infotexto)}}
+        <div>
+          {{item.name}}
+          {{ localize "ARGS.especies.infotextotit"}}
+          {{item.system.infotexto}}
+         
+        </div>
+         
+     
+        {{/if}}
+      {{/each}}  
+      <i class="fa-solid fa-circle-xmark"></i>
+    </div>
+    <Section class="caracteristicas-row1">
+          <div class="abilities grid grid-4col">
+              {{#if system.calculados.xp.leveleo}}
+                {{> "systems/ARGS/templates/partials/levelup-card.hbs" }}
+              {{/if}}
+           
+
+       
+
+        {{#each system.caracteristicas as |caracteristica key|}}
+          
+          <div class="ability flexrow flex-group-left2">
+            <label for="system.caracteristicas.{{key}}.value" class="resource-label">{{loud (localize (concat "ARGS.caracteristicas."key))}}</label>
+            <span><img src="/systems/ARGS/assets/CharSheet/car-{{key}}.png" height="100%" width="80px" ></span>
+              {{#if (eq key "movimiento")}}
+              <label>{{caracteristica.value}}</label>
+              {{else}}
+              <input type="text" name="system.caracteristicas.{{key}}.value" value="{{caracteristica.value}}" data-dtype="Number" />            
+              {{/if}}
+              <div class="car-bonif"> 
+               {{#if (gt caracteristica.bono 0)}}                       
+                <div class="car-bonif-positivo">
+                  <label>+{{caracteristica.bono}}</label> 
+                </div>
+                  {{/if}}          
+                 {{#if (lt caracteristica.bono 0)}}                           
+              <div class="car-bonif-negativo">
+                  <label>{{caracteristica.bono}}</label> 
+                </div>  
+               {{/if}} 
+            </div>
+            <span style="width: 25px;">=</span> 
+            <div class="car-bonif-total">
+               
+                <label class="carchange-{{key}}">{{caracteristica.final}}</label> 
+            </div>
+          </div>
+        {{/each}}
+      </div>
+       <div class="dados-suerte">
+            <div >
+           <h4>{{ localize 'ARGS.varios.dadossuerte' }}</h4> 
+            <table>
+              <tr >
+                <td> <span  class="fas fa-coin rollable" data-roll="1d2" data-label="{{localize "ARGS.varios.dadossuerte"}}"> </span></td>
+                <td><span  class="fas fa-dice-d4 rollable" data-roll="1d4" data-label="{{localize "ARGS.varios.dadossuerte"}}"></td>
+                <td><span  class="fas fa-dice-d6 rollable" data-roll="1d6" data-label="{{localize "ARGS.varios.dadossuerte"}}"></td>
+            </tr>
+            <tr >
+              <td><input type="checkbox"  name="system.dadosespeciales.puntoSuerted21" data-dtype="Boolean" {{checked system.dadosespeciales.puntoSuerted21}}><input type="checkbox" name="system.dadosespeciales.puntoSuerted22" data-dtype="Boolean" {{checked system.dadosespeciales.puntoSuerted22}}></td>
+              <td><input type="checkbox" name="system.dadosespeciales.puntoSuerted41" data-dtype="Boolean" {{checked system.dadosespeciales.puntoSuerted41}}><input type="checkbox" name="system.dadosespeciales.puntoSuerted42" data-dtype="Boolean" {{checked system.dadosespeciales.puntoSuerted42}}></td>
+              <td><input type="checkbox" name="system.dadosespeciales.puntoSuerted61" data-dtype="Boolean" {{checked system.dadosespeciales.puntoSuerted61}}><input type="checkbox" name="system.dadosespeciales.puntoSuerted62" data-dtype="Boolean" {{ checked system.dadosespeciales.puntoSuerted62}} ></td>
+            </tr>
+            
+           </table>
+          </div> 
+          <div >
+           <h4>{{ localize 'ARGS.varios.dadoslogica' }} </h4> 
+            <table>
+              <tr >
+                <td colspan="3"><span  class="fas fa-dice-d4 rollable" data-roll="1d4" data-label="{{localize "ARGS.varios.dadossuerte"}}"></td>                
+            </tr>
+            <tr >
+              <td><input type="checkbox" name="system.dadosespeciales.puntosLogicad41"  data-dtype="Boolean" {{checked system.dadosespeciales.puntosLogicad41}}><input type="checkbox" name="system.dadosespeciales.puntosLogicad42"  data-dtype="Boolean" {{checked system.dadosespeciales.puntosLogicad42}}></td>
+            </tr>
+           </table>
+          </div>
+        </div>  
+
+        <script>
+     
+          
+        </script>
+    <div class="religion">
+                <div class="credos">
+        <h4>{{ localize 'ARGS.varios.religion' }}</h4> 
+        <table>
+            <tr >
+            <td><img src="/systems/ARGS/assets/CharSheet/credo-fuego.png" height="100%" width="80px" data-tooltip="{{localize "ARGS.varios.relfuego"}}"></td>
+             <td><input class="religioncheck" type="checkbox" name="system.religiones.relfuego.check" data-dtype="Boolean" {{checked system.religiones.relfuego.check}} data-tooltip="{{localize "ARGS.varios.relfuego"}}"></td>
+            <td><img src="/systems/ARGS/assets/CharSheet/credo-agua.png" height="100%" width="80px" data-tooltip="{{localize "ARGS.varios.relagua"}}"></td>            
+            <td><input class="religioncheck" type="checkbox"  name="system.religiones.relagua.check" data-dtype="Boolean" {{checked system.religiones.relagua.check}} data-tooltip="{{localize "ARGS.varios.relagua"}}"></td>
+            </tr>
+            <tr >
+            <td><img src="/systems/ARGS/assets/CharSheet/credo-tierra.png" height="100%" width="80px" data-tooltip="{{localize "ARGS.varios.reltierra"}}" ></td>
+             <td><input class="religioncheck" type="checkbox"  name="system.religiones.reltierra.check" data-dtype="Boolean" {{checked system.religiones.reltierra.check}} data-tooltip="{{localize "ARGS.varios.reltierra"}}"></td>
+            <td><img src="/systems/ARGS/assets/CharSheet/credo-metal.png" height="100%" width="80px" data-tooltip="{{localize "ARGS.varios.relmetal"}}"></td>            
+            <td><input class="religioncheck" type="checkbox"  name="system.religiones.relmetal.check" data-dtype="Boolean" {{checked system.religiones.relmetal.check}} data-tooltip="{{localize "ARGS.varios.relmetal"}}"></td>
+            </tr>
+            <tr >
+            <td><img src="/systems/ARGS/assets/CharSheet/credo-naturaleza.png" height="100%" width="80px" data-tooltip="{{localize "ARGS.varios.relnaturaleza"}}" ></td>
+             <td><input class="religioncheck" type="checkbox"  name="system.religiones.relnaturaleza.check" data-dtype="Boolean" {{checked system.religiones.relnaturaleza.check}} data-tooltip="{{localize "ARGS.varios.relnaturaleza"}}"></td>
+            <td><img src="/systems/ARGS/assets/CharSheet/credo-aire.png" height="100%" width="80px" data-tooltip="{{localize "ARGS.varios.relaire"}}"></td>            
+            <td><input class="religioncheck" type="checkbox"  name="system.religiones.relaire.check" data-dtype="Boolean" {{checked system.religiones.relaire.check}} data-tooltip="{{localize "ARGS.varios.relaire"}}"></td>
+            </tr>
+            <tr >
+            <td><img src="/systems/ARGS/assets/CharSheet/credo-arkano.png" height="100%" width="80px" data-tooltip="{{localize "ARGS.varios.relarkana"}}"></td>
+             <td><input class="religioncheck" type="checkbox"  name="system.religiones.relarkana.check" data-dtype="Boolean" {{ checked system.religiones.relarkana.check}} data-tooltip="{{localize "ARGS.varios.relarkana"}}"></td>
+            </tr>
+        
+        </table>
+         </div>
+         
+        <div class="devocion"> 
+            <span style="font-size: 30px; color: rgb(32, 57, 139) "> {{system.calculados.devocion}} </span>
+            <span><img src="/systems/ARGS/assets/CharSheet/devocion.png" height="100px" width="80px" ></span>
+            <h4>{{ localize 'ARGS.varios.devocion' }}</h4> 
+        </div>
+       
+    </div>
+    </Section>
+        <section class="info flexrow">        
+            <ul class="xpca flexrow">
+                <li class="xp">
+                    <span>{{ localize "ARGS.atributos.xp" }}</span>
+                    <input type="text" name="system.calculados.xp.value" value="{{system.calculados.xp.value}}" />
+                    <span class="sep"> / </span>
+                    <span >{{system.calculados.xp.max}} </span>
+                </li>
+                <li class="aprendizaje">
+                        <span>{{ localize "ARGS.atributos.capacidadaprendizaje" }}</span>
+                        {{!--<input name="system.calculados.capacidadaprendizaje.value" type="text" value="{{system.calculados.capacidadaprendizaje.value}}" placeholder="0" data-dtype="Number">                   
+                        <span class="sep"> / </span> --}}
+                        <span >{{system.calculados.capacidadaprendizaje.max}} </span>
+                </li>                
+            </ul>
+          </section>
+
+    <section class="sheet-trackeables flexrow">
+            <ul class="tracks flexrow">
+                <li class="track health">
+                    <h4 class="track-name box-title">{{ localize "ARGS.atributos.puntosvida" }}</h4>
+                    <div class="track-value multiple">
+                        <input name="system.calculados.puntosvida.value" type="text" value="{{system.calculados.puntosvida.value}}" placeholder="10" data-dtype="Number">
+                        <span class="sep"> / </span>
+                        <span>{{ system.calculados.puntosvida.max }}</span>                    
+                    </div>                 
+                </li>
+                  <li class="track resmag">
+                    <h4 class="track-name box-title">{{ localize "ARGS.varios.resistenciamagia" }}</h4>
+                    <div class="track-value ">                        
+                        <footer class="track-footer">                       
+                        <span style="font-size:20px;">{{system.calculados.resistenciamagia.final}} [  <a  class="fas fa-dice-d10 resmag-check" data-roll="1d10" ></a> ]</span>                                                   
+                        </footer>                 
+                    </div>                 
+                </li>
+                <li class="track catarm">
+                    <h4 class="track-name box-title">{{ localize "ARGS.varios.catarmadura" }}</h4>
+                     <div class="track-value ">
+                        <span>{{system.calculados.catarmadura.final}} </span>
+                        <footer class="track-footer">
+                        <span style="font-size:20px;"> - max - </span>   
+                        </footer>                 
+                    </div>  
+                </li>
+                <li class="track bonifdef">
+                    <h4 class="track-name box-title">BD</h4>
+                      <div class="track-value col">
+                        <span style="font-size:18px;"> OA: {{system.calculados.OA.final}} + DEF: {{system.calculados.totaldefensa}}</span>   
+                         
+                         <footer class="track-footer">
+                            <span style="font-size:22px;"> TOTAL BD: {{system.calculados.BD.final}}</span>                             
+                          </footer>  
+
+                       </div> 
+                </li>
+                
+            </ul>
+        </section>
+ 
+     <div class="ataques-armas">
+       <h3>{{localize "ARGS.infotexto.ataques"}}</h3>
+        <ol class="ataques-list">
+                <li class="ataque flexrow ataque-header">
+                    <div class="ataque-name">{{localize "ARGS.infotexto.arma"}}</div>
+                    <div class="ataque-pericia"> {{localize "ARGS.infotexto.pericia"}}</div>
+                    <div class="ataque-calidad"> {{loud (localize "ARGS.items.calidad")}}</div>
+                    <div class="ataque-magia"> {{localize "ARGS.items.magia"}} </div>                    
+                    <div class="ataque-total"> {{localize "ARGS.infotexto.bo"}}</div>
+                    {{#if (eq system.caracteristicas.destreza.final 7)}}
+                    <div class="ataque-total"> {{localize "ARGS.infotexto.ambidiestro"}}</div>
+                    {{/if}}
+
+                </li>
+      {{#each items as |item iid|}}    
+                               
+        {{#if (and (eq system.equipado true)  (eq item.type "armas"))}}
+                <li class="item flexrow" data-item-id="{{item._id}}">                    
+                    <div class="item-name">
+                        <div class="item-imagen">
+                        <div class="armas-rapidas-imagen" ><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+                        </div>
+                        <div class="nombreitem">{{item.name}}</div>
+                    </div>
+                    <div class="ataque-pericia ">
+                    {{#each @root.system.pericias.combate as |prcombate key|}} 
+                      {{#if (eq key item.system.atacaCon)}}
+                    {{prcombate.final}} 
+                      {{/if}}
+                    {{/each}}     
+                    </div>                              
+                    <div class="ataque-calidad ">{{item.system.bonificadorCalidad}}</div>
+                    <div class="ataque-magia ">{{item.system.bonificadorMagia}}</div>
+                    <div class="ataque-total" > 
+                     <span  class="fas fa-dice-d10 armas-rapidas" data-actor-id="{{@root.actor.id}}"
+	                      data-item-id="{{item._id}}" data-roll-type="item" data-tooltip="{{localize "ARGS.infotexto.atacar"}}"></span>   
+                         <span  class="fas fa-shield-plus defensa-rapida" data-actor-id="{{@root.actor.id}}"
+	                      data-item-id="{{item._id}}" data-roll-type="item" data-tooltip="{{localize "ARGS.infotexto.defender"}}"></span>                     
+                     </div>
+                       {{#if (eq @root.system.caracteristicas.destreza.final 7)}}
+                        <div>   <span  class="fas fa-dice-d10 armas-rapidas-ambi" data-actor-id="{{@root.actor.id}}"
+	                      data-item-id="{{item._id}}" data-roll-type="item" data-tooltip="{{localize "ARGS.infotexto.ambidiestro"}}"></span></div>
+                        {{/if}}
+                </li>
+           {{/if}}
+        {{/each}}   
+        </ol>
+     </div>
+
+      <div class="infotexto2-control" >
+      
+       {{#each system.caracteristicas as |caracteristica key|}}
+          {{#if (and (eq key "destreza")(eq caracteristica.final 7))}}
+          <div>
+              {{localize "ARGS.infotexto.ssdesmov2"}} /
+          </div>    
+          <div>
+              {{localize "ARGS.infotexto.ssdesproy"}} /
+          </div>   
+          {{/if}}    
+          {{#if (and (eq key "destreza")(gt caracteristica.final 7))}}
+          <div>
+              {{localize "ARGS.infotexto.ssdesmov3"}} /
+          </div>    
+          <div>
+              {{localize "ARGS.infotexto.ssdesproy"}} /
+          </div>   
+          {{/if}}  
+            {{#if (and (eq key "habilidad")(eq caracteristica.final 7))}}
+          <div>
+              {{localize "ARGS.infotexto.sshabamb"}} /
+          </div>    
+          <div>
+              {{localize "ARGS.infotexto.sshabproy2"}} /
+          </div>   
+          {{/if}}    
+          {{#if (and (eq key "habilidad")(gt caracteristica.final 7))}}
+          <div>
+              {{localize "ARGS.infotexto.sshabdobgolpe"}} /
+          </div>    
+          <div>
+              {{localize "ARGS.infotexto.sshabproy3"}} /
+          </div>   
+          {{/if}}  
+           {{#if (and (eq key "fuerza")(gt caracteristica.final 7))}}
+          <div>
+              {{localize "ARGS.infotexto.ssfuedosman"}} /
+          </div>    
+    
+          {{/if}}  
+      {{/each}}  
+      
+      <i class="fa-solid fa-circle-xmark"></i>
+    </div>
+
+
+
+
+    <section class="pericias-body">
+         <ol class="pericias-left">
+          <div  class="percat-title">
+            <h4>{{localize "ARGS.pericias.combate.nombre"}} 
+              {{#if system.periciasinicial.combate.value}} <label style="color: blueviolet;"> -- {{system.periciasinicial.combate.value}} pts</label>{{/if}} </h4>
+            <img src="/systems/ARGS/assets/CharSheet/criticopifias.png" height="20px" width="20px" >
+          </div>           
+          {{#each system.pericias.combate as |prcombate key|}}         
+           <li class="pericias flexrow" data-property="pericias" data-key="{{key}}" data-cat="combate">
+           <label for="system.pericias.combate.{{key}}" class="pericia-label">{{localize (concat "ARGS.pericias.combate."key)}}</label>
+
+            {{#if (eq key "pelea")}}
+            
+            <span>{{@root.system.calculados.peleafinal}}</span>
+            {{else}}
+            <input type="text" name="system.pericias.combate.{{key}}.value" value="{{prcombate.value}}" data-dtype="Number"/>
+            <span>+</span>
+            <span  data-tooltip="{{localize "ARGS.infotexto.bonoclaseespecie"}}">{{prcombate.bonoclase}}</span>
+            <span>+</span>
+            <img src="/systems/ARGS/assets/CharSheet/car-{{prcombate.caracteristica}}.png"  >
+            <span>=</span>
+            <span>{{prcombate.final}}</span>  
+            {{/if}}            
+             <span  class="pericia-check fas fa-dice-d10" data-roll="1d10<=@pericias.combate.{{key}}.final" data-label="{{localize (concat "ARGS.pericias.combate."key)}}">{{!--numberFormat prcombate.value decimals=0 sign=true--}}</span> 
+            <input type="text" name="system.pericias.combate.{{key}}.avance" value="{{prcombate.avance}}"  data-tooltip="Max: {{@root.system.calculados.capacidadaprendizaje.max}}" data-dtype="Number">
+           
+          </li> 
+          
+        {{/each}}
+            <div  class="percat-title">
+            <h4>{{localize "ARGS.pericias.movimiento.nombre"}} 
+              {{#if system.periciasinicial.movimiento.value}}<label style="color: blueviolet;"> -- {{system.periciasinicial.movimiento.value}} pts</label>{{/if}} </h4>
+            <img src="/systems/ARGS/assets/CharSheet/criticopifias.png" height="20px" width="20px" >
+          </div>   
+          {{#each system.pericias.movimiento as |prmovimiento key|}}
+          <li class="pericias flexrow" data-property="pericias" data-key="{{key}}" data-cat="movimiento">
+             <label for="system.pericias.movimiento.{{key}}" class="pericia-label">{{localize (concat "ARGS.pericias.movimiento."key)}}</label>
+            <input type="text" name="system.pericias.movimiento.{{key}}.value" value="{{prmovimiento.value}}" data-dtype="Number"/>
+            <span>+</span>
+            <span  data-tooltip="{{localize "ARGS.infotexto.bonoclaseespecie"}}">{{prmovimiento.bonoclase}}</span>           
+            <span>+</span>
+            <span><img src="/systems/ARGS/assets/CharSheet/car-{{prmovimiento.caracteristica}}.png" height="20px" width="20px" ></span>
+            <span>=</span>
+            <span>{{prmovimiento.final}}</span>
+             <span  class="pericia-check fas fa-dice-d10" data-roll="1d10cs<=@pericias.movimiento.{{key}}.final" data-label="{{localize (concat "ARGS.pericias.movimiento."key)}}">{{!--numberFormat prcombate.value decimals=0 sign=true--}}</span> 
+            <input type="text" name="system.pericias.movimiento.{{key}}.avance" value="{{prmovimiento.avance}}"  data-tooltip="Max: {{@root.system.calculados.capacidadaprendizaje.max}}" data-dtype="Number">
+           
+          </li>         
+        {{/each}}
+      
+        <div  class="percat-title">
+            <h4>{{localize "ARGS.pericias.estaticas.nombre"}}
+              {{#if system.periciasinicial.estaticas.value}}<label style="color: blueviolet;"> -- {{system.periciasinicial.estaticas.value}} pts</label>{{/if}} </h4>
+            <img src="/systems/ARGS/assets/CharSheet/criticopifias.png"  >
+          </div>   
+          {{#each system.pericias.estaticas as |prestatica key|}}
+          <li class="pericias flexrow" data-property="pericias" data-key="{{key}}" data-cat="estaticas">
+             <label for="system.pericias.movimiento.{{key}}" class="pericia-label">{{localize (concat "ARGS.pericias.estaticas."key)}}</label>
+            <input type="text" name="system.pericias.estaticas.{{key}}.value" value="{{prestatica.value}}" data-dtype="Number"/>    
+            <span>+</span>
+            <span  data-tooltip="{{localize "ARGS.infotexto.bonoclaseespecie"}}">{{prestatica.bonoclase}}</span>       
+            <span>+</span>
+            <span><img src="/systems/ARGS/assets/CharSheet/car-{{prestatica.caracteristica}}.png" height="20px" width="20px" ></span>
+            <span>=</span>   
+            <span>{{prestatica.final}}</span>        
+             <span  class="pericia-check fas fa-dice-d10" data-roll="1d10cs<={{prestatica.final}}" data-label="{{localize (concat "ARGS.pericias.estaticas."key)}}">{{!--numberFormat prcombate.value decimals=0 sign=true--}}</span> 
+            <input type="text" name="system.pericias.estaticas.{{key}}.avance" value="{{prestatica.avance}}"  data-tooltip="Max: {{@root.system.calculados.capacidadaprendizaje.max}}" data-dtype="Number">
+           
+          </li>         
+        {{/each}}
+        {{#if (ne system.pericias.especie.periciaespecie1.nombre "")}}
+         <div  class="percat-title">
+            <h4>{{localize "ARGS.pericias.especie.nombre"}}</h4>
+            <img src="/systems/ARGS/assets/CharSheet/criticopifias.png" height="20px" width="20px" >
+          </div>           
+          {{#each system.pericias.especie as |prespecie key|}}      
+             {{#if (ne prespecie.nombre "")}}
+          <li class="pericias flexrow" data-property="pericias" data-key="{{key}}" data-cat="especie">
+           <label for="system.pericias.especie.{{key}}.nombre" class="pericia-label">{{prespecie.nombre}}</label>
+             
+            <input type="text" name="system.pericias.especie.{{key}}.value" value="{{prespecie.value}}" data-dtype="Number"/>           
+            <span>+</span>
+            <input type="text" name="system.pericias.especie.{{key}}.bonopericia" value="{{prespecie.bonopericia}}" data-dtype="Number"/> 
+            <span>+</span>
+            <span><img src="/systems/ARGS/assets/CharSheet/car-{{prespecie.pericia}}.png" height="20px" width="20px" ></span>
+            <span  data-tooltip="{{localize "ARGS.infotexto.bonoclaseespecie"}}">{{prespecie.bonoclase}}</span>
+            <span>=</span>
+            <span>{{prespecie.final}}</span>
+             <span  class="pericia-check fas fa-dice-d10" data-roll="1d10cs<={{prespecie.final}}" data-label="{{localize prespecie.nombre}}">{{!--numberFormat prcombate.value decimals=0 sign=true--}}</span> 
+            <input type="text" name="system.pericias.especie.{{key}}.avance" value="{{prespecie.avance}}"  data-tooltip="Max: {{@root.system.calculados.capacidadaprendizaje.max}}" data-dtype="Number">
+           
+           
+          </li> 
+             {{/if}}
+        {{/each}} 
+        {{/if}}
+
+      </ol>
+       
+       <ol class="pericias-right">
+          <div  class="percat-title">
+            <h4>{{localize "ARGS.pericias.interaccion.nombre"}}
+              {{#if system.periciasinicial.interaccion.value}}<label style="color: blueviolet;"> -- {{system.periciasinicial.interaccion.value}} pts</label>{{/if}} </h4>
+            <img src="/systems/ARGS/assets/CharSheet/criticopifias.png" height="20px" width="20px" >
+          </div>           
+          {{#each system.pericias.interaccion as |printeraccion key|}}          
+          <li class="pericias flexrow" data-property="pericias" data-key="{{key}}" data-cat="interaccion">
+           <label for="system.pericias.interaccion.{{key}}" class="pericia-label">{{localize (concat "ARGS.pericias.interaccion."key)}}</label>
+            <input type="text" name="system.pericias.interaccion.{{key}}.value" value="{{printeraccion.value}}" data-dtype="Number"/>
+            <span>+</span>
+            <span  data-tooltip="{{localize "ARGS.infotexto.bonoclaseespecie"}}">{{printeraccion.bonoclase}}</span>
+            <span>+</span>
+            <img src="/systems/ARGS/assets/CharSheet/car-{{printeraccion.caracteristica}}.png"  >
+            <span>=</span>
+            <span>{{printeraccion.final}}</span>
+            <span  class="pericia-check fas fa-dice-d10" data-roll="1d10<=@pericias.interaccion.{{key}}.final" data-label="{{localize (concat "ARGS.pericias.interaccion."key)}}">{{!--numberFormat prcombate.value decimals=0 sign=true--}}</span> 
+            <input type="text" name="system.pericias.interaccion.{{key}}.avance" value="{{printeraccion.avance}}"  data-tooltip="Max: {{@root.system.calculados.capacidadaprendizaje.max}}" data-dtype="Number">
+           
+           
+          </li> 
+             
+        {{/each}}
+            <div  class="percat-title">
+            <h4>{{localize "ARGS.pericias.conocimiento.nombre"}}
+              {{#if system.periciasinicial.conocimiento.value}}<label style="color: blueviolet;"> -- {{system.periciasinicial.conocimiento.value}} pts</label> {{/if}} </h4>
+            <img src="/systems/ARGS/assets/CharSheet/criticopifias.png" height="20px" width="20px" >
+          </div>   
+          {{#each system.pericias.conocimiento as |prconocimiento key|}}
+          <li class="pericias flexrow" data-property="pericias" data-key="{{key}}" data-cat="conocimiento">
+             <label for="system.pericias.conocimiento.{{key}}" class="pericia-label">{{localize (concat "ARGS.pericias.conocimiento."key)}}
+             {{#if (eq key "primerosauxilios")}} 
+             {{#if (eq @root.system.esAdiestrador true)}}
+                <span  class="fas fa-dice-d8 rollable" data-tooltip="{{localize "ARGS.infotexto.curar"}}" data-roll="1d8"></span><span  class="fas fa-paw rollable" data-tooltip="{{localize "ARGS.infotexto.curaranimal"}}" data-roll="2d8"></span>
+              {{else}}
+                <span  class="fas fa-dice-d8 rollable" data-tooltip="{{localize "ARGS.infotexto.curar"}}" data-roll="1d8" ></span>
+              {{/if}}
+            {{/if}}  
+             </label>
+            <input type="text" name="system.pericias.conocimiento.{{key}}.value" value="{{prconocimiento.value}}" data-dtype="Number"/>     
+            <span>+</span>
+            <span  data-tooltip="{{localize "ARGS.infotexto.bonoclaseespecie"}}">{{prconocimiento.bonoclase}}</span>      
+            <span>+</span>
+            <span><img src="/systems/ARGS/assets/CharSheet/car-{{prconocimiento.caracteristica}}.png" ></span>
+            <span>=</span>
+            <span>{{prconocimiento.final}}</span>
+             <span  class="pericia-check fas fa-dice-d10" data-roll="1d10<=@pericias.conocimiento.{{key}}.final" data-label="{{localize (concat "ARGS.pericias.conocimiento."key)}}">{{!--numberFormat prcombate.value decimals=0 sign=true--}}</span> 
+            <input type="text" name="system.pericias.conocimiento.{{key}}.avance" value="{{prconocimiento.avance}}"  data-tooltip="Max: {{@root.system.calculados.capacidadaprendizaje.max}}" data-dtype="Number">
+           
+          </li>         
+        {{/each}}
+        <div  class="percat-title">
+            <h4>{{localize "ARGS.pericias.extras.nombre"}}
+              {{#if system.periciasinicial.extras.value}}<label style="color: blueviolet;"> -- {{system.periciasinicial.extras.value}} pts</label>{{/if}} </h4>
+            <img src="/systems/ARGS/assets/CharSheet/criticopifias.png" height="20px" width="20px" >
+          </div>   
+          {{#each system.pericias.extras as |prextra key|}}
+          <li class="pericias flexrow" data-property="pericias" data-key="{{key}}" data-cat="extras">
+           
+            <input type="text" name="system.pericias.extras.{{key}}.nombre" value="{{prextra.nombre}}" class="pericia-label-input"/>           
+            <input type="text" name="system.pericias.extras.{{key}}.value" value="{{prextra.value}}" data-dtype="Number"/>           
+            <span>+</span>
+            <input type="text" name="system.pericias.extras.{{key}}.bonopericia" value="{{prextra.bonopericia}}" data-dtype="Number"/> 
+            <span>+</span>
+            <span  data-tooltip="{{localize "ARGS.infotexto.bonoclaseespecie"}}">{{prextra.bonoclase}}</span>
+            <span>=</span>
+            <span>{{prextra.final}}</span>
+             <span  class="pericia-check fas fa-dice-d10" data-roll="1d10cs<={{prextra.final}}" data-label="{{localize prextra.nombre}}">{{!--numberFormat prcombate.value decimals=0 sign=true--}}</span> 
+            <input type="text" name="system.pericias.extras.{{key}}.avance" value="{{prextra.avance}}"  data-tooltip="Max: {{@root.system.calculados.capacidadaprendizaje.max}}" data-dtype="Number">
+           
+          </li>         
+        {{/each}}
+        <div  class="percat-title">
+            <h4>{{localize "ARGS.pericias.combinadas.nombre"}} 
+              {{#if system.periciasinicial.combinadas.value}}<label style="color: blueviolet;"> -- {{system.periciasinicial.combinadas.value}} pts</label>{{/if}} </h4>
+            <img src="/systems/ARGS/assets/CharSheet/criticopifias.png" height="20px" width="20px" >
+          </div>   
+          {{#each system.pericias.combinadas as |prcombo key|}}
+          <li class="pericias flexrow" data-property="pericias" data-key="{{key}}" data-cat="combinadas">
+             <label for="system.pericias.combinadas.{{key}}" class="pericia-label-comb">{{localize (concat "ARGS.pericias.combinadas."key)}}</label>
+            <input type="text" name="system.pericias.combinadas.{{key}}.value" value="{{prcombo.value}}" data-dtype="Number"/>
+            <span>+</span>
+            <span  data-tooltip="{{localize "ARGS.infotexto.bonoclaseespecie"}}">{{prcombo.bonoclase}}</span>    
+            <span>+</span>
+            <span class="img-combo"><img src="/systems/ARGS/assets/CharSheet/per-{{key}}.png" ></span>
+            <span>=</span>
+            <span>{{prcombo.final}}</span>
+             <span  class="pericia-check fas fa-dice-d10" data-roll="1d10<=@pericias.combinadas.{{key}}.final" data-label="{{localize (concat "ARGS.pericias.combinadas."key)}}">{{!--numberFormat prcombate.value decimals=0 sign=true--}}</span> 
+            <input type="text" name="system.pericias.combinadas.{{key}}.avance" value="{{prcombo.avance}}"  data-tooltip="Max: {{@root.system.calculados.capacidadaprendizaje.max}}" data-dtype="Number">
+                   
+          </li>         
+        {{/each}}
+
+        {{#if (ne system.pericias.clase.periciaclase1.nombre "")}}
+         <div  class="percat-title">
+            <h4>{{localize "ARGS.pericias.clase.nombre"}}</h4>
+            <img src="/systems/ARGS/assets/CharSheet/criticopifias.png" height="20px" width="20px" >
+          </div>           
+         
+
+          {{#each system.pericias.clase as |prclase key|}}  
+           {{#if (ne prclase.nombre "")}}
+              {{#if (and (eq prclase.nombre "Navegar") 
+                      (or (eq @root.system.pericias.especie.periciaespecie1.nombre "Navegar")
+                          (eq @root.system.pericias.especie.periciaespecie2.nombre "Navegar")
+                          (eq @root.system.pericias.especie.periciaespecie3.nombre "Navegar"))
+                          )}}
+                  
+                  
+              
+           {{else}}
+            <li class="pericias flexrow" data-property="pericias" data-key="{{key}}" data-cat="clase">
+            <label for="system.pericias.clase.{{key}}.nombre" class="pericia-label">{{prclase.nombre}}</label>
+              <input type="text" name="system.pericias.clase.{{key}}.value" value="{{prclase.value}}" data-dtype="Number"/>           
+              <span>+</span>
+              <span>{{prclase.bonopericia}}</span> 
+              <span>+</span>
+              <span  data-tooltip="{{localize "ARGS.infotexto.bonoclaseespecie"}}">{{prclase.bonoclase}}</span>
+              <span>=</span>
+              <span>{{prclase.final}}</span>
+              <span  class="pericia-check fas fa-dice-d10" data-roll="1d10cs<={{prclase.final}}" data-label="{{localize prclase.nombre}}">{{!--numberFormat prcombate.value decimals=0 sign=true--}}</span> 
+              <input type="text" name="system.pericias.clase.{{key}}.avance" value="{{prclase.avance}}"  data-tooltip="Max: {{@root.system.calculados.capacidadaprendizaje.max}}" data-dtype="Number">
+
+            
+            </li> 
+            {{/if}}  
+           {{/if}}
+        {{/each}} 
+        {{/if}}
+      </ol>
+    </section>

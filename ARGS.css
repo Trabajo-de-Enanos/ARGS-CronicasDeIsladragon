@@ -1,0 +1,3743 @@
+.magia-top {
+  display: flex;
+}
+.magia-top .puntos-magia {
+  flex: 0 0 60%;
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+}
+.magia-top .puntos-magia h3 {
+  font-family: "Dungeon";
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 1px;
+}
+.magia-top .puntos-magia .puntos-magia-calc {
+  font-family: "Dungeon";
+  font-size: 30px;
+  font-weight: bold;
+  color: #9e2f06;
+}
+.magia-top .puntos-magia .puntos-magia-calc img {
+  height: 40px;
+  width: 40px;
+  border: none;
+}
+.magia-top .puntos-magia .puntos-magia-calc .ptosm-stats {
+  justify-content: center;
+  display: flex;
+  height: 30px;
+  margin-bottom: 2px;
+}
+.magia-top .puntos-magia .puntos-magia-calc .ptosm-stats img {
+  width: 25px;
+  height: 25px;
+}
+.magia-top .puntos-magia .puntos-magia-calc .ptosm-stats span {
+  margin-right: 5px;
+}
+.magia-top .puntos-magia .puntos-magia-calc .ptosm-stats span input[type="text"] {
+  width: 30px;
+  line-height: 24px;
+  border-bottom: none;
+  margin-bottom: 1px;
+  text-align: center;
+  color: purple;
+}
+.magia-top .puntos-magia .puntos-magia-calc .botellas {
+  display: grid;
+  border: none;
+  width: 100%;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% ;
+  background-color: #0e0e0e;
+  padding-top: 4px;
+}
+.magia-top .puntos-magia .puntos-magia-calc .botellas .mark-container img {
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+.magia-top .puntos-magia .puntos-magia-calc .botellas .mark-container .ptos-mgc {
+  flex: 0 5 40px;
+}
+.magia-top .puntos-magia .puntos-magia-res {
+  display: flex;
+  flex-direction: 0 0 60%;
+}
+.magia-top .conjurar {
+  flex: 0 0 40%;
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+}
+.magia-top .conjurar h3 {
+  font-family: "Dungeon";
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 1px;
+  flex: 1;
+  margin: 5px;
+}
+.magia-top .conjurar .conjurar-lista {
+  padding: 2px;
+  margin: 0px;
+}
+.magia-top .conjurar .conjurar-lista .conjurar-titulo {
+  display: flex;
+  height: 110px;
+}
+.magia-top .conjurar .conjurar-lista .conjurar-titulo .conjurarescuelas {
+  width: 100%;
+  justify-content: space-around;
+}
+.magia-top .conjurar .conjurar-lista .conjurar-titulo .conjurarescuelas h4 {
+  font-weight: bold;
+  text-align: center;
+}
+.magia-top .conjurar .conjurar-lista .conjurar-titulo img {
+  height: 80px;
+  width: 80px;
+  border: none;
+}
+.magia-top .conjurar .conjurar-lista .conjurar-titulos {
+  font-family: "FHACondFrenchNC";
+  font-weight: bold;
+  align-items: end;
+  display: grid;
+  grid-template-columns: 15% 5% 15% 5% 10% 5% 10% 5% 10% 10% 10%;
+  text-align: center;
+}
+.magia-top .conjurar .conjurar-lista .conjurar-titulos img {
+  display: flex;
+  justify-content: flex-start;
+  width: 40px;
+  height: 20px;
+  border: none;
+}
+.magia-top .conjurar .conjurar-lista li.conjurar-tirada {
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+  font-family: "Dungeon";
+  font-weight: bold;
+  font-size: 21px;
+  display: grid;
+  grid-template-columns: 15% 5% 15% 5% 10% 5% 10% 5% 10% 10% 10%;
+}
+.magia-top .conjurar .conjurar-lista li.conjurar-tirada .fas {
+  text-align: center;
+  color: #999;
+}
+.magia-top .conjurar .conjurar-lista li.conjurar-tirada .fas:hover {
+  color: #111;
+  text-shadow: 0 0 10px purple;
+}
+.magia-top .conjurar .conjurar-lista li.conjurar-tirada span {
+  text-align: center;
+}
+.magia-top .conjurar .conjurar-lista li.conjurar-tirada input[type="text"] {
+  display: block;
+  height: 24px;
+  line-height: 24px;
+  border-bottom: none;
+  text-align: center;
+  color: purple;
+}
+.agregar-hechizos {
+  display: flex;
+  height: 25px;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+  font-family: "Dungeon";
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: #240324;
+}
+.agregar-hechizos .fas:hover {
+  color: #ebad04;
+  text-shadow: 0 0 10px #fffb00;
+}
+.items-list-agua,
+.items-list-fuego,
+.items-list-aire,
+.items-list-metal,
+.items-list-naturaleza,
+.items-list-arkana,
+.items-list-tierra {
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 1px;
+}
+.items-list-agua .item-summary,
+.items-list-fuego .item-summary,
+.items-list-aire .item-summary,
+.items-list-metal .item-summary,
+.items-list-naturaleza .item-summary,
+.items-list-arkana .item-summary,
+.items-list-tierra .item-summary {
+  flex: 0 0 100%;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0.25em 0.5em;
+  color: #191813;
+  border-top: 1px solid #c9c7b8;
+}
+.items-list-agua .boton-hechizo ::marker,
+.items-list-fuego .boton-hechizo ::marker,
+.items-list-aire .boton-hechizo ::marker,
+.items-list-metal .boton-hechizo ::marker,
+.items-list-naturaleza .boton-hechizo ::marker,
+.items-list-arkana .boton-hechizo ::marker,
+.items-list-tierra .boton-hechizo ::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.items-list-agua .boton-hechizo button,
+.items-list-fuego .boton-hechizo button,
+.items-list-aire .boton-hechizo button,
+.items-list-metal .boton-hechizo button,
+.items-list-naturaleza .boton-hechizo button,
+.items-list-arkana .boton-hechizo button,
+.items-list-tierra .boton-hechizo button {
+  background: rgba(66, 66, 66, 0.568);
+  width: 20%;
+  border: 2px groove var(--color-border-light-highlight);
+}
+.items-list-agua .boton-hechizo button button::marker,
+.items-list-fuego .boton-hechizo button button::marker,
+.items-list-aire .boton-hechizo button button::marker,
+.items-list-metal .boton-hechizo button button::marker,
+.items-list-naturaleza .boton-hechizo button button::marker,
+.items-list-arkana .boton-hechizo button button::marker,
+.items-list-tierra .boton-hechizo button button::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.items-list-agua .chat-card-buttons::marker,
+.items-list-fuego .chat-card-buttons::marker,
+.items-list-aire .chat-card-buttons::marker,
+.items-list-metal .chat-card-buttons::marker,
+.items-list-naturaleza .chat-card-buttons::marker,
+.items-list-arkana .chat-card-buttons::marker,
+.items-list-tierra .chat-card-buttons::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.items-list-agua .item-namecenter,
+.items-list-fuego .item-namecenter,
+.items-list-aire .item-namecenter,
+.items-list-metal .item-namecenter,
+.items-list-naturaleza .item-namecenter,
+.items-list-arkana .item-namecenter,
+.items-list-tierra .item-namecenter {
+  flex: 0 0 24%;
+  display: flex;
+  overflow: hidden;
+}
+.items-list-agua .item-namecenter .nombreconjuro,
+.items-list-fuego .item-namecenter .nombreconjuro,
+.items-list-aire .item-namecenter .nombreconjuro,
+.items-list-metal .item-namecenter .nombreconjuro,
+.items-list-naturaleza .item-namecenter .nombreconjuro,
+.items-list-arkana .item-namecenter .nombreconjuro,
+.items-list-tierra .item-namecenter .nombreconjuro {
+  display: flex;
+  flex: 2;
+  margin: 0;
+  overflow: hidden;
+  font-size: 13px;
+  text-align: left;
+  align-items: center;
+  padding-left: 2px;
+}
+.items-list-agua .item-namecenter .nombreconjuro:hover,
+.items-list-fuego .item-namecenter .nombreconjuro:hover,
+.items-list-aire .item-namecenter .nombreconjuro:hover,
+.items-list-metal .item-namecenter .nombreconjuro:hover,
+.items-list-naturaleza .item-namecenter .nombreconjuro:hover,
+.items-list-arkana .item-namecenter .nombreconjuro:hover,
+.items-list-tierra .item-namecenter .nombreconjuro:hover {
+  text-shadow: 0 0 10px purple;
+}
+.items-list-agua .item-namecenter .item-image,
+.items-list-fuego .item-namecenter .item-image,
+.items-list-aire .item-namecenter .item-image,
+.items-list-metal .item-namecenter .item-image,
+.items-list-naturaleza .item-namecenter .item-image,
+.items-list-arkana .item-namecenter .item-image,
+.items-list-tierra .item-namecenter .item-image {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: center;
+  color: transparent;
+}
+.items-list-agua .item-namecenter .item-image .fa-lg,
+.items-list-fuego .item-namecenter .item-image .fa-lg,
+.items-list-aire .item-namecenter .item-image .fa-lg,
+.items-list-metal .item-namecenter .item-image .fa-lg,
+.items-list-naturaleza .item-namecenter .item-image .fa-lg,
+.items-list-arkana .item-namecenter .item-image .fa-lg,
+.items-list-tierra .item-namecenter .item-image .fa-lg {
+  font-size: 1.25em;
+  line-height: inherit;
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+  padding-top: 5px;
+}
+.items-list-agua .item-namecenter .item-image:hover,
+.items-list-fuego .item-namecenter .item-image:hover,
+.items-list-aire .item-namecenter .item-image:hover,
+.items-list-metal .item-namecenter .item-image:hover,
+.items-list-naturaleza .item-namecenter .item-image:hover,
+.items-list-arkana .item-namecenter .item-image:hover,
+.items-list-tierra .item-namecenter .item-image:hover {
+  font-size: 1.25;
+  line-height: -3em;
+  vertical-align: baseline;
+  width: 30px;
+  height: 30px;
+  background: none !important;
+  color: white;
+}
+.items-list-agua .item-namecenter img,
+.items-list-fuego .item-namecenter img,
+.items-list-aire .item-namecenter img,
+.items-list-metal .item-namecenter img,
+.items-list-naturaleza .item-namecenter img,
+.items-list-arkana .item-namecenter img,
+.items-list-tierra .item-namecenter img {
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  background-position: 50% 0;
+  border: none;
+  margin-right: 5px;
+}
+.items-list-agua .item-level,
+.items-list-fuego .item-level,
+.items-list-aire .item-level,
+.items-list-metal .item-level,
+.items-list-naturaleza .item-level,
+.items-list-arkana .item-level,
+.items-list-tierra .item-level {
+  flex: 0 0 5%;
+}
+.items-list-agua .item-pm,
+.items-list-fuego .item-pm,
+.items-list-aire .item-pm,
+.items-list-metal .item-pm,
+.items-list-naturaleza .item-pm,
+.items-list-arkana .item-pm,
+.items-list-tierra .item-pm {
+  flex: 0 0 6%;
+}
+.items-list-agua .item-modconj,
+.items-list-fuego .item-modconj,
+.items-list-aire .item-modconj,
+.items-list-metal .item-modconj,
+.items-list-naturaleza .item-modconj,
+.items-list-arkana .item-modconj,
+.items-list-tierra .item-modconj {
+  flex: 0 0 8%;
+}
+.items-list-agua .item-tiempocast,
+.items-list-fuego .item-tiempocast,
+.items-list-aire .item-tiempocast,
+.items-list-metal .item-tiempocast,
+.items-list-naturaleza .item-tiempocast,
+.items-list-arkana .item-tiempocast,
+.items-list-tierra .item-tiempocast {
+  flex: 0 0 8%;
+}
+.items-list-agua .item-duracion,
+.items-list-fuego .item-duracion,
+.items-list-aire .item-duracion,
+.items-list-metal .item-duracion,
+.items-list-naturaleza .item-duracion,
+.items-list-arkana .item-duracion,
+.items-list-tierra .item-duracion {
+  flex: 0 0 8%;
+}
+.items-list-agua .item-resistible,
+.items-list-fuego .item-resistible,
+.items-list-aire .item-resistible,
+.items-list-metal .item-resistible,
+.items-list-naturaleza .item-resistible,
+.items-list-arkana .item-resistible,
+.items-list-tierra .item-resistible {
+  flex: 0 0 10%;
+}
+.items-list-agua .item-transferible,
+.items-list-fuego .item-transferible,
+.items-list-aire .item-transferible,
+.items-list-metal .item-transferible,
+.items-list-naturaleza .item-transferible,
+.items-list-arkana .item-transferible,
+.items-list-tierra .item-transferible {
+  flex: 0 0 10%;
+}
+.items-list-agua .item-preparado,
+.items-list-fuego .item-preparado,
+.items-list-aire .item-preparado,
+.items-list-metal .item-preparado,
+.items-list-naturaleza .item-preparado,
+.items-list-arkana .item-preparado,
+.items-list-tierra .item-preparado {
+  flex: 0 0 9%;
+}
+.items-list-agua .item-controls,
+.items-list-fuego .item-controls,
+.items-list-aire .item-controls,
+.items-list-metal .item-controls,
+.items-list-naturaleza .item-controls,
+.items-list-arkana .item-controls,
+.items-list-tierra .item-controls {
+  flex: 0 0 10%;
+}
+li.item-summary::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.items-list-agua li.item.flexrow.items-header {
+  background-color: rgba(4, 62, 138, 0.75);
+  color: whitesmoke;
+}
+.items-list-agua li.item.flexrow {
+  text-align: center;
+  border-bottom: 1px groove #043e8a;
+  justify-content: center;
+  ALIGN-ITEMS: center;
+}
+.items-list-agua li.item-summary::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.items-list-fuego li.item.flexrow.items-header {
+  background-color: rgba(90, 16, 16, 0.65);
+  color: whitesmoke;
+}
+.items-list-fuego li.item.flexrow {
+  text-align: center;
+  border-bottom: 1px groove #5a1010;
+  justify-content: center;
+  ALIGN-ITEMS: center;
+}
+.items-list-fuego li.item-summary::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.items-list-tierra li.item.flexrow.items-header {
+  background-color: #3d290b;
+  color: whitesmoke;
+}
+.items-list-tierra li.item.flexrow {
+  text-align: center;
+  border-bottom: 1px groove #3d290b;
+  justify-content: center;
+  ALIGN-ITEMS: center;
+}
+.items-list-tierra li.item-summary::marker {
+  display: none;
+  color: #000000;
+}
+.items-list-metal li.item.flexrow.items-header {
+  background-color: #353434;
+  color: whitesmoke;
+}
+.items-list-metal li.item.flexrow {
+  text-align: center;
+  border-bottom: 1px groove #353434;
+  justify-content: center;
+  ALIGN-ITEMS: center;
+}
+.items-list-metal li.item-summary::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.items-list-naturaleza li.item.flexrow.items-header {
+  background-color: rgba(32, 56, 12, 0.75);
+  color: whitesmoke;
+}
+.items-list-naturaleza li.item.flexrow {
+  text-align: center;
+  border-bottom: 1px groove #20380c;
+  justify-content: center;
+  ALIGN-ITEMS: center;
+}
+.items-list-naturaleza li.item-summary::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.items-list-aire li.item.flexrow.items-header {
+  background-color: rgba(190, 247, 255, 0.75);
+  color: black;
+}
+.items-list-aire li.item.flexrow {
+  text-align: center;
+  border-bottom: 1px groove #bef7ff;
+  justify-content: center;
+  ALIGN-ITEMS: center;
+}
+.items-list-aire li.item-summary::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.items-list-arkana li.item.flexrow.items-header {
+  background-color: rgba(45, 4, 58, 0.75);
+  color: whitesmoke;
+}
+.items-list-arkana li.item.flexrow {
+  text-align: center;
+  border-bottom: 1px groove rgba(45, 4, 58);
+  justify-content: center;
+  ALIGN-ITEMS: center;
+}
+.items-list-arkana li.item-summary::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.levelo-msg {
+  font-size: 30px;
+  font-family: "Dungeon";
+  justify-content: center;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  color: #dbdada;
+  background-color: black;
+  z-index: 120;
+  display: flex;
+  width: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("/systems/ARGS/assets/artwork/campfire.jpg");
+}
+.levelo-msg .leveleodiv {
+  display: inline-block;
+}
+.levelo-msg .leveleodiv .leveleomsg {
+  text-align: center;
+  font-size: 25px;
+  font-family: 'FHACondFrenchNC';
+  color: whitesmoke;
+  padding: 15px;
+  text-shadow: 1px 2px black;
+}
+.levelo-msg .leveleobutt {
+  background-color: none;
+  display: flex;
+  flex: 0 0 30px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  width: 390px;
+  margin: 10px;
+  text-shadow: 1px 2px black;
+}
+.levelo-msg .leveleobutt img {
+  width: 50px;
+  height: 50px;
+  border: 0px;
+  filter: drop-shadow(2px 4px 6px purple);
+}
+.levelo-msg .leveleobutt button {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  border: none;
+  color: darkseagreen;
+  text-shadow: 1px 2px black;
+}
+.levelo-msg .leveleobutt .carlevel {
+  color: white;
+}
+.levelo-msg .leveleobutt li {
+  display: table-cell;
+  color: white;
+}
+.ARGS.sheet.aventurero .editable {
+  background-image: url(/systems/ARGS/assets/parchment-smooth.webp) !important;
+}
+.ARGS.sheet.aventurero .infotexto1-control,
+.ARGS.sheet.aventurero .infotexto2-control {
+  background-color: #252525;
+  width: 100%;
+  color: #eeede0;
+  align-items: center;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.ARGS.sheet.aventurero .infotexto1-control .fas:hover,
+.ARGS.sheet.aventurero .infotexto2-control .fas:hover {
+  color: #ff9ae1;
+  text-shadow: 0 0 10px purple;
+}
+.ARGS.sheet.aventurero .infotexto2-control {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.ARGS.sheet.aventurero .caracteristicas-row1 {
+  font-family: "Dungeon";
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex: 0 0 300px;
+  padding: 3px;
+  height: 155px;
+}
+.ARGS.sheet.aventurero .caracteristicas-row1 span.sep {
+  flex: none;
+  margin: 0 1px;
+  display: inline;
+  position: relative;
+  color: #7a7971;
+  font-weight: normal;
+}
+.ARGS.sheet.aventurero .caracteristicas-row1 .grid-4col {
+  grid-column: span 4 / span 4;
+  grid-template-columns: repeat(4, minmax(0, 0.7fr));
+  padding-right: 5px;
+  overflow: hidden;
+}
+.ARGS.sheet.aventurero .caracteristicas-row1 .flex-group-left2 {
+  justify-content: flex-start;
+  text-align: center;
+  flex: 0 0 100px;
+  align-content: flex-start;
+}
+.ARGS.sheet.aventurero .caracteristicas-row1 .flex-group-left2 img {
+  width: 30px;
+  border: 0px;
+  height: 30px;
+  max-width: 30px;
+}
+.ARGS.sheet.aventurero .caracteristicas-row1 .flex-group-left2 span {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+.ARGS.sheet.aventurero .caracteristicas-row1 .flex-group-left2 .resource-label {
+  flex: 0 0 100px;
+}
+.ARGS.sheet.aventurero .caracteristicas-row1 .flex-group-left2 input[type="text"] {
+  width: 20px;
+  height: 30px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  border: 0;
+  background: none;
+  color: #4b4a44;
+  border-bottom: 1px solid #252525;
+  outline: none;
+  border-radius: 0;
+}
+.ARGS.sheet.aventurero .caracteristicas-row1 .flex-group-left2 .car-bonif .car-bonif-positivo {
+  color: green;
+  font-size: 18px;
+}
+.ARGS.sheet.aventurero .caracteristicas-row1 .flex-group-left2 .car-bonif .car-bonif-negativo {
+  color: darkred;
+  font-size: 18px;
+}
+.ARGS.sheet.aventurero .caracteristicas-row1 .flex-group-left2 .car-bonif-total {
+  font-size: 30px;
+}
+.ARGS.sheet.aventurero .dados-suerte {
+  font-family: "Dungeon";
+  font-size: 18px;
+  font-weight: bold ;
+  text-align: center;
+  flex: 0 0 155px;
+  display: inline-block;
+  height: 150px;
+  /*position: absolute;   
+        top: -100px;
+        left: 600px;*/
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+}
+.ARGS.sheet.aventurero .dados-suerte img {
+  width: 30px;
+  border: 0px;
+  max-width: 30px;
+}
+.ARGS.sheet.aventurero .dados-suerte table {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border-top: 0px;
+  border-bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+.ARGS.sheet.aventurero .dados-suerte table tbody {
+  height: 52px;
+}
+.ARGS.sheet.aventurero .dados-suerte table td,
+.ARGS.sheet.aventurero .dados-suerte table table th {
+  padding: 0 0;
+}
+.ARGS.sheet.aventurero .dados-suerte table td {
+  background: none;
+  margin: 0 0;
+  padding: 0 0;
+  width: 50px;
+}
+.ARGS.sheet.aventurero .dados-suerte table td .fas:hover {
+  color: #111;
+  text-shadow: 0 0 10px purple;
+}
+.ARGS.sheet.aventurero .dados-suerte table th {
+  background: none;
+  margin: 0 0;
+  padding: 0 0;
+  width: 50px;
+}
+.ARGS.sheet.aventurero .dados-suerte table tr:nth-child(2) {
+  margin: 0 0;
+  padding: 0 0;
+  height: 20px;
+}
+.ARGS.sheet.aventurero .dados-suerte table td:nth-child(2) {
+  margin: 0 0;
+  padding: 0 0;
+}
+.ARGS.sheet.aventurero .dados-suerte table td:first-child {
+  padding-left: 2px;
+  padding: 0 0;
+  margin: 0;
+}
+.ARGS.sheet.aventurero .dados-suerte table table tr:nth-child(even) {
+  height: 15px;
+}
+.ARGS.sheet.aventurero .dados-suerte table tr:nth-child(even) {
+  background: none;
+}
+.ARGS.sheet.aventurero .dados-suerte h4 {
+  font-size: 20px;
+  margin: 0px;
+  font-weight: bold;
+}
+.ARGS.sheet.aventurero .dados-suerte input {
+  height: 10px;
+  width: 10px;
+  vertical-align: top;
+  padding: 0 0;
+  margin-top: 0px;
+}
+.ARGS.sheet.aventurero .sheet-trackeables {
+  display: flex;
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+}
+.ARGS.sheet.aventurero .sheet-trackeables ul.tracks {
+  flex: 0 0 100%;
+  margin: 0;
+  padding-left: 0px;
+}
+.ARGS.sheet.aventurero .sheet-trackeables ul.tracks li.track {
+  position: relative;
+  height: 70px;
+  margin: 0;
+  border: none;
+  border-right: 2px groove #eeede0;
+  border-radius: 0;
+  list-style: none;
+}
+.ARGS.sheet.aventurero .sheet-trackeables ul.tracks li.track ::marker {
+  display: none;
+}
+.ARGS.sheet.aventurero .sheet-trackeables ul.tracks li.track .track-name {
+  font-family: "Modesto Condensed";
+  justify-content: center;
+  border-bottom: 1px solid #4e4e4e;
+  font-size: 18px;
+  text-align: center;
+  list-style: none;
+}
+.ARGS.sheet.aventurero .sheet-trackeables ul.tracks li.track .track-name ::marker {
+  display: none;
+}
+.ARGS.sheet.aventurero .sheet-trackeables ul.tracks li.track .track.health span.value {
+  line-height: 64px;
+  flex: 0 0 64px;
+}
+.ARGS.sheet.aventurero .sheet-trackeables ul.tracks li.track .track-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  line-height: 28px;
+  font-family: "Dungeon";
+  font-size: 30px;
+  font-weight: 700;
+}
+.ARGS.sheet.aventurero .sheet-trackeables ul.tracks li.track .track-value .track-footer {
+  display: grid;
+  font-size: 20px;
+}
+.ARGS.sheet.aventurero .sheet-trackeables ul.tracks li.track .col {
+  flex-direction: column;
+  line-height: 15px;
+  justify-content: normal;
+}
+.ARGS.sheet.aventurero .sheet-trackeables ul.tracks li.track input {
+  width: 20%;
+  text-align: right;
+  border-bottom: none;
+}
+.ARGS.sheet.aventurero .religion {
+  font-family: "Dungeon";
+  font-size: 18px;
+  font-weight: bold ;
+  text-align: center;
+  flex: 0 0 230px;
+  display: inline-flex;
+  height: 150px;
+  /*position: absolute;   
+            top: -100px;
+            left: 600px;*/
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+}
+.ARGS.sheet.aventurero .religion img {
+  width: 25px;
+  border: 0px;
+}
+.ARGS.sheet.aventurero .religion table {
+  width: 175px;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border-top: 0px;
+  border-bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+.ARGS.sheet.aventurero .religion table tbody {
+  height: 52px;
+}
+.ARGS.sheet.aventurero .religion table td,
+.ARGS.sheet.aventurero .religion table table th {
+  padding: 0 0;
+}
+.ARGS.sheet.aventurero .religion table td {
+  background: none;
+  margin: 0 0;
+  padding: 0 0;
+  width: 50px;
+}
+.ARGS.sheet.aventurero .religion table th {
+  background: none;
+  margin: 0 0;
+  padding: 0 0;
+  width: 50px;
+}
+.ARGS.sheet.aventurero .religion table tr:nth-child(2) {
+  margin: 0 0;
+  padding: 0 0;
+  height: 20px;
+}
+.ARGS.sheet.aventurero .religion table td:nth-child(2) {
+  margin: 0 0;
+  padding: 0 0;
+}
+.ARGS.sheet.aventurero .religion table td:first-child {
+  padding-left: 2px;
+  padding: 0 0;
+  margin: 0;
+}
+.ARGS.sheet.aventurero .religion table table tr:nth-child(even) {
+  height: 15px;
+}
+.ARGS.sheet.aventurero .religion table tr:nth-child(even) {
+  background: none;
+}
+.ARGS.sheet.aventurero .religion h4 {
+  font-size: 20px;
+  margin: 0px;
+  font-weight: bold;
+}
+.ARGS.sheet.aventurero .religion input {
+  height: 10px;
+  width: 10px;
+  vertical-align: top;
+  padding: 0 0;
+  margin-top: 0px;
+}
+.ARGS.sheet.aventurero .religion .credos {
+  display: inline-grid;
+  align-content: flex-start;
+}
+.ARGS.sheet.aventurero .religion .devocion {
+  display: inline-grid;
+  padding: 5px;
+  align-content: space-between;
+}
+.ARGS.sheet.aventurero .religion .devocion img {
+  height: 60px;
+  width: 100%;
+}
+.ARGS.sheet.aventurero .ataques-armas {
+  font-family: "Dungeon";
+  font-size: 20px;
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.ARGS.sheet.aventurero .ataques-armas h3 {
+  font-weight: bold;
+  padding-left: 1rem;
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 0px;
+}
+.ARGS.sheet.aventurero .ataques-armas .ataques-list {
+  border-bottom: 2px groove #eeede0;
+  line-height: 20px;
+  margin: 0px;
+  padding: 0px;
+}
+.ARGS.sheet.aventurero .ataques-armas .ataques-list .fas {
+  float: center;
+  margin-right: 3px;
+  text-align: center;
+  color: #999;
+}
+.ARGS.sheet.aventurero .ataques-armas .ataques-list .fas:hover {
+  color: #111;
+  text-shadow: 0 0 10px purple;
+}
+.ARGS.sheet.aventurero .ataques-armas .ataques-list .ataque {
+  text-align: center;
+}
+.ARGS.sheet.aventurero .ataques-armas .ataques-list .item {
+  font-family: "FHACondFrenchNC";
+  font-weight: normal;
+  align-items: center;
+  text-align: center;
+  height: 27px;
+}
+.ARGS.sheet.aventurero .ataques-armas .ataques-list li.ataque .ataque-name {
+  flex: 0 0 40%;
+  color: purple;
+  text-align: left;
+  padding-left: 3rem;
+}
+.ARGS.sheet.aventurero .ataques-armas .ataques-list .item-name {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+}
+.ARGS.sheet.aventurero .ataques-armas .ataques-list li.item .item-name .item-image {
+  border: none;
+  width: 40px;
+}
+.ARGS.sheet.aventurero .info {
+  height: 35px;
+  vertical-align: middle;
+  padding: 0px;
+}
+.ARGS.sheet.aventurero .info .xpca {
+  height: 30px;
+  border: 2px groove #eeede0;
+  font-size: 25px;
+  font-family: "Dungeon";
+  font-weight: bold;
+  padding: 0px;
+  border-radius: 5px;
+  margin: 2px;
+}
+.ARGS.sheet.aventurero .info .xpca li {
+  height: calc(100% - 6px);
+  float: left;
+  margin: 2px 0;
+  padding: 0;
+  border-right: 2px groove #eeede0;
+  line-height: 22px;
+  color: #4b4a44;
+  display: flex;
+  justify-content: center;
+}
+.ARGS.sheet.aventurero .info .xpca li input[type="text"] {
+  display: block;
+  height: 24px;
+  line-height: 24px;
+  width: 30px;
+  border-bottom: none;
+  text-align: right;
+  color: mediumpurple;
+}
+.ARGS.sheet.aventurero .info .xpca span {
+  margin-inline: 4px;
+  border-block-start: 1px solid transparent;
+  white-space: nowrap;
+}
+.ARGS.sheet.aventurero .pericias-body {
+  display: flex;
+  justify-content: space-between;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left,
+.ARGS.sheet.aventurero .pericias-body .pericias-right {
+  display: inline-grid;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  margin-left: 5px;
+  padding: 0px;
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+  flex: 2 0 350px;
+  justify-content: space-around;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left .fas,
+.ARGS.sheet.aventurero .pericias-body .pericias-right .fas {
+  float: right;
+  margin-right: 3px;
+  text-align: right;
+  color: #999;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left .fas:hover,
+.ARGS.sheet.aventurero .pericias-body .pericias-right .fas:hover {
+  color: #111;
+  text-shadow: 0 0 10px purple;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left .pericia-label,
+.ARGS.sheet.aventurero .pericias-body .pericias-right .pericia-label {
+  flex: 1 0 120px;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left .pericia-label-input[type="text"],
+.ARGS.sheet.aventurero .pericias-body .pericias-right .pericia-label-input[type="text"] {
+  flex: 0 0 120px;
+  margin-right: 2px;
+  border-bottom: 1px dotted darkred;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left .pericia-label-comb,
+.ARGS.sheet.aventurero .pericias-body .pericias-right .pericia-label-comb {
+  flex: 0 0 120px;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left .percat-title,
+.ARGS.sheet.aventurero .pericias-body .pericias-right .percat-title {
+  display: flex;
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+  padding: 0px;
+  height: 24px;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left .percat-title img,
+.ARGS.sheet.aventurero .pericias-body .pericias-right .percat-title img {
+  width: 48px;
+  border: 0px;
+  max-width: 58px;
+  align-items: flex-end;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left .percat-title h4,
+.ARGS.sheet.aventurero .pericias-body .pericias-right .percat-title h4 {
+  width: 100%;
+  align-items: center;
+  margin-bottom: 0px;
+  text-align: center;
+  font-family: "dungeon";
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 20px;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left .ol,
+.ARGS.sheet.aventurero .pericias-body .pericias-right .ol {
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left li,
+.ARGS.sheet.aventurero .pericias-body .pericias-right li {
+  background-color: none;
+  font-family: "dungeon";
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 21px;
+  justify-content: space-between;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left li input[type="text"],
+.ARGS.sheet.aventurero .pericias-body .pericias-right li input[type="text"] {
+  flex: 0 0 35px;
+  line-height: 21px;
+  font-size: 20px;
+  height: 20px;
+  border-left: 1px solid #eeede0;
+  text-align: center;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left img,
+.ARGS.sheet.aventurero .pericias-body .pericias-right img {
+  border: 0px;
+  flex: 0 0 25px;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left span,
+.ARGS.sheet.aventurero .pericias-body .pericias-right span {
+  flex: 0 0 20px;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left .img-combo,
+.ARGS.sheet.aventurero .pericias-body .pericias-right .img-combo {
+  flex: 0 0 50px;
+}
+.ARGS.sheet.aventurero .pericias-body .pericias-left .img-combo img,
+.ARGS.sheet.aventurero .pericias-body .pericias-right .img-combo img {
+  width: 50px;
+}
+/* ----------------------------------------- */
+/*  Sheet Body                               */
+/* ----------------------------------------- */
+.ARGS.sheet.aventurero ul.attributes {
+  flex: 0 0 60px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ARGS.sheet.aventurero ul.attributes h4 {
+  margin-top: 2px;
+  margin-bottom: 0px;
+  height: 23px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "FHACondFrenchNC";
+  font-weight: bold;
+  border-bottom: 1px solid #8f8f8f;
+}
+.ARGS.sheet.aventurero ul.attributes li.attribute {
+  height: 60px;
+  margin: 0 5px 0 0;
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+  text-align: center;
+}
+.ARGS.sheet.aventurero ul.attributes li.attribute .attribute-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  line-height: 28px;
+  font-family: "FHACondFrenchNC";
+  font-size: 20px;
+  font-weight: 700;
+}
+.ARGS.sheet.aventurero ul.attributes li.attribute input[type="text"] {
+  width: 100%;
+  height: 23px;
+  box-sizing: border-box;
+  line-height: 30px;
+  font-size: 22px;
+  font-family: "FHACondFrenchNC";
+  font-weight: bold;
+  border: 0;
+  background: none;
+  outline: none;
+  display: flexbox;
+}
+.ARGS.sheet.aventurero .sheet-body .central {
+  display: flex;
+  flex-direction: row;
+}
+.ARGS.sheet.aventurero .sheet-body .central h3 {
+  font-size: 20px;
+  font-family: "FHACondFrenchNC";
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1px;
+  margin-bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.ARGS.sheet.aventurero .sheet-body .central .items-list {
+  margin: 0 0;
+  padding: 0 0 0 0;
+}
+.ARGS.sheet.aventurero .sheet-body .central .items-list .item {
+  align-items: center;
+  padding: 0 2px;
+  border-bottom: 1px solid #c9c7b8;
+}
+.ARGS.sheet.aventurero .sheet-body .central .items-list li.item.flexrow.items-header {
+  font-size: 16px;
+  color: #313131;
+  border-bottom: 1px solid gray;
+  background-color: rgba(0, 0, 0, 0.05);
+  height: 20px;
+  line-height: 25px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .items-list li {
+  font-family: "FHACondFrenchNC";
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 1px;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid #c9c7b8;
+  word-break: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.ARGS.sheet.aventurero .sheet-body .central .items-list li .item-name {
+  flex: 0 0 50%;
+  display: flex;
+  overflow: hidden;
+}
+.ARGS.sheet.aventurero .sheet-body .central .items-list li .item-name .nombreitem {
+  display: flex;
+  flex: 2;
+  margin: 0;
+  overflow: hidden;
+  font-size: 13px;
+  text-align: left;
+  align-items: center;
+  padding-left: 2px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .items-list li .item-name .item-image {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: center;
+  color: transparent;
+}
+.ARGS.sheet.aventurero .sheet-body .central .items-list li .item-name .item-image .fa-lg {
+  font-size: 1.25em;
+  line-height: inherit;
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+  padding-top: 5px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .items-list li .item-name .item-image:hover {
+  font-size: 1.25;
+  line-height: -3em;
+  vertical-align: baseline;
+  width: 30px;
+  height: 30px;
+  background: none !important;
+  color: white;
+}
+.ARGS.sheet.aventurero .sheet-body .central .items-list li .item-name img {
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  background-position: 50% 0;
+  border: none;
+  margin-right: 5px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .items-list li .item-peso {
+  flex: 0 0 30px;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+}
+.ARGS.sheet.aventurero .sheet-body .central .items-list li .item-defensa {
+  flex: 0 0 22px;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  text-align: center;
+}
+.ARGS.sheet.aventurero .sheet-body .central .items-list li .item-controls {
+  display: flex;
+  justify-content: flex-end;
+}
+.ARGS.sheet.aventurero .sheet-body .central .izquierda {
+  flex: 0 0 30%;
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio {
+  flex: 0 0 40%;
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio .item-namecenter {
+  flex: 0 0 40%;
+  display: flex;
+  overflow: hidden;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio .item-namecenter .nombreitem {
+  display: flex;
+  flex: 2;
+  margin: 0;
+  overflow: hidden;
+  font-size: 13px;
+  text-align: left;
+  align-items: center;
+  padding-left: 2px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio .item-namecenter .item-image {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: center;
+  color: transparent;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio .item-namecenter .item-image .fa-lg {
+  font-size: 1.25em;
+  line-height: inherit;
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+  padding-top: 5px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio .item-namecenter .item-image:hover {
+  font-size: 1.25;
+  line-height: -3em;
+  vertical-align: baseline;
+  width: 30px;
+  height: 30px;
+  background: none !important;
+  color: white;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio .item-namecenter img {
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  background-position: 50% 0;
+  border: none;
+  margin-right: 5px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio .item-peso {
+  flex: 0 0 30px;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio .item-defensa {
+  flex: 0 0 22px;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  text-align: center;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio .item-cant {
+  flex: 0 0 30px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio .item-usos {
+  display: flex;
+  flex: 0 0 50px;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  justify-content: center;
+  align-items: center;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio .item-usos .item-usomax {
+  flex: 0 0 30px;
+  text-align: left;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio .item-usos .sep {
+  flex: 0 0 10px;
+  font-weight: bold;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio .item-usos input[type="text"] {
+  flex: 0 0 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: bold;
+  border: 0;
+  background: none;
+  color: purple;
+  outline: none;
+  border-radius: 0;
+  padding: 0px;
+  text-align: right;
+}
+.ARGS.sheet.aventurero .sheet-body .central .medio .item-controls {
+  display: flex;
+  justify-content: flex-end;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha {
+  flex: 0 0 30%;
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas {
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .mount-tracks {
+  display: flex;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .mount-tracks .track-value {
+  flex: 0 0 50%;
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .mount-tracks .track-value img {
+  height: 20px;
+  width: 20px;
+  border: none;
+  margin-right: 5px;
+  align-items: baseline;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .mount-tracks input[type="text"] {
+  width: 25%;
+  height: 20px;
+  box-sizing: border-box;
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 0;
+  background: none;
+  border-bottom: 1px solid #2f2f2f;
+  outline: none;
+  border-radius: 0;
+  padding-right: 5px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .monturas-list {
+  margin: 0 0;
+  padding: 0 0 0 0;
+  display: flex;
+  flex: 0 0 100%;
+  height: 50px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .monturas-list .montura {
+  align-items: center;
+  padding: 0 2px;
+  flex: 0 0 100%;
+  border-bottom: 1px solid #c9c7b8;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .monturas-list li.item.flexrow.items-header {
+  font-size: 16px;
+  color: #313131;
+  border-bottom: 1px solid gray;
+  background-color: rgba(0, 0, 0, 0.05);
+  height: 20px;
+  line-height: 25px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .monturas-list li {
+  font-family: "FHACondFrenchNC";
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 1px;
+  text-align: center;
+  border-right: 1px solid #c9c7b8;
+  word-break: break-word;
+  flex: 0 0 100%;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .monturas-list li .mount-name {
+  flex: 0 0 100%;
+  display: flex;
+  overflow: hidden;
+  font-size: 20px;
+  align-items: center;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .monturas-list li .mount-name .nombremount {
+  display: flex;
+  flex: 2;
+  margin: 0;
+  overflow: hidden;
+  font-size: 20px;
+  text-align: left;
+  align-items: center;
+  padding-left: 2px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .monturas-list li .mount-name .item-controls {
+  font-size: 15px;
+  align-items: center;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .monturas-list li .mount-name .mount-image {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: center;
+  color: transparent;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .monturas-list li .mount-name .mount-image .fa-lg {
+  font-size: 2.25em;
+  line-height: inherit;
+  width: 50px;
+  height: 50px;
+  margin: 0px;
+  padding-top: 5px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .monturas-list li .mount-name .mount-image:hover {
+  font-size: 2.25;
+  line-height: -3em;
+  vertical-align: baseline;
+  width: 50px;
+  height: 50px;
+  background: none !important;
+  color: white;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .monturas-list li .mount-name img {
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  background-position: 50% 0;
+  border: none;
+  margin-right: 5px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .statsmount {
+  font-family: "Dungeon";
+  font-weight: bold;
+  font-size: 20px;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .statsmount ol.stats-mount {
+  padding: 0px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .statsmount ol.stats-mount li {
+  align-items: center;
+  border: 1px dashed  gray;
+  text-align: center;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .statsmount ol.stats-mount li .fas:hover {
+  color: #111;
+  text-shadow: 0 0 10px purple;
+}
+.ARGS.sheet.aventurero .sheet-body .central .derecha .monturas .statsmount ol.stats-mount li img {
+  width: 30px !important;
+  height: 30px !important;
+  border: none;
+  margin-right: 5px;
+}
+.ARGS.sheet.aventurero .sheet-body .exceso {
+  font-size: 20px;
+  font-family: "FHACondFrenchNC";
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1px;
+  margin-bottom: 0px;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza {
+  width: 75%;
+  border: 2px groove #eeede0;
+  border-radius: 5px ;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza .riqueza-todo {
+  display: flex;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza img {
+  height: 35px;
+  width: 35px;
+  padding-right: 3px;
+  border: none;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza .riqueza-titulo {
+  display: flex;
+  flex: 0 0 20%;
+  margin: 0px;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza .riqueza-titulo h3 {
+  font-family: "Dungeon";
+  font-size: 30px;
+  font-weight: bold;
+  align-items: center;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza .riqueza-monedas {
+  display: flex;
+  font-size: 25px;
+  font-family: "Dungeon";
+  font-weight: bold;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza .riqueza-monedas .bronce {
+  display: flex;
+  flex: 0 0 25%;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza .riqueza-monedas .bronce input[type="text"] {
+  flex: 0 0 30%;
+  text-align: center;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza .riqueza-monedas .plata {
+  display: flex;
+  flex: 0 0 25%;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza .riqueza-monedas .plata input[type="text"] {
+  flex: 0 0 30%;
+  text-align: center;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza .riqueza-monedas .oro {
+  display: flex;
+  flex: 0 0 25%;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza .riqueza-monedas .oro input[type="text"] {
+  flex: 0 0 30%;
+  text-align: center;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza .riqueza-monedas .joyas {
+  display: flex;
+  flex: 0 0 25%;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza .riqueza-monedas .joyas input[type="text"] {
+  flex: 0 0 30%;
+  text-align: center;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.ARGS.sheet.aventurero .sheet-body .riqueza .monedacarga {
+  font-family: "Dungeon";
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+.resource .attribute-value > input {
+  flex: 0 0 25%;
+}
+.resource .attribute-value label.recharge {
+  height: 32px;
+  position: relative;
+  font-family: "Signika", sans-serif;
+  font-size: 11px;
+  text-align: center;
+  color: #4b4a44;
+  align-items: center;
+}
+.resource .attribute-value label.recharge input[type="checkbox"] {
+  flex-basis: 14px;
+  height: 14px;
+  width: 14px;
+  margin: 0;
+  top: -6px;
+}
+.clase-banner {
+  background-color: #202020;
+  color: whitesmoke;
+  height: 100px;
+}
+.clase-banner h3 {
+  margin: 0px;
+}
+.clase-banner .clase-info {
+  display: grid;
+  grid-template-columns: 40% 50% 10%;
+  height: 80px;
+}
+.clase-banner .clase-info .item-name {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 80%;
+  align-items: center;
+}
+.clase-banner .clase-info .item-name .item-image {
+  border: none;
+}
+.clase-banner .clase-info .item-name .item-image img {
+  border: none;
+}
+.clase-banner .clase-info .item-name .nombreitem {
+  font-size: 20px;
+}
+.clase-banner .clase-info img {
+  border: none;
+  width: 80px;
+  height: 80px;
+}
+.clase-banner .clase-info .item-stats {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+}
+.clase-banner .clase-info .item-controls {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+}
+.habilidad-banner {
+  height: 100px;
+}
+.habilidad-banner h3 {
+  margin: 0px;
+}
+.habilidad-banner .habilidad-info {
+  display: grid;
+  grid-template-columns: 30% 60% 10%;
+  height: 80px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.habilidad-banner .habilidad-info .combate,
+.habilidad-banner .habilidad-info .campamento,
+.habilidad-banner .habilidad-info .otros {
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 30% 60% 10%;
+  height: 80px;
+}
+.habilidad-banner .habilidad-info .combate .item-name,
+.habilidad-banner .habilidad-info .campamento .item-name,
+.habilidad-banner .habilidad-info .otros .item-name {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 80%;
+  align-items: center;
+}
+.habilidad-banner .habilidad-info .combate .item-name .item-image,
+.habilidad-banner .habilidad-info .campamento .item-name .item-image,
+.habilidad-banner .habilidad-info .otros .item-name .item-image {
+  border: none;
+}
+.habilidad-banner .habilidad-info .combate .item-name .item-image img,
+.habilidad-banner .habilidad-info .campamento .item-name .item-image img,
+.habilidad-banner .habilidad-info .otros .item-name .item-image img {
+  border: none;
+}
+.habilidad-banner .habilidad-info .combate .item-name .nombreitem,
+.habilidad-banner .habilidad-info .campamento .item-name .nombreitem,
+.habilidad-banner .habilidad-info .otros .item-name .nombreitem {
+  font-size: 15px;
+  font-weight: bold;
+}
+.habilidad-banner .habilidad-info .combate img,
+.habilidad-banner .habilidad-info .campamento img,
+.habilidad-banner .habilidad-info .otros img {
+  border: none;
+  width: 70px;
+  height: 70px;
+}
+.habilidad-banner .habilidad-info .combate .item-description,
+.habilidad-banner .habilidad-info .campamento .item-description,
+.habilidad-banner .habilidad-info .otros .item-description {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 15px;
+}
+.habilidad-banner .habilidad-info .combate .item-description .editor,
+.habilidad-banner .habilidad-info .campamento .item-description .editor,
+.habilidad-banner .habilidad-info .otros .item-description .editor {
+  position: relative !important;
+  max-height: max-content !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  overflow: scroll !important;
+}
+.habilidad-banner .habilidad-info .combate .item-description .editor-content,
+.habilidad-banner .habilidad-info .campamento .item-description .editor-content,
+.habilidad-banner .habilidad-info .otros .item-description .editor-content {
+  height: 73px !important;
+  overflow-y: auto;
+  word-break: break-word;
+  font-size: 12px;
+}
+.habilidad-banner .habilidad-info .combate .item-controls,
+.habilidad-banner .habilidad-info .campamento .item-controls,
+.habilidad-banner .habilidad-info .otros .item-controls {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+}
+.ARGS.sheet.aventurero .sheet-header {
+  background-color: none;
+  height: 153px;
+  width: 100%;
+  display: inline-flex;
+  overflow: hidden;
+}
+.ARGS.sheet.aventurero .sheet-header input[type="text"] {
+  width: 95%;
+  height: 30px;
+  box-sizing: border-box;
+  line-height: 30px;
+  font-family: initial;
+  font-size: 20px;
+  font-weight: bold;
+  border: 0;
+  background: none;
+  border-bottom: 1px solid #2f2f2f;
+  outline: none;
+  border-radius: 0;
+  padding-right: 5px;
+}
+.ARGS.sheet.aventurero .sheet-header img {
+  width: 160px;
+  height: 160px;
+}
+.ARGS.sheet.aventurero .sheet-header .header-details1 {
+  flex: 0 0 350px;
+  align-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Dungeon";
+  font-size: 20px;
+  font-weight: 900;
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+  /*background: url("../assets/CharSheet/perg1y2.png");*/
+}
+.ARGS.sheet.aventurero .sheet-header .header-details1 table {
+  background: none;
+  border-top: none;
+  border-bottom: none;
+}
+.ARGS.sheet.aventurero .sheet-header .header-details1 table td {
+  background: none;
+  padding: 0px;
+  padding-right: 2px;
+}
+.ARGS.sheet.aventurero .sheet-header .header-details1 table th {
+  padding: 0px;
+}
+.ARGS.sheet.aventurero .sheet-header .header-details1 table td:first-child {
+  padding-left: 2px;
+  justify-content: end;
+  text-align: end;
+}
+.ARGS.sheet.aventurero .sheet-header .header-details1 .pc_especie {
+  display: grid;
+  grid-template-columns: 15% 5% 75%;
+  gap: 5px;
+  text-align: right;
+}
+.ARGS.sheet.aventurero .sheet-header .header-details1 .pc_especie .compendium-items {
+  text-align: center;
+}
+.ARGS.sheet.aventurero .sheet-header .header-details1 .pc_clases {
+  display: grid;
+  grid-template-columns: 15% 5% 75%;
+  gap: 5px;
+  text-align: right;
+}
+.ARGS.sheet.aventurero .sheet-header .header-details1 .pc_clases .compendium-items {
+  text-align: center;
+}
+.ARGS.sheet.aventurero .sheet-header .header-sistema {
+  flex: 0 0 200px;
+  font-family: "Dubstep Dungeons";
+  font-size: 30px;
+  height: 166px;
+  text-align: center;
+}
+.ARGS.sheet.aventurero .sheet-header .info-char {
+  color: black;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: var(--dl-color-gray-black);
+  /*background: url("../assets/CharSheet/perg1y2.png");*/
+}
+.ARGS.sheet.aventurero .sheet-tabs {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Dominican Small Caps";
+  font-size: 16px;
+  font-weight: bold;
+  color: #2f302f;
+}
+.ARGS.sheet.aventurero .sheet-tabs .item {
+  padding: 0px;
+  border-bottom: 1px solid #a1a1a1;
+}
+.ARGS.sheet.aventurero .sheet-tabs .item.active {
+  text-shadow: 0 0 10px purple;
+}
+.ARGS.sheet.aventurero .sheet-body input[type="text"] {
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  line-height: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  border: 0;
+  background: none;
+  border-bottom: 1px solid #252525;
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+  border-radius: 0;
+  display: flexbox;
+}
+.ARGS.sheet.aventurero .sheet-body .editor {
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+  width: 90%;
+  overflow: auto;
+}
+.ARGS.sheet.aventurero .sheet-body .editor-edit {
+  display: contents;
+  font-size: 1.25em;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  background: rgba(187, 187, 187, 0.75);
+  border: 1px solid var(--color-border-dark-1);
+  border-radius: 4px;
+  padding: 1px 2px;
+  box-shadow: 0 0 1px var(--color-shadow-dark);
+}
+.ARGS.sheet.aventurero .sheet-body .biografia {
+  height: 250px;
+}
+.ARGS.sheet.aventurero .sheet-body .biografia .editor {
+  height: 100%;
+  height: 350px;
+  width: 100%;
+}
+.ARGS.sheet.aventurero .sheet-body .biografia .header-details2 {
+  flex: 0 0 250px;
+  align-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Dungeon";
+  font-size: 20px;
+  font-weight: 900;
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+}
+.ARGS.sheet.aventurero .sheet-body .biografia .header-details2 input[type="text"] {
+  width: 100%;
+  height: 25px;
+  box-sizing: border-box;
+  line-height: 30px;
+  font-size: 20px;
+  text-align: left;
+}
+.ARGS.sheet.aventurero .sheet-body .biografia .header-details2 table {
+  background: none;
+  border-top: none;
+  border-bottom: none;
+}
+.ARGS.sheet.aventurero .sheet-body .biografia .header-details2 table tbody {
+  margin-right: 10px;
+}
+.ARGS.sheet.aventurero .sheet-body .biografia .header-details2 table tr {
+  height: 20px;
+}
+.ARGS.sheet.aventurero .sheet-body .biografia .header-details2 table td {
+  padding: 0px;
+  background: none;
+  padding-right: 2px;
+  text-align: right;
+  padding-left: 2px;
+}
+.ARGS.sheet.aventurero .sheet-body .biografia .header-details2 table th {
+  padding: 0px;
+  background: none;
+  padding-right: 2px;
+}
+.ARGS.sheet.aventurero .sheet-body .biografia .header-details2 table td:first-child {
+  padding-left: 2px;
+  justify-content: end;
+  text-align: end;
+}
+.grid,
+.grid-2col {
+  display: grid;
+  grid-column: span 2 / span 2;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+  margin: 5px 0;
+  padding: 0;
+}
+.grid-3col {
+  grid-column: span 3 / span 3;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-4col {
+  grid-column: span 4 / span 4;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.grid-5col {
+  grid-column: span 5 / span 5;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.grid-6col {
+  grid-column: span 6 / span 6;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.grid-7col {
+  grid-column: span 7 / span 7;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.grid-8col {
+  grid-column: span 8 / span 8;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+.grid-9col {
+  grid-column: span 9 / span 9;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+.grid-10col {
+  grid-column: span 10 / span 10;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+.grid-11col {
+  grid-column: span 11 / span 11;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+}
+.grid-12col {
+  grid-column: span 12 / span 12;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+.grid-start-2 {
+  grid-column-start: 2;
+}
+.grid-start-3 {
+  grid-column-start: 3;
+}
+.grid-start-4 {
+  grid-column-start: 4;
+}
+.grid-start-5 {
+  grid-column-start: 5;
+}
+.grid-start-6 {
+  grid-column-start: 6;
+}
+.grid-start-7 {
+  grid-column-start: 7;
+}
+.grid-start-8 {
+  grid-column-start: 8;
+}
+.grid-start-9 {
+  grid-column-start: 9;
+}
+.grid-start-10 {
+  grid-column-start: 10;
+}
+.grid-start-11 {
+  grid-column-start: 11;
+}
+.grid-start-12 {
+  grid-column-start: 12;
+}
+.grid-span-2 {
+  grid-column-end: span 2;
+}
+.grid-span-3 {
+  grid-column-end: span 3;
+}
+.grid-span-4 {
+  grid-column-end: span 4;
+}
+.grid-span-5 {
+  grid-column-end: span 5;
+}
+.grid-span-6 {
+  grid-column-end: span 6;
+}
+.grid-span-7 {
+  grid-column-end: span 7;
+}
+.grid-span-8 {
+  grid-column-end: span 8;
+}
+.grid-span-9 {
+  grid-column-end: span 9;
+}
+.grid-span-10 {
+  grid-column-end: span 10;
+}
+.grid-span-11 {
+  grid-column-end: span 11;
+}
+.grid-span-12 {
+  grid-column-end: span 12;
+}
+.flex-group-center,
+.flex-group-left,
+.flex-group-right {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.flex-group-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+.flex-group-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+.flexshrink {
+  flex: 0;
+}
+.flex-between {
+  justify-content: space-between;
+}
+.flexlarge {
+  flex: 2;
+}
+.align-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+.align-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+.align-center {
+  justify-content: center;
+  text-align: center;
+}
+.ARGS.sheet.equipo {
+  min-height: 400px;
+  max-height: 95%;
+  min-width: 480px;
+  background-color: purple;
+  /* .flexcol {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            
+                > * {
+                flex: 1;
+                }
+            
+                .flex1 { flex: 1; }
+                .flex2 { flex: 2; }
+                .flex3 { flex: 3; }
+                .flex4 { flex: 4; }
+            }*/
+  /* ----------------------------------------- */
+  /*  Sheet Header                             */
+  /* ----------------------------------------- */
+}
+.ARGS.sheet.equipo .sheet-header {
+  flex: 0 0 80px;
+  padding: 0px;
+  background: transparent;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.ARGS.sheet.equipo .sheet-header img.profile {
+  border: 2px solid #000;
+  flex: 0 0 80px;
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+.ARGS.sheet.equipo .sheet-header .header-detalles {
+  margin-left: 1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.ARGS.sheet.equipo .sheet-header .itemnombre {
+  padding: 0;
+  height: 30px;
+  line-height: 18px;
+}
+.ARGS.sheet.equipo .sheet-header .itemnombre input {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  border: none;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  font-family: "Dungeon";
+  background: transparent;
+}
+.ARGS.sheet.equipo .sheet-header .item-subtitulo {
+  padding: 2px 4px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-end;
+  height: 20px;
+  margin-left: 1rem;
+  flex: 0 0 1px;
+  text-transform: capitalize;
+  font-family: "FHACondFrenchNC";
+}
+.ARGS.sheet.equipo .sheet-header .item-subtitulo .item-tipo {
+  margin: 0;
+  font-size: 20px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.65);
+}
+.ARGS.sheet.equipo .sheet-header .item-subtitulo .item-status {
+  font-size: 16px;
+  line-height: 14px;
+  margin-left: 4px;
+  color: rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+}
+.ARGS.sheet.equipo .sheet-header .tipocalidad {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  font-size: 16px;
+  font-family: "FHACondFrenchNC";
+  height: 26px;
+  flex: 0 0 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.ARGS.sheet.equipo .sheet-header .tipocalidad li {
+  line-height: 24px;
+}
+.ARGS.sheet.equipo .sheet-header .tipocalidad li select {
+  width: 100%;
+  height: 20px;
+  border: none;
+  margin-left: 3px;
+  text-transform: capitalize;
+}
+.ARGS.sheet.equipo .sheet-navigation {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Dominican Small Caps";
+  font-size: 16px;
+  font-weight: bold;
+  height: 50px;
+  padding-top: 5px;
+  color: #2f302f;
+}
+.ARGS.sheet.equipo .sheet-navigation .item {
+  padding: 0px;
+  border-bottom: 1px solid #a1a1a1;
+  flex: 0 0 33%;
+}
+.ARGS.sheet.equipo .tabs {
+  border-bottom-width: 100%;
+  flex: 0 0 25px;
+}
+.ARGS.sheet.equipo .tabs .item.active {
+  text-shadow: 0 0 10px purple;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #a1a1a1;
+  border-left: 1px solid #a1a1a1;
+  border-right: 1px solid #a1a1a1;
+  border-bottom: none;
+  flex: 0 0 34%;
+}
+.ARGS.sheet.equipo .sheet-body {
+  height: 100%;
+  font-family: "FHACondFrenchNC";
+  font-size: 16px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.ARGS.sheet.equipo .sheet-body .item-properties {
+  flex: 0 0 120px;
+  margin: 5px 5px 5px 0;
+  padding-right: 5px;
+  border-right: 2px groove #eeede0;
+  height: 500px;
+}
+.ARGS.sheet.equipo .sheet-body .item-properties .form-group-nofisico {
+  margin: 0;
+  font-size: 15px;
+  color: #303030;
+  border-bottom: 1px solid #a1a1a1;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+}
+.ARGS.sheet.equipo .sheet-body .item-properties .form-group-nofisico label {
+  line-height: 20px;
+  height: 20px;
+}
+.ARGS.sheet.equipo .sheet-body .item-properties .form-group {
+  margin: 0;
+  font-size: 15px;
+  color: #303030;
+  border-bottom: 1px solid #a1a1a1;
+  padding: 3px;
+}
+.ARGS.sheet.equipo .sheet-body .item-properties .form-group label {
+  line-height: 20px;
+  height: 20px;
+}
+.ARGS.sheet.equipo .sheet-body .item-properties .form-group input {
+  text-align: center;
+  width: 50px;
+  flex: 0 0 26px;
+  height: 20px;
+}
+.ARGS.sheet.equipo .sheet-body .item-properties .form-group select {
+  text-align: center;
+  flex: 0 0 30px;
+  font-size: 16px;
+  height: 20px;
+}
+.ARGS.sheet.equipo .sheet-body .item-properties .properties-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ARGS.sheet.equipo .sheet-body .item-properties .properties-list li {
+  margin: 3px 0;
+  padding: 0 2px;
+  background: rgba(0, 0, 0, 0.05);
+  text-align: center;
+  color: purple;
+  font-size: 15px;
+  line-height: 18px;
+}
+.ARGS.sheet.equipo .sheet-body .item-properties .properties-list li input[type="number"] {
+  font-size: 16px;
+  font-weight: bold;
+}
+.ARGS.sheet.equipo .sheet-body .item-properties .properties-header {
+  font-weight: bold;
+  color: #353535;
+  text-align: center;
+  margin: 0.5em 0 0 0;
+  font-size: 1em;
+}
+.ARGS.sheet.equipo .sheet-body .item-properties [name="system.precio.denominacion"] {
+  border: none;
+}
+.ARGS.sheet.equipo .sheet-body .tab {
+  padding: 0 5px;
+}
+.ARGS.sheet.equipo .detalles input[type="text"],
+.ARGS.sheet.equipo .detalles input[type="number"],
+.ARGS.sheet.equipo .detalles select {
+  height: 24px;
+  border: 1px solid #7a7971;
+  background: rgba(0, 0, 0, 0.05);
+}
+.ARGS.sheet.equipo .detalles .form-group {
+  justify-content: flex-start;
+}
+.ARGS.sheet.equipo .detalles .form-group span {
+  text-align: center;
+  line-height: 24px;
+}
+.ARGS.sheet.equipo .detalles .form-fields {
+  justify-content: flex-start;
+  flex: 0 0 50%;
+}
+.ARGS.sheet.equipo .detalles .form-fields label {
+  flex: 0 0 125px;
+}
+.ARGS.sheet.equipo .detalles .form-fields input[type="number"],
+.ARGS.sheet.equipo .detalles .form-fields select {
+  flex: 0 0 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.ARGS.sheet.equipo .detalles .form-group.input-select select {
+  flex: 1.8;
+}
+.ARGS.sheet.equipo .detalles .form-group.input-select-select select {
+  flex: 1.5;
+}
+.ARGS.sheet.equipo .detalles .form-group.uses-per .form-fields,
+.ARGS.sheet.equipo .detalles .form-group.consumption .form-fields {
+  flex-wrap: nowrap;
+}
+.ARGS.sheet.equipo .detalles .form-group.uses-per.consumption input,
+.ARGS.sheet.equipo .detalles .form-group.consumption.consumption input {
+  flex: 0 0 32px;
+}
+.ARGS.sheet.equipo .detalles .form-group.uses-per span,
+.ARGS.sheet.equipo .detalles .form-group.consumption span {
+  flex: 0 0 16px;
+  margin: 0 4px 0 0;
+}
+.ARGS.sheet.equipo .detalles span.sep {
+  flex: 0 0 8px;
+}
+.ARGS.sheet.equipo .detalles .prepared {
+  flex: 1.3 !important;
+  text-align: right;
+  padding-right: 10px;
+}
+.ARGS.sheet.equipo .editor {
+  height: 80%;
+}
+.form-group-carac {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+.form-group-carac input[type="text"] {
+  height: 16px;
+  font-size: 13px;
+  border: 1px solid #7a7971;
+  background: whitesmoke;
+}
+.form-group-carac select {
+  height: 24px;
+  border: 1px solid #7a7971;
+  background: whitesmoke;
+}
+.form-group-escuela {
+  align-items: baseline;
+  margin-bottom: 4px;
+  text-align: right;
+  margin-right: 5px;
+  padding: 0px;
+  gap: 1px;
+  margin: 1px 0;
+}
+.magbonus-grid {
+  text-align: right;
+  margin-right: 5px;
+  padding: 0px;
+  gap: 1px;
+  margin: 1px 0;
+  align-items: center;
+}
+.magbonus-grid input[type="text"] {
+  height: 16px;
+  font-size: 13px;
+  border: 1px solid #7a7971;
+  background: whitesmoke !important;
+}
+.defepv-grid {
+  text-align: right;
+  margin-right: 5px;
+  padding: 0px;
+  gap: 1px;
+  margin: 1px 0;
+  align-items: center;
+}
+.defepv-grid .pv-bonus span {
+  display: flex;
+}
+.defepv-grid input[type="text"] {
+  height: 16px;
+  font-size: 13px;
+  border: 1px solid #7a7971;
+  background: whitesmoke !important;
+}
+.sheet img[data-edit] {
+  height: 30px;
+  width: 30px;
+  border: none;
+}
+.lucklog-grid {
+  text-align: right;
+  margin-right: 5px;
+  padding: 0px;
+  gap: 1px;
+  margin: 1px 0;
+  align-items: center;
+}
+.lucklog-grid .checkbox {
+  text-align: left;
+}
+.lucklog-grid input[type="text"] {
+  height: 16px;
+  font-size: 13px;
+  border: 1px solid #7a7971;
+  background: whitesmoke !important;
+}
+.lucklog-grid .content-link {
+  display: flex;
+  width: 100px;
+  height: 25px;
+  background-color: #ce8629;
+  color: black;
+}
+.pericias-especiales .pericias-grid {
+  grid-template-columns: 10% 40% 40% 10%;
+  padding: 0px;
+  gap: 1px;
+  margin: 1px 0;
+}
+.pericias-especiales label {
+  line-height: 25px;
+  margin-right: 5px;
+}
+.pericias-extra-especie .pericias-grid .percat-group .pericia-valor,
+.pericias-iniciales .pericias-grid .percat-group .pericia-valor {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  line-height: 20px;
+}
+.pericias-entrenamiento,
+.pericias-iniciales {
+  display: grid;
+}
+.pericias-entrenamiento .pericias-grid,
+.pericias-iniciales .pericias-grid {
+  gap: 1px;
+  margin: 1px 0;
+}
+.pericias-entrenamiento .pericias-grid .percat-group,
+.pericias-iniciales .pericias-grid .percat-group {
+  display: grid;
+  margin: 2px;
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+}
+.pericias-entrenamiento .pericias-grid .percat-group .percat-title h4,
+.pericias-iniciales .pericias-grid .percat-group .percat-title h4 {
+  font-family: "FHACondFrenchNC";
+  font-weight: bold;
+  color: purple;
+}
+.pericias-entrenamiento .pericias-grid .percat-group .pericia-valor,
+.pericias-iniciales .pericias-grid .percat-group .pericia-valor {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  line-height: 20px;
+}
+.pericias-entrenamiento .pericias-grid .percat-group .pericia-valor .pericia-label,
+.pericias-iniciales .pericias-grid .percat-group .pericia-valor .pericia-label {
+  display: flex;
+  align-items: center;
+  height: 16px;
+}
+.pericias-entrenamiento .pericias-grid .percat-group .pericia-valor input[type="text"],
+.pericias-iniciales .pericias-grid .percat-group .pericia-valor input[type="text"] {
+  height: 16px;
+  font-size: 13px;
+  border: 1px solid #7a7971;
+  background: whitesmoke;
+}
+.lenguajes {
+  flex: 0 0 250px;
+  align-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Dungeon";
+  font-size: 20px;
+  font-weight: 900;
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+  background-color: whitesmoke;
+}
+.lenguajes h3 {
+  font-weight: bold;
+}
+.lenguajes h4 {
+  font-weight: bold;
+}
+.lenguajes select {
+  font-family: "FHACondFrenchNC";
+  font-size: 14px;
+  height: 18px;
+  vertical-align: text-bottom;
+}
+.lenguajes .tabla-idiomas {
+  margin: 0px;
+}
+.lenguajes .tabla-idiomas table {
+  margin: 0px;
+}
+.lenguajes .tabla-idiomas table td {
+  padding: 0px;
+}
+.lenguajes .tabla-idiomas table tr {
+  height: 14px;
+}
+.lenguajes .controles {
+  font-size: 12px;
+}
+.lenguajes .especie-info h3 {
+  margin: 0px;
+}
+.lenguajes .especie-info .item-name {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 80%;
+  align-items: center;
+}
+.lenguajes .especie-info .item-name .item-image {
+  border: none;
+}
+.lenguajes .especie-info .item-name .item-image img {
+  border: none;
+}
+.lenguajes .especie-info .item-name .nombreitem {
+  font-size: 30px;
+}
+.ARGS.chat-card.item-card .card-header {
+  padding: 3px 0;
+  border-top: 2px groove #FFF;
+  border-bottom: 2px groove #FFF;
+}
+.ARGS.chat-card.item-card .card-header img {
+  flex: 0 0 36px;
+  margin-right: 5px;
+  width: 36px;
+  height: 36px;
+  border-radius: 3px;
+}
+.ARGS.chat-card.item-card .card-header h3 {
+  flex: 1;
+  align-items: center;
+  margin: 0;
+  line-height: 1;
+  align-self: center;
+  font-size: 28px;
+  font-family: 'Dungeon';
+  font-weight: bold;
+}
+.ARGS.chat-card.item-card .card-content {
+  padding: 3px 0 3px;
+}
+.ARGS.chat-card.item-card .card-content p {
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  line-height: 22px;
+}
+.ARGS.chat-card.item-card .card-attack-roll {
+  padding: 3px 0 3px;
+}
+.ARGS.chat-card.item-card .card-damage-rolls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.ARGS.chat-card.item-card .pericia-valor {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+.ARGS.chat-card.item-card .card-damage-roll {
+  padding: 2px 6px 3px;
+}
+.ARGS.chat-card.item-card .card-damage-roll h3 {
+  font-size: 12px;
+}
+.ARGS.chat-card.item-card .card-damage-roll-single {
+  padding: 12px 0 3px;
+  grid-column: span 2;
+}
+.ARGS.chat-card.item-card .card-spell-critical {
+  font-size: 12px;
+  padding: 3px 0 0;
+}
+.ARGS.chat-card.item-card .card-spell-critical .critico {
+  color: green;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Dungeon";
+}
+.ARGS.chat-card.item-card .card-spell-critical .pifia {
+  color: darkred;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Dungeon";
+}
+.ARGS.chat-card.item-card .card-spell-critical .pifia span {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+.ARGS.chat-card.item-card .card-spell-critical .critico-texto,
+.ARGS.chat-card.item-card .card-spell-critical .pifia-texto {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+.ARGS.chat-card.item-card .conjuro-valor {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+.ARGS.chat-card.item-card .card-buttons {
+  padding: 3px 0 3px;
+  display: none;
+}
+.ARGS.chat-card.item-card .card-buttons.hp {
+  padding: 3px 0 3px;
+  display: block;
+}
+.ARGS.chat-card.item-card .card-footer {
+  padding: 3px 0 0;
+  border-top: 2px groove #FFF;
+}
+.ARGS.chat-card.item-card .card-footer .bo-como-bd {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+.ARGS.chat-card.item-card .card-footer .bo-como-bd-val {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: purple;
+  padding: 3px 0;
+  border: 2px groove #FFF;
+}
+.ARGS.chat-card.item-card .card-footer span {
+  border: 2px groove #FFF;
+  border-radius: 5px;
+  padding: 0 4px 0 4px;
+  font-size: 10px;
+}
+.monturas {
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+}
+.monturas .mount-tracks {
+  display: flex;
+}
+.monturas .mount-tracks .track-value {
+  flex: 0 0 50%;
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+.monturas .mount-tracks .track-value img {
+  height: 20px;
+  width: 20px;
+  border: none;
+  margin-right: 5px;
+  align-items: baseline;
+}
+.monturas .mount-tracks input[type="text"] {
+  width: 25%;
+  height: 20px;
+  box-sizing: border-box;
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 0;
+  background: none;
+  border-bottom: 1px solid #2f2f2f;
+  outline: none;
+  border-radius: 0;
+  padding-right: 5px;
+}
+.monturas .monturas-list {
+  margin: 0 0;
+  padding: 0 0 0 0;
+  display: flex;
+  flex: 0 0 100%;
+  height: 50px;
+}
+.monturas .monturas-list .montura {
+  align-items: center;
+  padding: 0 2px;
+  flex: 0 0 100%;
+  border-bottom: 1px solid #c9c7b8;
+}
+.monturas .monturas-list li.item.flexrow.items-header {
+  font-size: 16px;
+  color: #313131;
+  border-bottom: 1px solid gray;
+  background-color: rgba(0, 0, 0, 0.05);
+  height: 20px;
+  line-height: 25px;
+}
+.monturas .monturas-list li {
+  font-family: "FHACondFrenchNC";
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 1px;
+  text-align: center;
+  border-right: 1px solid #c9c7b8;
+  word-break: break-word;
+  flex: 0 0 100%;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.monturas .monturas-list li .mount-name {
+  flex: 0 0 100%;
+  display: flex;
+  overflow: hidden;
+  font-size: 20px;
+  align-items: center;
+}
+.monturas .monturas-list li .mount-name .nombremount {
+  display: flex;
+  flex: 2;
+  margin: 0;
+  overflow: hidden;
+  font-size: 20px;
+  text-align: left;
+  align-items: center;
+  padding-left: 2px;
+}
+.monturas .monturas-list li .mount-name .item-controls {
+  font-size: 15px;
+  align-items: center;
+}
+.monturas .monturas-list li .mount-name .mount-image {
+  flex: 0 0 50px;
+  height: 50px;
+}
+.monturas .monturas-list li .mount-name img {
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  background-position: 50% 0;
+  border: none;
+  margin-right: 5px;
+}
+.monturas .statsmount {
+  font-family: "Dungeon";
+  font-weight: bold;
+  font-size: 20px;
+}
+.monturas .statsmount ol.stats-mount {
+  padding: 0px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.monturas .statsmount ol.stats-mount li {
+  align-items: center;
+  border: 1px dashed  gray;
+  text-align: center;
+}
+.monturas .statsmount ol.stats-mount li .fas:hover {
+  color: #111;
+  text-shadow: 0 0 10px purple;
+}
+.monturas .statsmount ol.stats-mount li img {
+  width: 30px !important;
+  height: 30px !important;
+  border: none;
+  margin-right: 5px;
+}
+.ARGS.chat-card.pericia-card .card-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.ARGS.chat-card.pericia-card .card-header .header-title {
+  flex: 0 0 100%;
+}
+.ARGS.chat-card.pericia-card .card-header h3 {
+  flex: 1;
+  align-items: center;
+  margin: 0;
+  line-height: 1;
+  align-self: center;
+  font-size: 28px;
+  font-family: 'Dungeon';
+  font-weight: bold;
+}
+.ARGS.chat-card.pericia-card .d10-roll .card-check-roll .critico {
+  color: green;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Dungeon";
+}
+.ARGS.chat-card.pericia-card .d10-roll .card-check-roll .pifia {
+  color: darkred;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Dungeon";
+}
+.ARGS.chat-card.pericia-card .d10-roll .card-check-roll .pericia-valor {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+.ARGS.chat-card.stat-card .card-header {
+  padding: 3px 0;
+  border-top: 2px groove #FFF;
+  border-bottom: 2px groove #FFF;
+}
+.ARGS.chat-card.stat-card .card-header h3 {
+  flex: 1;
+  align-items: center;
+  margin: 0;
+  line-height: 1;
+  align-self: center;
+  font-size: 28px;
+  font-family: 'Dungeon';
+  font-weight: bold;
+}
+.ARGS.chat-card.stat-card .dice-tooltip {
+  display: block !important;
+}
+.ARGS.chat-card.stat-card .stat-valor {
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+.editable {
+  background-image: url(/systems/ARGS/assets/parchment-smooth.webp) !important;
+}
+.sheet-tabs {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Dominican Small Caps";
+  font-size: 16px;
+  font-weight: bold;
+  color: #2f302f;
+}
+.sheet-tabs .item {
+  padding: 0px;
+  border-bottom: 1px solid #a1a1a1;
+}
+.sheet-tabs .item.active {
+  text-shadow: 0 0 10px purple;
+}
+.monstruo.sheet-header {
+  display: flex;
+}
+.monstruo.sheet-header .monstruo-nombre {
+  flex: 0 0 100%;
+  height: 15%;
+  font-family: "Dungeon";
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}
+.monstruo.sheet-header .monstruo-nombre input {
+  height: 40px;
+}
+.monstruo.sheet-header .monstruo-descripcion {
+  display: flex;
+  flex: 0 0 100%;
+  height: 320px;
+}
+.monstruo.sheet-header .monstruo-descripcion .monstruo-img {
+  flex: 0 0 320px            ;
+}
+.monstruo.sheet-header .monstruo-descripcion .monstruo-img img {
+  width: 100%;
+  border: 0px;
+  height: 100%;
+  padding-right: 5px;
+  max-width: 320px;
+  max-height: 320px;
+}
+.monstruo.sheet-header .monstruo-descripcion .monstruo-detalles {
+  flex: 1 0 0;
+  height: 265px;
+  padding-top: 10px;
+}
+.monstruo.sheet-header .monstruo-descripcion .monstruo-detalles .prosemirror {
+  display: flex;
+  height: 100%;
+}
+.monstruo.sheet-header .monstruo-descripcion .monstruo-detalles .editor-content {
+  height: 310px;
+  overflow-y: auto;
+  word-break: break-word;
+}
+.monstruo.sheet-header .monstruo-descripcion .monstruo-detalles .editor {
+  position: relative;
+  max-height: 320px;
+  max-width: 100%;
+  overflow: auto;
+}
+.nivel-tamanio {
+  display: flex;
+  padding-bottom: 5px;
+}
+.nivel-tamanio .nivel {
+  flex: 0 0 50%;
+  text-align: center;
+}
+.nivel-tamanio .tamanio {
+  flex: 0 0 50%;
+  text-align: center;
+}
+.sheet-trackeables {
+  display: flex;
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+}
+.sheet-trackeables ul.tracks {
+  flex: 0 0 100%;
+  margin: 0;
+  padding-left: 0px;
+}
+.sheet-trackeables ul.tracks li.track {
+  position: relative;
+  height: 70px;
+  margin: 0;
+  border: none;
+  border-right: 2px groove #eeede0;
+  border-radius: 0;
+  list-style: none;
+}
+.sheet-trackeables ul.tracks li.track ::marker {
+  display: none;
+}
+.sheet-trackeables ul.tracks li.track .track-name {
+  font-family: "Modesto Condensed";
+  justify-content: center;
+  border-bottom: 1px solid #4e4e4e;
+  font-size: 18px;
+  text-align: center;
+  list-style: none;
+}
+.sheet-trackeables ul.tracks li.track .track-name ::marker {
+  display: none;
+}
+.sheet-trackeables ul.tracks li.track .track.health span.value {
+  line-height: 64px;
+  flex: 0 0 64px;
+}
+.sheet-trackeables ul.tracks li.track .track-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  line-height: 28px;
+  font-family: "Dungeon";
+  font-size: 30px;
+  font-weight: 700;
+}
+.sheet-trackeables ul.tracks li.track .track-value .track-footer {
+  display: grid;
+  font-size: 20px;
+}
+.sheet-trackeables ul.tracks li.track .track-value .fa-dice-d6:hover {
+  color: #111;
+  text-shadow: 0 0 10px purple;
+}
+.sheet-trackeables ul.tracks li.track .col {
+  flex-direction: column;
+  justify-content: normal;
+}
+.sheet-trackeables ul.tracks li.track input {
+  width: 20%;
+  text-align: right;
+  border-bottom: none;
+}
+.monstruo-ataques {
+  height: 100px;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.monstruo-ataques .ataque-monstruo,
+.monstruo-ataques .defensa-monstruo {
+  font-size: 20px;
+}
+.monstruo-ataques .ataque-monstruo .fas:hover,
+.monstruo-ataques .defensa-monstruo .fas:hover {
+  font-size: 30px ;
+  color: #111;
+  text-shadow: 0 0 10px purple;
+}
+.monstruo-habilidades {
+  height: 200px;
+}
+.especiales .editor {
+  height: 200px;
+}
+.animales-descripcion {
+  display: flex;
+}
+.animales-descripcion .animales-img {
+  height: 75px;
+  width: 75px;
+}
+.animales-descripcion .animales-img img {
+  height: 75px;
+  width: 75px;
+  border: none;
+}
+.animales-descripcion .animales-nombre {
+  flex: 0 0 50%;
+  font-family: "Dungeon";
+  font-size: 50px;
+  font-weight: bold;
+}
+.animales-descripcion .animales-nombre input {
+  height: 50px;
+}
+.animales-detalles {
+  display: block;
+}
+.animales-detalles .editor {
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: auto;
+  height: 250px;
+}
+.items-list-monst {
+  border: 2px groove #eeede0;
+  border-radius: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 1px;
+}
+.items-list-monst li.item.flexrow.items-header {
+  background-color: #353434;
+  color: whitesmoke;
+}
+.items-list-monst li.item.flexrow {
+  text-align: center;
+  border-bottom: 1px groove #353434;
+  justify-content: center;
+  ALIGN-ITEMS: center;
+}
+.items-list-monst li.item-summary::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.items-list-monst .item-summary {
+  flex: 0 0 100%;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0.25em 0.5em;
+  color: #191813;
+  border-top: 1px solid #c9c7b8;
+}
+.items-list-monst .boton-hechizo ::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.items-list-monst .boton-hechizo button {
+  background: rgba(66, 66, 66, 0.568);
+  width: 20%;
+  border: 2px groove var(--color-border-light-highlight);
+}
+.items-list-monst .boton-hechizo button button::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.items-list-monst .chat-card-buttons::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.items-list-monst .item-namecenter {
+  flex: 0 0 24%;
+  display: flex;
+  overflow: hidden;
+}
+.items-list-monst .item-namecenter .nombreconjuro {
+  display: flex;
+  flex: 2;
+  margin: 0;
+  overflow: hidden;
+  font-size: 13px;
+  text-align: left;
+  align-items: center;
+  padding-left: 2px;
+}
+.items-list-monst .item-namecenter .nombreconjuro:hover {
+  text-shadow: 0 0 10px purple;
+}
+.items-list-monst .item-namecenter .item-image {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: center;
+  color: transparent;
+}
+.items-list-monst .item-namecenter .item-image .fa-lg {
+  font-size: 1.25em;
+  line-height: inherit;
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+  padding-top: 5px;
+}
+.items-list-monst .item-namecenter .item-image:hover {
+  font-size: 1.25;
+  line-height: -3em;
+  vertical-align: baseline;
+  width: 30px;
+  height: 30px;
+  background: none !important;
+  color: white;
+}
+.items-list-monst .item-namecenter img {
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  background-position: 50% 0;
+  border: none;
+  margin-right: 5px;
+}
+.items-list-monst .item-level {
+  flex: 0 0 5%;
+}
+.items-list-monst .item-pm {
+  flex: 0 0 6%;
+}
+.items-list-monst .item-modconj {
+  flex: 0 0 8%;
+}
+.items-list-monst .item-tiempocast {
+  flex: 0 0 8%;
+}
+.items-list-monst .item-duracion {
+  flex: 0 0 8%;
+}
+.items-list-monst .item-resistible {
+  flex: 0 0 10%;
+}
+.items-list-monst .item-transferible {
+  flex: 0 0 10%;
+}
+.items-list-monst .item-preparado {
+  flex: 0 0 9%;
+}
+.items-list-monst .item-controls {
+  flex: 0 0 10%;
+}
+li.item-summary::marker {
+  display: none;
+  color: rgba(0, 0, 0, 0);
+}
+.form-group .diag-fomulatit {
+  flex: 0 0 20%;
+}
+.form-group .diag-fomula {
+  flex: 0 0 80%;
+}
+.sheet-tabs {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Dominican Small Caps";
+  font-size: 16px;
+  font-weight: bold;
+  color: #2f302f;
+}
+.sheet-tabs .item {
+  padding: 0px;
+  border-bottom: 1px solid #a1a1a1;
+}
+.sheet-tabs .item.active {
+  text-shadow: 0 0 10px purple;
+}
+.vehiculo.sheet-header {
+  display: flex;
+}
+.vehiculo.sheet-header .vehiculo-nombre {
+  flex: 0 0 100%;
+  height: 15%;
+  font-family: "Dungeon";
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}
+.vehiculo.sheet-header .vehiculo-nombre input {
+  height: 40px;
+}
+.vehiculo.sheet-header .vehiculo-descripcion {
+  display: flex;
+  flex: 0 0 100%;
+  height: 220px;
+}
+.vehiculo.sheet-header .vehiculo-descripcion .vehiculo-img {
+  flex: 0 0 220px            ;
+}
+.vehiculo.sheet-header .vehiculo-descripcion .vehiculo-img img {
+  width: 100%;
+  border: 0px;
+  height: 100%;
+  padding-right: 5px;
+  max-width: 220px;
+  max-height: 220px;
+}
+.vehiculo.sheet-header .vehiculo-descripcion .infoderecha {
+  flex: 1 0 0;
+}
+.vehiculo-detalles {
+  flex: 1 0 0;
+  height: 265px;
+  padding-top: 10px;
+}
+.vehiculo-detalles .prosemirror {
+  display: flex;
+  height: 100%;
+}
+.vehiculo-detalles .editor-content {
+  height: 310px;
+  overflow-y: auto;
+  word-break: break-word;
+  height: 100%;
+}
+.vehiculo-detalles .editor {
+  position: relative;
+  max-height: 320px;
+  max-width: 100%;
+  overflow: auto;
+  height: 100%;
+}
+.nivel-tamanio {
+  display: flex;
+  padding-bottom: 5px;
+}
+.nivel-tamanio .nivel {
+  flex: 0 0 50%;
+  text-align: center;
+}
+.nivel-tamanio .tamanio {
+  flex: 0 0 50%;
+  text-align: center;
+}
+.sheet-trackeables .track.velocidad input {
+  width: 30% !important;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+.sheet-trackeables .track.velocidad .track-footer {
+  display: flex ;
+  flex: 0 0 30%;
+}
+.sheet-trackeables .track.bodega input {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+.sheet-trackeables .track.health .track-value.multiple {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.sheet-trackeables .track.health .track-value.multiple input {
+  width: 40% !important;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+.sheet-trackeables .track.health .track-footer {
+  line-height: 12px;
+  vertical-align: top;
+}
+.sheet-trackeables .track.tripulaciones .track-value.col .multip {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.sheet-trackeables .track.tripulaciones .track-value.col .multip input {
+  width: 30% !important;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+.sheet-trackeables .track.tripulaciones .track-value.col .track-footer {
+  line-height: 12px;
+  vertical-align: top;
+}
+.sheet-tabs {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Dominican Small Caps";
+  font-size: 16px;
+  font-weight: bold;
+  color: #2f302f;
+}
+.sheet-tabs .item {
+  padding: 0px;
+  border-bottom: 1px solid #a1a1a1;
+}
+.sheet-tabs .item.active {
+  text-shadow: 0 0 10px purple;
+}
+.inventory-list-vehic {
+  padding: 0 5px;
+}
+.inventory-list-vehic .items-header {
+  height: 28px;
+  margin: 2px 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove #eeede0;
+  font-weight: bold;
+}
+.inventory-list-vehic .items-header .item-detail,
+.inventory-list-vehic .items-header .item-controls {
+  font-size: 12px;
+  text-align: center;
+  line-height: 24px;
+}
+.inventory-list-vehic .items-header h3 {
+  padding-left: 5px;
+  font-family: "FHACondFrenchNC";
+  text-align: left;
+  font-size: 22px;
+  border-bottom: none !important;
+}
+.inventory-list-vehic .item .item-name {
+  align-items: center;
+  display: flex;
+}
+.inventory-list-vehic .item .item-image {
+  flex: 0 0 30px;
+  height: 25px;
+  width: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.inventory-list-vehic .item .item-image img {
+  height: 25px;
+  width: 25px;
+  border: none;
+}
+.inventory-list-vehic .item .item-uses input {
+  width: 24px;
+  text-align: center;
+}
+.inventory-list-vehic .item .item-properties {
+  margin-top: 3px;
+}
+.inventory-list-vehic .item .item-recharge {
+  flex: 0 0 80px;
+  text-align: right;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.inventory-list-vehic .inventory-header .item-controls a.item-create {
+  flex: 0 0 100%;
+}
+.inventory-list-vehic .item-detail {
+  flex: 0 0 70px;
+  font-size: 12px;
+  text-align: center;
+  border-right: 1px solid #c9c7b8;
+  word-break: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.inventory-list-vehic .item-detail:last-child {
+  border-right: none;
+}
+.inventory-list-vehic .item-detail.item-action {
+  flex: 0 0 100px;
+}
+.inventory-list-vehic .item-detail.item-quantity {
+  flex: 0 0 40px;
+}
+.inventory-list-vehic .item-detail.attunement {
+  flex: 0 0 24px;
+}
+.inventory-list-vehic .item-weight {
+  flex: 0 0 60px;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+}
+.inventory-list-vehic .item-control.item-delete {
+  align-items: center;
+}
+.inventory-list-vehic .item-controls {
+  flex: 0 0 44px;
+  text-align: center;
+}
+.inventory-list-vehic .item-summary {
+  flex: 0 0 100%;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0.25em 0.5em;
+  color: #191813;
+  border-top: 1px solid #c9c7b8;
+}
+.armas-canons {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.armas-canons .cannon-t {
+  display: flex;
+  flex: 0 0 33%;
+  border: 2px groove #eeede0;
+}
+.armas-canons .cannon-t .cuadro-imagen {
+  background-color: #1d1d1d;
+}
+.armas-canons .cannon-t .cuadro-imagen .item-image {
+  width: 75px;
+  height: 75px;
+  flex: 0 0 75px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.armas-canons .cannon-t .cuadro-imagen .item-image img {
+  width: 75px;
+  height: 75px;
+}
+.armas-canons .cannon-t .cuadro-imagen .item-controls {
+  height: 25px;
+  background-color: #1d1d1d;
+  text-align: center;
+  flex: 0 0 100%;
+  line-height: 25px;
+}
+.armas-canons .cannon-t .cuadro-imagen .item-controls .items-list {
+  color: whitesmoke;
+  margin: 0px;
+  padding: 0px;
+}
+.armas-canons .cannon-t .info {
+  flex: 0 0 calc(100% - 75px);
+  display: flex;
+  flex-wrap: wrap;
+}
+.armas-canons .cannon-t .info .nombre {
+  flex: 0 0 100%;
+  font-family: "Dungeon";
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 25px;
+  text-align: center;
+  height: 20px;
+}
+.armas-canons .cannon-t .info .ataque-arma {
+  padding-left: 5px;
+  flex: 0 0 100%;
+  text-align: center;
+  font-size: 20px;
+}
+.armas-canons .cannon-t .info .ataque-arma .fas:hover {
+  font-size: 25px ;
+  color: #111;
+  text-shadow: 0 0 10px purple;
+}
+.armas-canons .cannon-t .info .recarga.item {
+  text-align: center;
+  flex: 0 0 100%;
+}
+.armas-canons .cannon-t .info .recarga.item h4 {
+  margin: 0px;
+}
+.armas-canons .cannon-t .info .manejado {
+  padding-left: 5px;
+  flex: 0 0 50%;
+}
+.municiones {
+  display: flex;
+}
+.municiones .items-header {
+  height: 28px;
+  margin: 2px 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove #eeede0;
+  font-weight: bold;
+}
+.municiones .items-header .item-detail,
+.municiones .items-header .item-controls {
+  font-size: 12px;
+  text-align: center;
+  line-height: 24px;
+}
+.municiones .items-header h3 {
+  padding-left: 5px;
+  font-family: "FHACondFrenchNC";
+  text-align: left;
+  font-size: 22px;
+  border-bottom: none !important;
+}
+.municiones .items-list {
+  padding: 0px;
+  flex: 0 0 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+  border: 2px groove #eeede0;
+}
+.municiones .items-list .item-namecenter {
+  display: flex;
+  flex: 0 0 60%;
+  text-align: left;
+}
+.municiones .items-list .item-namecenter .nombreitem {
+  display: flex;
+  flex: 2;
+  margin: 0;
+  overflow: hidden;
+  font-size: 13px;
+  text-align: left;
+  align-items: center;
+  padding-left: 2px;
+}
+.municiones .items-list .item-namecenter .item-image {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  vertical-align: middle;
+  text-align: center;
+  color: transparent;
+}
+.municiones .items-list .item-namecenter img {
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  background-position: 50% 0;
+  border: none;
+  margin-right: 5px;
+}
+.municiones .items-list .item-peso {
+  flex: 0 0 10%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.municiones .items-list .item-cant {
+  flex: 0 0 10%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.municiones .items-list .item-usos {
+  flex: 1 0 10%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.municiones .items-list .item-usos input {
+  width: 20px;
+}
+.municiones .items-list .item-controls {
+  display: flex;
+  flex: 0 0 10%;
+  justify-content: center;
+  font-size: inherit;
+  align-items: center;
+}
+.items-list.effects-list .items-header {
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.26);
+}
+.items-list.effects-list .item.effect {
+  align-items: center;
+}
+.items-list.effects-list .item.effect .item-name.effect-name {
+  margin: 0px;
+  align-items: center;
+}
+.items-list.effects-list .item.effect .item-name.effect-name .item-image {
+  flex: 0 0 40px;
+  height: 40px !important;
+  width: 40px !important;
+}
+.items-list.effects-list .item.effect .effect-controls {
+  display: flex;
+  flex: 0 0 15%;
+  justify-content: center;
+}
+.items-list.effects-list .item-name.effect-name {
+  display: flex;
+  flex: 0 0 50%;
+}
+.items-list.effects-list .effect-source {
+  display: flex;
+  flex: 0 0 25%;
+}
+.items-list.effects-list .effect-duration {
+  display: flex;
+  flex: 0 0 10%;
+}
+.items-list.effects-list .effect-controls {
+  display: flex;
+  flex: 0 0 15%;
+  justify-content: center;
+}
+:root {
+  --background-highlight: rgba(255, 255, 255, 0.25);
+  --clickable: red;
+  --form-background: rgba(0, 0, 0, 0.03921569);
+  --inactive-control: #A0A09A;
+  --primary: black;
+  --secondary: #78557e;
+}
+@font-face {
+  font-family: "Dubstep Dungeons";
+  src: url("../ARGS/fonts/Dubstep Dungeons.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Night of the Dragons";
+  src: url("../ARGS/fonts/Night of the Dragons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dungeon";
+  src: url("../ARGS/fonts/DUNGRG__.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dominican Small Caps";
+  src: url("../ARGS/fonts/DOMISC__.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FHACondFrenchNC";
+  src: url("../ARGS/fonts/FHACondFrenchNC.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --font-header: "Dungeon";
+}
+.dice-roll .dice-total.success {
+  color: inherit;
+  background: #c7d0c0;
+  border: 1px solid #006c00;
+}
+.dice-roll .dice-total.failure {
+  color: inherit;
+  background: #ffdddd;
+  border: 1px solid #6e0000;
+}
+.dice-roll .dice-total.critical {
+  color: green;
+}
+.dice-roll .dice-total.fumble {
+  color: red;
+}

@@ -1,0 +1,11 @@
+import {ARGS} from "./modulos/config.js";
+import ARGSHojaItem from "./modulos/hojas/ARGSHojaItem.js";
+
+Hooks.once("init",function(){
+	console.log("AGRS - Entrando a Isladragon");
+	
+	CONFIG.ARGS = ARGS;
+	
+	Items.unregisterSheet("core", ItemSheet);
+	Items.registerSheet("ARGS", ARGSHojaItem, {makeDefault: true});
+});

@@ -1,0 +1,87 @@
+@import "./aventurero-grimorio.less";
+@import "./levelup-card.less";
+@import "./aventurero-caracteristicas.less";
+@import "./aventurero-grimorio.less";
+@import "./aventurero-inventario.less";
+@import "./aventurero-habilidades.less";
+@import "./aventurero-hoja.less";
+@import "./grids.less";
+@import "./flex.less";
+@import "./armas-hoja.less";
+@import "./clases-hoja.less";
+@import "./lenguajes.less";
+@import "./chat.less";
+@import "./monstruos-hoja.less";
+@import "./varios.less";
+@import "./vehiculos.less";
+@import "./efectos.less";
+
+@colorDark: #191813;
+@colorFaint: #c9c7b8;
+@colorBeige: #b5b3a4;
+@colorTan: #7a7971;
+@colorOlive: #4b4a44;
+@colorCrimson: #44191A;
+@borderGroove: 2px groove #eeede0;
+
+:root {
+    --background-highlight: rgba(255, 255, 255, 0.25);
+    --clickable: red;
+    --form-background: rgba(0, 0, 0, 0.0392156863);
+    --inactive-control: #A0A09A;
+    --primary: black;
+    --secondary: #78557e;
+  }
+  @font-face {
+    font-family: "Dubstep Dungeons";
+    src: url("../ARGS/fonts/Dubstep Dungeons.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Night of the Dragons";
+    src: url("../ARGS/fonts/Night of the Dragons.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Dungeon";
+    src: url("../ARGS/fonts/DUNGRG__.TTF") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Dominican Small Caps";
+    src: url("../ARGS/fonts/DOMISC__.TTF") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "FHACondFrenchNC";
+    src: url("../ARGS/fonts/FHACondFrenchNC.TTF") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+   :root {
+    --font-header: "Dungeon";
+    
+  }
+
+  .dice-roll .dice-total.success {
+    color: inherit;
+    background: #c7d0c0;
+    border: 1px solid #006c00;
+  }
+  .dice-roll .dice-total.failure {
+    color: inherit;
+    background: #ffdddd;
+    border: 1px solid #6e0000;
+  }
+  .dice-roll .dice-total.critical {
+    color: green;
+  }
+  .dice-roll .dice-total.fumble {
+    color: red;
+  }

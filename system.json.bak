@@ -1,0 +1,41 @@
+{
+	"id": "ARGS",
+	"title": "Advanced Roleplaying Game System 1E",
+	"desciption": "Cronicas de Isladragon",
+	"version": "1.0.1",
+	"compatibility": {
+		"minimum": "10",
+		"verified": "11"
+	},
+	"url": "https://www.instagram.com/argsdungeonlair/",
+	"authors": [
+    {
+			"name": "Juanjo Vilaseca",
+			"instagram": "@brucewayne__ok"
+		},
+		{
+			"name": "Federico Lauro",
+			"instagram": "@lic_federico_lauro"			
+		}
+  ],
+	"esmodules": ["ARGS.mjs"],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		},
+		{
+			"lang": "es",
+			"name": "Español",
+			"path": "lang/es.json"
+		}
+	],
+	"styles": ["css/ARGS.css"],
+	"packs": [
+	],
+	"socket": true,
+  "gridDistance": 1,
+  "gridUnits": "hex",	
+  "background": "systems/ARGS/assets/artwork/args_cover.webp"
+}
