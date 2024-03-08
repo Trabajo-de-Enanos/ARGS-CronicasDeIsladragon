@@ -38,7 +38,7 @@ I used a lot of examples and code from other systems:
 
 ## LICENCE
 
-This work includes material from the ARGS System manual licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.
+This work includes material from the ARGS System manual licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by-sa/4.0/
 All ARGS materiales included in **foundryvtt-ARGS** are used with the permission of Juajo Vilaseca one of the co-authors of the game.
 
 ARGS links:
